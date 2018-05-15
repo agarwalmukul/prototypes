@@ -61,18 +61,20 @@ public class DrawLineManager : MonoBehaviour {
 			_prevPoint = _currPoint;
 		}
 		*/
+		/* Another experiment is a point is added to a strip only if the controller is moving at a velocity greater than a threshold.
+		 * This did not work out, because if the user is moving at a slow speed and then speeds up, it makes one strip which does not
+		 * look great
 		if(OVRInput.GetLocalControllerVelocity(OVRInput.Controller.RTouch).magnitude > 0.1f){
 			currLine.AddPoint (_currPoint);
 		}
-
-		/*
+		*/
 		float threshold = 0.005f/OVRInput.GetLocalControllerVelocity(OVRInput.Controller.RTouch).magnitude;
 		if ((_currPoint - _prevPoint).magnitude < threshold) {
 		} else {
 			currLine.AddPoint (_currPoint);
 			_prevPoint = _currPoint;
 		}
-		*/
+
 
 
 	}
