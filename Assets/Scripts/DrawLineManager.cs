@@ -68,16 +68,31 @@ public class DrawLineManager : MonoBehaviour {
 			currLine.AddPoint (_currPoint);
 		}
 		*/
+
+		/* Experiment where if the controller is moving fast, more points are added as opposed to when it is moving slow
 		float threshold = 0.005f/OVRInput.GetLocalControllerVelocity(OVRInput.Controller.RTouch).magnitude;
 		if ((_currPoint - _prevPoint).magnitude < threshold) {
 		} else {
 			currLine.AddPoint (_currPoint);
 			_prevPoint = _currPoint;
 		}
-
-
-
+		*/
+		currLine.AddPoint (_currPoint);
+		/*
+		// Experiment: Do not draw a strip if the the displacement vector between the current and last frame coincides
+		// or is close to the orientation of the tracked controller.
+		Vector3 rot = new Vector3 (1,0,0);
+		Quaternion qu = OVRInput.GetLocalControllerRotation (OVRInput.Controller.RTouch);
+		rot = qu * Vector3.forward;
+		if (Vector3.Dot (_currPoint - _prevPoint, rot) < 0.5f) {
+			currLine.AddPoint (_currPoint);
+			_prevPoint = _currPoint;
+		}
+		*/
 	}
+
+	private GameObject _orientationLine;
+	private LineRenderer _orientationLineRend;
 
 	// Use this for initialization
 
@@ -85,6 +100,22 @@ public class DrawLineManager : MonoBehaviour {
 		//instance = new CollisionDetector ();
 		numClicks = 0;
 		//Debug.Log (instance.CollidingBodyPart);
+		_orientationLine = new GameObject();
+		_orientationLine.AddComponent<LineRenderer> ();
+		_orientationLineRend = _orientationLine.GetComponent<LineRenderer> ();
+		_orientationLineRend.positionCount = 2;
+		_orientationLineRend.SetWidth (0.005f, 0.005f);
+
+
+	}
+	private Vector3 _strokeOrientation = OVRInput.GetLocalControllerRotation (OVRInput.Controller.RTouch) * Vector3.up;
+	public Vector3 StrokeOrientation {
+		get{
+			return _strokeOrientation;
+		}
+		set{
+			_strokeOrientation = value;
+		}
 	}
 
 	GameObject createStroke ()
@@ -97,6 +128,13 @@ public class DrawLineManager : MonoBehaviour {
 		}
 		return go;
 	}
+
+	void DrawOrientation (){
+		Vector3 firstPoint = OVRInput.GetLocalControllerPosition (OVRInput.Controller.RTouch) - 0.1f * StrokeOrientation;
+		Vector3 secondPoint = OVRInput.GetLocalControllerPosition (OVRInput.Controller.RTouch) + 0.1f * StrokeOrientation;
+		_orientationLineRend.SetPosition(0, firstPoint);
+		_orientationLineRend.SetPosition (1, secondPoint);
+	}
 	
 	// Update is called once per frame
 	void Update () {
@@ -108,6 +146,13 @@ public class DrawLineManager : MonoBehaviour {
 			instance = new CollisionDetector ();
 		}
 		*/
+		DrawOrientation ();
+		// change the orientation of the strip on the basis of the joystick press right
+		if(OVRInput.Get (OVRInput.Button.PrimaryThumbstickRight, OVRInput.Controller.RTouch)){
+			StrokeOrientation = Vector3.RotateTowards (StrokeOrientation, OVRInput.GetLocalControllerRotation (OVRInput.Controller.RTouch) * Vector3.right, 0.05f, 0.0f);
+		} else if(OVRInput.Get (OVRInput.Button.PrimaryThumbstickLeft, OVRInput.Controller.RTouch)){
+			StrokeOrientation = Vector3.RotateTowards (StrokeOrientation, OVRInput.GetLocalControllerRotation (OVRInput.Controller.RTouch) * Vector3.up, 0.05f, 0.0f);
+		}
 
 		// Change the width of the strip on the basis of the joystick press down
 		if(OVRInput.Get (OVRInput.Button.PrimaryThumbstickUp, OVRInput.Controller.RTouch)){
@@ -122,6 +167,7 @@ public class DrawLineManager : MonoBehaviour {
 			_currLine = go.AddComponent<MeshLineRenderer> ();
 			_currLine.SetMaterial (mat);
 			_currLine.setWidth(StripWidth);
+			_currLine.SetOrientation (StrokeOrientation);
 			//currLine.endWidth = 0.1f;
 			numClicks = 0;
 			_prevPoint = OVRInput.GetLocalControllerPosition (OVRInput.Controller.RTouch);
@@ -132,6 +178,7 @@ public class DrawLineManager : MonoBehaviour {
 			_currLine.setWidth(StripWidth);
 			_currPoint = OVRInput.GetLocalControllerPosition (OVRInput.Controller.RTouch);
 			cleanPoint (_currLine, _currPoint);
+			_currLine.SetOrientation (StrokeOrientation);
 			numClicks++;
 		}
 	}

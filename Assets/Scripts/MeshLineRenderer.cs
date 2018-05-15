@@ -18,6 +18,8 @@ public class MeshLineRenderer : MonoBehaviour {
 
 	private Vector3 s;
 
+	private Vector3 l;
+
 	private float lineSize = .1f;
 
 	private bool firstQuad = true;
@@ -25,6 +27,10 @@ public class MeshLineRenderer : MonoBehaviour {
 	void Start() {
 		ml = GetComponent<MeshFilter>().mesh;
 		GetComponent<MeshRenderer>().material = lmat;
+	}
+
+	public void SetOrientation (Vector3 orientation){
+		l = orientation;
 	}
 
 	public void SetMaterial (Material mat){
@@ -54,16 +60,22 @@ public class MeshLineRenderer : MonoBehaviour {
 			q = new Vector3[2];
 		}
 
-		Vector3 n = Vector3.Cross(s, e);
+		//Vector3 n = Vector3.Cross(s, e);
+		/*
 		Vector3 rot = new Vector3 (1,0,0);
 		Quaternion qu = OVRInput.GetLocalControllerRotation (OVRInput.Controller.RTouch);
 		rot = qu * Vector3.forward;
+		rot = qu * Vector3.up;
+		rot = qu * Vector3.right;
 		Debug.Log (rot);
 		//Debug.Log ((OVRInput.GetLocalControllerRotation (OVRInput.Controller.RTouch).eulerAngles)/360.0f);
 		//n = (1/360.0f) * OVRInput.GetLocalControllerRotation (OVRInput.Controller.RTouch).eulerAngles;
-		n = rot;
-		Vector3 l = Vector3.Cross(n, e - s);
-		l.Normalize();
+		Vector3 n = rot;
+		//Vector3 l = Vector3.Cross(n, e - s);
+		//l.Normalize();
+		Vector3 l = rot;
+		*/
+		Vector3 n = Vector3.Cross(s-e, l);
 
 		if(all) {
 			q[0] = transform.InverseTransformPoint(s + l * w);
