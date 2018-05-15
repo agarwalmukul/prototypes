@@ -61,21 +61,21 @@ public class MeshLineRenderer : MonoBehaviour {
 		}
 
 		//Vector3 n = Vector3.Cross(s, e);
-		/*
+
 		Vector3 rot = new Vector3 (1,0,0);
 		Quaternion qu = OVRInput.GetLocalControllerRotation (OVRInput.Controller.RTouch);
 		rot = qu * Vector3.forward;
-		rot = qu * Vector3.up;
-		rot = qu * Vector3.right;
+		//rot = qu * Vector3.up;
+		//rot = qu * Vector3.right;
 		Debug.Log (rot);
 		//Debug.Log ((OVRInput.GetLocalControllerRotation (OVRInput.Controller.RTouch).eulerAngles)/360.0f);
 		//n = (1/360.0f) * OVRInput.GetLocalControllerRotation (OVRInput.Controller.RTouch).eulerAngles;
 		Vector3 n = rot;
-		//Vector3 l = Vector3.Cross(n, e - s);
-		//l.Normalize();
-		Vector3 l = rot;
-		*/
-		Vector3 n = Vector3.Cross(s-e, l);
+		Vector3 l = Vector3.Cross(n, e - s);
+		l.Normalize();
+		//Vector3 l = rot;
+
+		//Vector3 n = Vector3.Cross(s-e, l); 
 
 		if(all) {
 			q[0] = transform.InverseTransformPoint(s + l * w);
