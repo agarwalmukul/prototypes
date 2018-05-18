@@ -598,7 +598,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edf1c648f687d9b4e943f1f9b2e05b20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  handRight: {fileID: 1391571155}
+  controllerRight: {fileID: 159636714}
   mat: {fileID: 2100000, guid: aeb54ae1b95708a4fae0ea90312c3996, type: 2}
 --- !u!1 &692546937
 GameObject:
