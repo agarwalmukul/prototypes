@@ -34,15 +34,6 @@ public class DrawLineManager : MonoBehaviour {
 
 	private Vector3 _prevPoint = new Vector3(0,0,0);
 	private Vector3 _currPoint = new Vector3(0,0,0);
-	/*
-	public Vector3 CurrPoint{
-		get{
-			return _currPoint;
-		}
-		private set{ 
-			_currPoint = value;
-		}
-	}*/
 
 	public GameObject handRight;
 	private MeshLineRenderer _currLine;
@@ -91,8 +82,8 @@ public class DrawLineManager : MonoBehaviour {
 		*/
 	}
 
-	private GameObject _orientationLine;
-	private LineRenderer _orientationLineRend;
+	private GameObject _cursor;
+	private LineRenderer _cursorRenderer;
 
 	// Use this for initialization
 
@@ -100,37 +91,44 @@ public class DrawLineManager : MonoBehaviour {
 		//instance = new CollisionDetector ();
 		numClicks = 0;
 		//Debug.Log (instance.CollidingBodyPart);
-		_orientationLine = new GameObject();
-		_orientationLine.AddComponent<LineRenderer> ();
-		_orientationLineRend = _orientationLine.GetComponent<LineRenderer> ();
-		_orientationLineRend.positionCount = 2;
-		_orientationLineRend.SetWidth (0.005f, 0.005f);
+		_cursor = new GameObject();
+		_cursor.AddComponent<LineRenderer> ();
+		_cursorRenderer = _cursor.GetComponent<LineRenderer> ();
+		_cursorRenderer.positionCount = 2;
+		_cursorRenderer.SetWidth (0.005f, 0.005f);
 
 
 	}
 	// This renders the visual indicator for the orientation of the strip that will be generated
-	private float _strokeOrientationFactor = 0.0f;
-	public float StrokeOrientationFactor {
+	private float _cursorOrientationFactor = 0.0f;
+	public float CursorOrientationFactor {
 		get {
-			return _strokeOrientationFactor;
+			return _cursorOrientationFactor;
 		}
 		set { 
 			if (value > 1.0f) {
-				_strokeOrientationFactor = 1.0f;
+				_cursorOrientationFactor = 1.0f;
 			} else if (value < 0.0f) {
-				_strokeOrientationFactor = 0.0f;
+				_cursorOrientationFactor = 0.0f;
 			} else {
-				_strokeOrientationFactor = value;
+				_cursorOrientationFactor = value;
 			}
 		}
 	}
-	public Vector3 calcStrokeOrientation (){
+	public Vector3 calcCursorOrientation (){
 		//get{
-		return ((1.0f - StrokeOrientationFactor) * (OVRInput.GetLocalControllerRotation (OVRInput.Controller.RTouch) * Vector3.up) + StrokeOrientationFactor * (OVRInput.GetLocalControllerRotation (OVRInput.Controller.RTouch) * Vector3.right)).normalized;
+		return ((1.0f - CursorOrientationFactor) * (OVRInput.GetLocalControllerRotation (OVRInput.Controller.RTouch) * Vector3.up) + CursorOrientationFactor * (OVRInput.GetLocalControllerRotation (OVRInput.Controller.RTouch) * Vector3.right)).normalized;
 		//}
 	}
+	// Draw the cursor using the width as a parameter
+	void DrawCursor (float width){
+		Vector3 firstPoint = OVRInput.GetLocalControllerPosition (OVRInput.Controller.RTouch) - (width/2.0f) * calcCursorOrientation();
+		Vector3 secondPoint = OVRInput.GetLocalControllerPosition (OVRInput.Controller.RTouch) + (width/2.0f) * calcCursorOrientation();
+		_cursorRenderer.SetPosition(0, firstPoint);
+		_cursorRenderer.SetPosition (1, secondPoint);
+	}
 
-	GameObject createStroke ()
+	GameObject createStrokeGameObject ()
 	{
 		GameObject go = new GameObject ();
 		go.AddComponent<MeshFilter> ();
@@ -141,13 +139,7 @@ public class DrawLineManager : MonoBehaviour {
 		return go;
 	}
 
-	void DrawOrientation (){
-		Vector3 firstPoint = OVRInput.GetLocalControllerPosition (OVRInput.Controller.RTouch) - (StripWidth/2.0f) * calcStrokeOrientation();
-		Vector3 secondPoint = OVRInput.GetLocalControllerPosition (OVRInput.Controller.RTouch) + (StripWidth/2.0f) * calcStrokeOrientation();
-		_orientationLineRend.SetPosition(0, firstPoint);
-		_orientationLineRend.SetPosition (1, secondPoint);
-	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		//if (instance != null) {
@@ -158,13 +150,13 @@ public class DrawLineManager : MonoBehaviour {
 			instance = new CollisionDetector ();
 		}
 		*/
-		DrawOrientation ();
+		DrawCursor (StripWidth);
 		// change the orientation of the strip on the basis of the joystick press right
 		if(OVRInput.Get (OVRInput.Button.PrimaryThumbstickRight, OVRInput.Controller.RTouch)){
-			StrokeOrientationFactor += 0.02f;
+			CursorOrientationFactor += 0.02f;
 			//StrokeOrientation = Vector3.RotateTowards (StrokeOrientation, OVRInput.GetLocalControllerRotation (OVRInput.Controller.RTouch) * Vector3.right, 0.05f, 0.0f);
 		} else if(OVRInput.Get (OVRInput.Button.PrimaryThumbstickLeft, OVRInput.Controller.RTouch)){
-			StrokeOrientationFactor -= 0.02f;
+			CursorOrientationFactor -= 0.02f;
 			//StrokeOrientation = Vector3.RotateTowards (StrokeOrientation, OVRInput.GetLocalControllerRotation (OVRInput.Controller.RTouch) * Vector3.up, 0.05f, 0.0f);
 		}
 
@@ -177,11 +169,11 @@ public class DrawLineManager : MonoBehaviour {
 
 		// Start and stop the strip drawing process
 		if (OVRInput.GetDown (OVRInput.Button.PrimaryIndexTrigger, OVRInput.Controller.RTouch)) {
-			GameObject go = createStroke ();
+			GameObject go = createStrokeGameObject ();
 			_currLine = go.AddComponent<MeshLineRenderer> ();
 			_currLine.SetMaterial (mat);
 			_currLine.setWidth(StripWidth);
-			_currLine.SetOrientation (calcStrokeOrientation());
+			_currLine.SetOrientation (calcCursorOrientation());
 			//currLine.endWidth = 0.1f;
 			numClicks = 0;
 			_prevPoint = OVRInput.GetLocalControllerPosition (OVRInput.Controller.RTouch);
@@ -192,7 +184,7 @@ public class DrawLineManager : MonoBehaviour {
 			_currLine.setWidth(StripWidth);
 			_currPoint = OVRInput.GetLocalControllerPosition (OVRInput.Controller.RTouch);
 			cleanPoint (_currLine, _currPoint);
-			_currLine.SetOrientation (calcStrokeOrientation());
+			_currLine.SetOrientation (calcCursorOrientation());
 			numClicks++;
 		}
 	}
