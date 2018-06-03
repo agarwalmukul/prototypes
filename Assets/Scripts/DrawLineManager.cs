@@ -38,7 +38,8 @@ public class DrawLineManager : MonoBehaviour {
 	//}
 
 	private Vector3 calcCursorPosition(){
-		return OVRInput.GetLocalControllerPosition (OVRInput.Controller.RTouch) + 0.1f * (OVRInput.GetLocalControllerRotation (OVRInput.Controller.RTouch) * Vector3.forward);
+		//return OVRInput.GetLocalControllerPosition (OVRInput.Controller.RTouch) + 0.1f * (OVRInput.GetLocalControllerRotation (OVRInput.Controller.RTouch) * Vector3.forward);
+		return OVRInput.GetLocalControllerPosition (OVRInput.Controller.RTouch) + 0.1f * (Vector3.forward);
 	}
 
 	private Vector3 _prevPoint = new Vector3(0,0,0);
