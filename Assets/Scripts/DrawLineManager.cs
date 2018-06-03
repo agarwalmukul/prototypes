@@ -31,6 +31,15 @@ public class DrawLineManager : MonoBehaviour {
 			}
 		}
 	}
+	//private Vector3 _cursorPosition;
+	//public Vector3 CursorPosition{
+	//	get{ return _cursorPosition; }
+	//	set{ }
+	//}
+
+	private Vector3 calcCursorPosition(){
+		return OVRInput.GetLocalControllerPosition (OVRInput.Controller.RTouch) + 0.1f * (OVRInput.GetLocalControllerRotation (OVRInput.Controller.RTouch) * Vector3.forward);
+	}
 
 	private Vector3 _prevPoint = new Vector3(0,0,0);
 	private Vector3 _currPoint = new Vector3(0,0,0);
@@ -122,8 +131,8 @@ public class DrawLineManager : MonoBehaviour {
 	}
 	// Draw the cursor using the width as a parameter
 	void DrawCursor (float width){
-		Vector3 firstPoint = OVRInput.GetLocalControllerPosition (OVRInput.Controller.RTouch) - (width/2.0f) * calcCursorOrientation();
-		Vector3 secondPoint = OVRInput.GetLocalControllerPosition (OVRInput.Controller.RTouch) + (width/2.0f) * calcCursorOrientation();
+		Vector3 firstPoint = calcCursorPosition() - (width/2.0f) * calcCursorOrientation();
+		Vector3 secondPoint = calcCursorPosition() + (width/2.0f) * calcCursorOrientation();
 		_cursorRenderer.SetPosition(0, firstPoint);
 		_cursorRenderer.SetPosition (1, secondPoint);
 	}
@@ -184,13 +193,13 @@ public class DrawLineManager : MonoBehaviour {
 			_currLine.SetOrientation (calcCursorOrientation());
 			//currLine.endWidth = 0.1f;
 			numClicks = 0;
-			_prevPoint = OVRInput.GetLocalControllerPosition (OVRInput.Controller.RTouch);
+			_prevPoint = calcCursorPosition();
 		}
 		else if (OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger, OVRInput.Controller.RTouch)){
 			//currLine.positionCount = numClicks + 1;
 			//currLine.SetPosition (numClicks, OVRInput.GetLocalControllerPosition (OVRInput.Controller.RTouch));
 			_currLine.setWidth(StripWidth);
-			_currPoint = OVRInput.GetLocalControllerPosition (OVRInput.Controller.RTouch);
+			_currPoint = calcCursorPosition();
 			cleanPoint (_currLine, _currPoint);
 			_currLine.SetOrientation (calcCursorOrientation());
 			numClicks++;
