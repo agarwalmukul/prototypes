@@ -36,10 +36,11 @@ public class DrawLineManager : MonoBehaviour {
 	//	get{ return _cursorPosition; }
 	//	set{ }
 	//}
-
+	private float _cursorDistance = 0.1f;
+	private float _cursorDistanceSpeed = 0.005f;
 	private Vector3 calcCursorPosition(){
 		//return OVRInput.GetLocalControllerPosition (OVRInput.Controller.RTouch) + 0.1f * (OVRInput.GetLocalControllerRotation (OVRInput.Controller.RTouch) * Vector3.forward);
-		return OVRInput.GetLocalControllerPosition (OVRInput.Controller.RTouch) + 0.1f * (Vector3.forward);
+		return OVRInput.GetLocalControllerPosition (OVRInput.Controller.RTouch) + _cursorDistance * (Vector3.forward);
 	}
 
 	private Vector3 _prevPoint = new Vector3(0,0,0);
@@ -170,12 +171,23 @@ public class DrawLineManager : MonoBehaviour {
 			//StrokeOrientation = Vector3.RotateTowards (StrokeOrientation, OVRInput.GetLocalControllerRotation (OVRInput.Controller.RTouch) * Vector3.up, 0.05f, 0.0f);
 		}
 
+		/*
+		// change the transparency of the avatar if the controller button 'A' is pressed. This was done so that I could see the 3D strokes that I have made more clearly
 		if (OVRInput.Get (OVRInput.Button.Two, OVRInput.Controller.RTouch)) {
 			_baseMeshRenderer.material.color = new Color(_baseMeshRenderer.material.color.r, _baseMeshRenderer.material.color.g, _baseMeshRenderer.material.color.b, 0.0f);
 			//baseMesh.SetActive (false);
 		} else {
 			//baseMesh.SetActive (true);
 			_baseMeshRenderer.material.color = new Color(_baseMeshRenderer.material.color.r, _baseMeshRenderer.material.color.g, _baseMeshRenderer.material.color.b, 1.0f);
+		}
+		*/
+
+		// Lets try giving the user a control on determining the distance of the 3D cursor from the controller. "A" button brings the cursor closer and "B" button pushes it away
+		if (OVRInput.Get (OVRInput.Button.Two, OVRInput.Controller.RTouch)) {
+			_cursorDistance += _cursorDistanceSpeed;
+		}
+		if (OVRInput.Get (OVRInput.Button.One, OVRInput.Controller.RTouch)) {
+			_cursorDistance -= _cursorDistanceSpeed;
 		}
 
 		// Change the width of the strip on the basis of the joystick press down
