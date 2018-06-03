@@ -35,7 +35,7 @@ public class DrawLineManager : MonoBehaviour {
 	private Vector3 _prevPoint = new Vector3(0,0,0);
 	private Vector3 _currPoint = new Vector3(0,0,0);
 
-	public GameObject handRight;
+	public GameObject baseMesh;
 	private MeshLineRenderer _currLine;
 	private int numClicks;
 	public Material mat;
@@ -84,7 +84,7 @@ public class DrawLineManager : MonoBehaviour {
 
 	private GameObject _cursor;
 	private LineRenderer _cursorRenderer;
-
+	private Renderer _baseMeshRenderer;
 	// Use this for initialization
 
 	void Start () {
@@ -97,7 +97,7 @@ public class DrawLineManager : MonoBehaviour {
 		_cursorRenderer.positionCount = 2;
 		_cursorRenderer.SetWidth (0.005f, 0.005f);
 
-
+		_baseMeshRenderer = baseMesh.GetComponent<Renderer> ();
 	}
 	// This renders the visual indicator for the orientation of the strip that will be generated
 	private float _cursorOrientationFactor = 0.0f;
@@ -160,6 +160,14 @@ public class DrawLineManager : MonoBehaviour {
 			//StrokeOrientation = Vector3.RotateTowards (StrokeOrientation, OVRInput.GetLocalControllerRotation (OVRInput.Controller.RTouch) * Vector3.up, 0.05f, 0.0f);
 		}
 
+		if (OVRInput.Get (OVRInput.Button.Two, OVRInput.Controller.RTouch)) {
+			_baseMeshRenderer.material.color = new Color(_baseMeshRenderer.material.color.r, _baseMeshRenderer.material.color.g, _baseMeshRenderer.material.color.b, 0.0f);
+			//baseMesh.SetActive (false);
+		} else {
+			//baseMesh.SetActive (true);
+			_baseMeshRenderer.material.color = new Color(_baseMeshRenderer.material.color.r, _baseMeshRenderer.material.color.g, _baseMeshRenderer.material.color.b, 1.0f);
+		}
+
 		// Change the width of the strip on the basis of the joystick press down
 		if(OVRInput.Get (OVRInput.Button.PrimaryThumbstickUp, OVRInput.Controller.RTouch)){
 			StripWidth += stripWidthChangeFactor;
@@ -187,5 +195,13 @@ public class DrawLineManager : MonoBehaviour {
 			_currLine.SetOrientation (calcCursorOrientation());
 			numClicks++;
 		}
+
+
+		if (CollisionDetector.CollidingBodyPart != null) {
+			Debug.Log (CollisionDetector.CollidingBodyPart.transform.name);
+		}
+
+
+
 	}
 }
