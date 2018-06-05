@@ -40,7 +40,7 @@ public class DrawLineManager : MonoBehaviour {
 	private float _cursorDistanceSpeed = 0.005f;
 	private Vector3 _originCursorPosition;
 	private Quaternion _originCursorRotation;
-
+	private bool _gripButtonDown = false;
 	private OVRInput.Controller _dominantHand = OVRInput.Controller.RTouch;
 	private OVRInput.Controller _nonDominantHand = OVRInput.Controller.LTouch;
 
@@ -174,6 +174,38 @@ public class DrawLineManager : MonoBehaviour {
 		return go;
 	}
 
+	// to display the grid plane on which the user is drawing strips
+	void GenerateGrid(Vector3 position, Quaternion rotation, Vector3 scale)
+	{
+		GameObject plane = GameObject.CreatePrimitive (PrimitiveType.Plane);
+		plane.transform.position = position;
+		plane.transform.rotation = rotation;
+		plane.transform.localScale = scale;
+		plane.AddComponent<BoxCollider> ();
+		//plane.AddComponent<MeshRenderer> ();
+		Texture2D gridImage = new Texture2D(64,64);
+		int borderSize = 1;
+		Color gridColor = Color.cyan;
+		Color borderColor = Color.black;
+		Collider floorCollider = plane.GetComponent<Collider>();
+		Vector3 floorSize = new Vector3(floorCollider.bounds.size.x, floorCollider.bounds.size.z);
+		for (int x = 0; x < gridImage.width; x++)
+		{
+			for (int y = 0; y < gridImage.height; y++)
+			{
+				if (x < borderSize || x > gridImage.width - borderSize || y < borderSize || y > gridImage.height - borderSize)
+				{
+					gridImage.SetPixel(x, y, new Color(borderColor.r, borderColor.g, borderColor.b, 50));
+				}
+				else gridImage.SetPixel(x, y, new Color(gridColor.r, gridColor.g, gridColor.b, 50));
+			}
+			gridImage.Apply();
+		}
+		MeshRenderer floorRenderer = plane.GetComponent<MeshRenderer>();
+		floorRenderer.material.mainTexture = gridImage;
+		floorRenderer.material.mainTextureScale = new Vector2(floorCollider.bounds.size.x, floorCollider.bounds.size.z);
+		floorRenderer.material.mainTextureOffset = new Vector2(.5f, .5f);
+	}
 
 	// Update is called once per frame
 	void Update () {
@@ -248,9 +280,20 @@ public class DrawLineManager : MonoBehaviour {
 		}
 
 		// assigning the origin of the drawing surface as this origin's x,y has to be defined in order to use the magnified surface.
-		if (OVRInput.Get (OVRInput.Axis1D.PrimaryHandTrigger, _dominantHand) > 0.9f && _originCursorPosition == new Vector3()) {
-			_originCursorPosition = calcCursorPosition ();
-			_originCursorRotation = OVRInput.GetLocalControllerRotation (_dominantHand);
+
+		if (OVRInput.Get (OVRInput.Axis1D.PrimaryHandTrigger, _dominantHand) > 0.9f && !_gripButtonDown) {
+			if (_originCursorPosition == new Vector3 ()) {
+				_originCursorPosition = calcCursorPosition ();
+				_originCursorRotation = OVRInput.GetLocalControllerRotation (_dominantHand);
+				Vector3 scale = new Vector3 (0.02f, 0.02f, 0.02f);
+				GenerateGrid (_originCursorPosition, _originCursorRotation, scale);
+			} else {
+				_originCursorPosition = new Vector3 ();
+				_originCursorRotation = new Quaternion ();
+			}
+			_gripButtonDown = true;
+		} else {
+			_gripButtonDown = false;
 		}
 
 
