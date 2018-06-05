@@ -52,9 +52,17 @@ public class DrawLineManager : MonoBehaviour {
 		//return OVRInput.GetLocalControllerPosition (OVRInput.Controller.RTouch) + _cursorDistance * (OVRInput.GetLocalControllerRotation (OVRInput.Controller.RTouch) * Vector3.forward);
 
 		if (_originCursorPosition != new Vector3()) {
-			return new Vector3 (_originCursorPosition.x+((controllerPosition.x-_originCursorPosition.x) * ((_cursorDistance-0.1f)*20.0f)), _originCursorPosition.y+((controllerPosition.y-_originCursorPosition.y) * ((_cursorDistance-0.1f)*20.0f)), controllerPosition.z) + _cursorDistance * (Vector3.forward);
+			Vector3 newX = _originCursorRotation * Vector3.right;
+			Vector3 newY = _originCursorRotation * Vector3.up;
+			Vector3 diff = controllerPosition - _originCursorPosition;
+			Vector3 scaledDiffNewX = (((_cursorDistance - 0.1f) * 20.0f) * Vector3.Dot (diff, newX)) * newX.normalized;
+			Vector3 scaledDiffNewY = (((_cursorDistance - 0.1f) * 20.0f) * Vector3.Dot (diff, newY)) * newY.normalized;
+			//Vector3 finalVector = ( * (diffNewX + diffNewY));
+			Vector3 newZ = OVRInput.GetLocalControllerPosition(_dominantHand) + _cursorDistance * (_originCursorRotation * Vector3.forward);
+			return scaledDiffNewX + scaledDiffNewY + newZ;
+			//return new Vector3 (_originCursorPosition.x+((controllerPosition.x-_originCursorPosition.x) * ((_cursorDistance-0.1f)*20.0f)), _originCursorPosition.y+((controllerPosition.y-_originCursorPosition.y) * ((_cursorDistance-0.1f)*20.0f)), controllerPosition.z) + _cursorDistance * (Vector3.forward);
 		} else {
-			return OVRInput.GetLocalControllerPosition (_dominantHand) + _cursorDistance * (Vector3.forward);
+			return OVRInput.GetLocalControllerPosition (_dominantHand) + _cursorDistance * (OVRInput.GetLocalControllerRotation(_dominantHand) * Vector3.forward);
 		}
 
 	}
@@ -240,8 +248,9 @@ public class DrawLineManager : MonoBehaviour {
 		}
 
 		// assigning the origin of the drawing surface as this origin's x,y has to be defined in order to use the magnified surface.
-		if (OVRInput.Get (OVRInput.Axis1D.PrimaryHandTrigger, _dominantHand) > 0.9f) {
+		if (OVRInput.Get (OVRInput.Axis1D.PrimaryHandTrigger, _dominantHand) > 0.9f && _originCursorPosition == new Vector3()) {
 			_originCursorPosition = calcCursorPosition ();
+			_originCursorRotation = OVRInput.GetLocalControllerRotation (_dominantHand);
 		}
 
 
