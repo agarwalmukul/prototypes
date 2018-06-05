@@ -38,9 +38,25 @@ public class DrawLineManager : MonoBehaviour {
 	//}
 	private float _cursorDistance = 0.1f;
 	private float _cursorDistanceSpeed = 0.005f;
+	private Vector3 _originCursorPosition;
+	private Quaternion _originCursorRotation;
+
+	private OVRInput.Controller _dominantHand = OVRInput.Controller.RTouch;
+	private OVRInput.Controller _nonDominantHand = OVRInput.Controller.LTouch;
+
 	private Vector3 calcCursorPosition(){
 		//return OVRInput.GetLocalControllerPosition (OVRInput.Controller.RTouch) + 0.1f * (OVRInput.GetLocalControllerRotation (OVRInput.Controller.RTouch) * Vector3.forward);
-		return OVRInput.GetLocalControllerPosition (OVRInput.Controller.RTouch) + _cursorDistance * (Vector3.forward);
+		Vector3 controllerPosition = OVRInput.GetLocalControllerPosition (_dominantHand);
+
+
+		//return OVRInput.GetLocalControllerPosition (OVRInput.Controller.RTouch) + _cursorDistance * (OVRInput.GetLocalControllerRotation (OVRInput.Controller.RTouch) * Vector3.forward);
+
+		if (_originCursorPosition != new Vector3()) {
+			return new Vector3 (_originCursorPosition.x+((controllerPosition.x-_originCursorPosition.x) * ((_cursorDistance-0.1f)*20.0f)), _originCursorPosition.y+((controllerPosition.y-_originCursorPosition.y) * ((_cursorDistance-0.1f)*20.0f)), controllerPosition.z) + _cursorDistance * (Vector3.forward);
+		} else {
+			return OVRInput.GetLocalControllerPosition (_dominantHand) + _cursorDistance * (Vector3.forward);
+		}
+
 	}
 
 	private Vector3 _prevPoint = new Vector3(0,0,0);
@@ -128,7 +144,7 @@ public class DrawLineManager : MonoBehaviour {
 	}
 	public Vector3 calcCursorOrientation (){
 		//get{
-		return ((1.0f - CursorOrientationFactor) * (OVRInput.GetLocalControllerRotation (OVRInput.Controller.RTouch) * Vector3.up) + CursorOrientationFactor * (OVRInput.GetLocalControllerRotation (OVRInput.Controller.RTouch) * Vector3.right)).normalized;
+		return ((1.0f - CursorOrientationFactor) * (OVRInput.GetLocalControllerRotation (_dominantHand) * Vector3.up) + CursorOrientationFactor * (OVRInput.GetLocalControllerRotation (_dominantHand) * Vector3.right)).normalized;
 		//}
 	}
 	// Draw the cursor using the width as a parameter
@@ -163,10 +179,10 @@ public class DrawLineManager : MonoBehaviour {
 		*/
 		DrawCursor (StripWidth);
 		// change the orientation of the strip on the basis of the joystick press right
-		if(OVRInput.Get (OVRInput.Button.PrimaryThumbstickRight, OVRInput.Controller.RTouch)){
+		if(OVRInput.Get (OVRInput.Button.PrimaryThumbstickRight, _dominantHand)){
 			CursorOrientationFactor += 0.02f;
 			//StrokeOrientation = Vector3.RotateTowards (StrokeOrientation, OVRInput.GetLocalControllerRotation (OVRInput.Controller.RTouch) * Vector3.right, 0.05f, 0.0f);
-		} else if(OVRInput.Get (OVRInput.Button.PrimaryThumbstickLeft, OVRInput.Controller.RTouch)){
+		} else if(OVRInput.Get (OVRInput.Button.PrimaryThumbstickLeft, _dominantHand)){
 			CursorOrientationFactor -= 0.02f;
 			//StrokeOrientation = Vector3.RotateTowards (StrokeOrientation, OVRInput.GetLocalControllerRotation (OVRInput.Controller.RTouch) * Vector3.up, 0.05f, 0.0f);
 		}
@@ -183,22 +199,22 @@ public class DrawLineManager : MonoBehaviour {
 		*/
 
 		// Lets try giving the user a control on determining the distance of the 3D cursor from the controller. "A" button brings the cursor closer and "B" button pushes it away
-		if (OVRInput.Get (OVRInput.Button.Two, OVRInput.Controller.RTouch)) {
+		if (OVRInput.Get (OVRInput.Button.Two, _dominantHand)) {
 			_cursorDistance += _cursorDistanceSpeed;
 		}
-		if (OVRInput.Get (OVRInput.Button.One, OVRInput.Controller.RTouch)) {
+		if (OVRInput.Get (OVRInput.Button.One, _dominantHand)) {
 			_cursorDistance -= _cursorDistanceSpeed;
 		}
 
 		// Change the width of the strip on the basis of the joystick press down
-		if(OVRInput.Get (OVRInput.Button.PrimaryThumbstickUp, OVRInput.Controller.RTouch)){
+		if(OVRInput.Get (OVRInput.Button.PrimaryThumbstickUp, _dominantHand)){
 			StripWidth += stripWidthChangeFactor;
-		} else if(OVRInput.Get (OVRInput.Button.PrimaryThumbstickDown, OVRInput.Controller.RTouch)){
+		} else if(OVRInput.Get (OVRInput.Button.PrimaryThumbstickDown, _dominantHand)){
 			StripWidth -= stripWidthChangeFactor;
 		}
 
 		// Start and stop the strip drawing process
-		if (OVRInput.GetDown (OVRInput.Button.PrimaryIndexTrigger, OVRInput.Controller.RTouch)) {
+		if (OVRInput.GetDown (OVRInput.Button.PrimaryIndexTrigger, _dominantHand)) {
 			GameObject go = createStrokeGameObject ();
 			_currLine = go.AddComponent<MeshLineRenderer> ();
 			_currLine.SetMaterial (mat);
@@ -208,7 +224,7 @@ public class DrawLineManager : MonoBehaviour {
 			numClicks = 0;
 			_prevPoint = calcCursorPosition();
 		}
-		else if (OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger, OVRInput.Controller.RTouch)){
+		else if (OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger, _dominantHand)){
 			//currLine.positionCount = numClicks + 1;
 			//currLine.SetPosition (numClicks, OVRInput.GetLocalControllerPosition (OVRInput.Controller.RTouch));
 			_currLine.setWidth(StripWidth);
@@ -223,6 +239,10 @@ public class DrawLineManager : MonoBehaviour {
 			Debug.Log (CollisionDetector.CollidingBodyPart.transform.name);
 		}
 
+		// assigning the origin of the drawing surface as this origin's x,y has to be defined in order to use the magnified surface.
+		if (OVRInput.Get (OVRInput.Axis1D.PrimaryHandTrigger, _dominantHand) > 0.9f) {
+			_originCursorPosition = calcCursorPosition ();
+		}
 
 
 	}
