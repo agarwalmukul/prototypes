@@ -1035,7 +1035,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseMesh: {fileID: 1891354893}
-  mat: {fileID: 2100000, guid: aeb54ae1b95708a4fae0ea90312c3996, type: 2}
+  strokeMat: {fileID: 2100000, guid: aeb54ae1b95708a4fae0ea90312c3996, type: 2}
+  gridMat: {fileID: 2100000, guid: 66b2688fa8a957a4faa00e619c011559, type: 2}
 --- !u!1 &692546937
 GameObject:
   m_ObjectHideFlags: 0

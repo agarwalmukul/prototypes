@@ -40,7 +40,7 @@ public class DrawLineManager : MonoBehaviour {
 	private float _cursorDistanceSpeed = 0.005f;
 	private Vector3 _originCursorPosition;
 	private Quaternion _originCursorRotation;
-	private bool _gripButtonDown = false;
+
 	private OVRInput.Controller _dominantHand = OVRInput.Controller.RTouch;
 	private OVRInput.Controller _nonDominantHand = OVRInput.Controller.LTouch;
 
@@ -73,7 +73,8 @@ public class DrawLineManager : MonoBehaviour {
 	public GameObject baseMesh;
 	private MeshLineRenderer _currLine;
 	private int numClicks;
-	public Material mat;
+	public Material strokeMat;
+	public Material gridMat;
 
 	void cleanPoint (MeshLineRenderer currLine, Vector3 newPoint)
 	{
@@ -177,34 +178,63 @@ public class DrawLineManager : MonoBehaviour {
 	// to display the grid plane on which the user is drawing strips
 	void GenerateGrid(Vector3 position, Quaternion rotation, Vector3 scale)
 	{
-		GameObject plane = GameObject.CreatePrimitive (PrimitiveType.Plane);
-		plane.transform.position = position;
-		plane.transform.rotation = rotation;
-		plane.transform.localScale = scale;
-		plane.AddComponent<BoxCollider> ();
+		if (_grid==null) {
+			_grid = GameObject.CreatePrimitive (PrimitiveType.Plane);
+		}
+		//_grid = GameObject.CreatePrimitive (PrimitiveType.Plane);
+		_grid.transform.position = position;
+		rotation *= Quaternion.Euler (90, 180, 0);
+		_grid.transform.rotation = rotation;
+		//plane.transform.LookAt(Vector3.Cross(position - 200.0f* (rotation * Vector3.forward), position - 200.0f* (rotation * Vector3.up)));
+		Debug.Log(rotation + " " + _grid.transform.rotation + " " + rotation * Vector3.forward + " " +   rotation * Vector3.right + " " + rotation * Vector3.up);
+		//plane.transform.rotation = Quaternion.Lerp (plane.transform.rotation, rotation);
+		//plane.transform.LookAt(OVRInput.GetLocalControllerPosition(_dominantHand));
+		_grid.transform.localScale = scale;
+		//plane.AddComponent<BoxCollider> ();
 		//plane.AddComponent<MeshRenderer> ();
-		Texture2D gridImage = new Texture2D(64,64);
-		int borderSize = 1;
-		Color gridColor = Color.cyan;
-		Color borderColor = Color.black;
-		Collider floorCollider = plane.GetComponent<Collider>();
-		Vector3 floorSize = new Vector3(floorCollider.bounds.size.x, floorCollider.bounds.size.z);
+		//Texture2D gridImage = new Texture2D(64,64, TextureFormat.ARGB32, false);
+		//int borderSize = 1;
+		//Color gridColor = Color.cyan;
+		//Color borderColor = Color.black;
+		//Collider floorCollider = plane.GetComponent<Collider>();
+		//Vector3 floorSize = new Vector3(floorCollider.bounds.size.x, floorCollider.bounds.size.z);
+		/*
 		for (int x = 0; x < gridImage.width; x++)
 		{
 			for (int y = 0; y < gridImage.height; y++)
 			{
+				gridImage.SetPixel (x, y, Color.clear);
+				/*
 				if (x < borderSize || x > gridImage.width - borderSize || y < borderSize || y > gridImage.height - borderSize)
 				{
-					gridImage.SetPixel(x, y, new Color(borderColor.r, borderColor.g, borderColor.b, 50));
+					gridImage.SetPixel(x, y, new Color(borderColor.r, borderColor.g, borderColor.b, 0.5f));
 				}
-				else gridImage.SetPixel(x, y, new Color(gridColor.r, gridColor.g, gridColor.b, 50));
+				else gridImage.SetPixel(x, y, new Color(gridColor.r, gridColor.g, gridColor.b, 0.0f));
+				///// end the nested multi line comment here
 			}
 			gridImage.Apply();
+			for (int y = 0; y < gridImage.height; y++)
+			{
+				
+				if (x < borderSize || x > gridImage.width - borderSize || y < borderSize || y > gridImage.height - borderSize)
+				{
+					gridImage.SetPixel(x, y, new Color(borderColor.r, borderColor.g, borderColor.b, 0.5f));
+				}
+				else gridImage.SetPixel(x, y, new Color(gridColor.r, gridColor.g, gridColor.b, 0.0f));
+
+			}
+			gridImage.Apply ();
 		}
-		MeshRenderer floorRenderer = plane.GetComponent<MeshRenderer>();
+		*/
+		MeshRenderer floorRenderer = _grid.GetComponent<MeshRenderer>();
+		floorRenderer.material = gridMat;
+		_grid.SetActive (true);
+		/*
 		floorRenderer.material.mainTexture = gridImage;
-		floorRenderer.material.mainTextureScale = new Vector2(floorCollider.bounds.size.x, floorCollider.bounds.size.z);
+		floorRenderer.material.mainTextureScale = 100.0f * new Vector2(floorCollider.bounds.size.x, floorCollider.bounds.size.z);
 		floorRenderer.material.mainTextureOffset = new Vector2(.5f, .5f);
+		floorRenderer.sharedMaterial.SetFloat ("_Mode", 3.0f);
+		*/
 	}
 
 	// Update is called once per frame
@@ -257,7 +287,7 @@ public class DrawLineManager : MonoBehaviour {
 		if (OVRInput.GetDown (OVRInput.Button.PrimaryIndexTrigger, _dominantHand)) {
 			GameObject go = createStrokeGameObject ();
 			_currLine = go.AddComponent<MeshLineRenderer> ();
-			_currLine.SetMaterial (mat);
+			_currLine.SetMaterial (strokeMat);
 			_currLine.setWidth(StripWidth);
 			_currLine.SetOrientation (calcCursorOrientation());
 			//currLine.endWidth = 0.1f;
@@ -274,28 +304,40 @@ public class DrawLineManager : MonoBehaviour {
 			numClicks++;
 		}
 
-
+		/*
 		if (CollisionDetector.CollidingBodyPart != null) {
 			Debug.Log (CollisionDetector.CollidingBodyPart.transform.name);
+		}*/
+
+		// event system for detecting the frame where gripDown happens
+		if (OVRInput.Get (OVRInput.Axis1D.PrimaryHandTrigger, _dominantHand) > 0.9f) {
+			if (_gripDownCount == 0) {
+				_gripDownCount = 1;
+				_gripDown = true;
+			} else {
+				_gripDown = false;
+			}
+		} else {
+			if (_gripDownCount == 1) {
+				_gripDownCount = 0;
+			}
 		}
 
 		// assigning the origin of the drawing surface as this origin's x,y has to be defined in order to use the magnified surface.
-
-		if (OVRInput.Get (OVRInput.Axis1D.PrimaryHandTrigger, _dominantHand) > 0.9f && !_gripButtonDown) {
+		if (_gripDown) {
 			if (_originCursorPosition == new Vector3 ()) {
 				_originCursorPosition = calcCursorPosition ();
 				_originCursorRotation = OVRInput.GetLocalControllerRotation (_dominantHand);
-				Vector3 scale = new Vector3 (0.02f, 0.02f, 0.02f);
+				Vector3 scale = new Vector3(0.02f,0.02f,0.02f);
 				GenerateGrid (_originCursorPosition, _originCursorRotation, scale);
 			} else {
 				_originCursorPosition = new Vector3 ();
 				_originCursorRotation = new Quaternion ();
+				_grid.SetActive (false);
 			}
-			_gripButtonDown = true;
-		} else {
-			_gripButtonDown = false;
 		}
-
-
 	}
+	private GameObject _grid;
+	private bool _gripDown = false;
+	private int _gripDownCount = 0;
 }
