@@ -17,6 +17,7 @@ public class DrawLineManager : MonoBehaviour {
 	}
 	public operations currentOperation;
 	*/
+	public GameObject interactionCursor;
 	private float stripWidthChangeFactor = 0.001f;
 	private float _stripWidth = 0.1f;
 	public float StripWidth {
@@ -43,6 +44,12 @@ public class DrawLineManager : MonoBehaviour {
 
 	private OVRInput.Controller _dominantHand = OVRInput.Controller.RTouch;
 	private OVRInput.Controller _nonDominantHand = OVRInput.Controller.LTouch;
+
+	// calculate the position of the interaction cursor, put it 0.1 m in front of the touch controller
+	private Vector3 calcInteractionCursorPosition(){
+		Vector3 controllerPosition = OVRInput.GetLocalControllerPosition (_dominantHand);
+		return OVRInput.GetLocalControllerPosition (_dominantHand) + 0.1f * (OVRInput.GetLocalControllerRotation(_dominantHand) * Vector3.forward);
+	}
 
 	private Vector3 calcCursorPosition(){
 		//return OVRInput.GetLocalControllerPosition (OVRInput.Controller.RTouch) + 0.1f * (OVRInput.GetLocalControllerRotation (OVRInput.Controller.RTouch) * Vector3.forward);
@@ -247,6 +254,9 @@ public class DrawLineManager : MonoBehaviour {
 			instance = new CollisionDetector ();
 		}
 		*/
+		// the interaction cursor is positioned where the cursor is
+		interactionCursor.transform.position = calcInteractionCursorPosition ();
+
 		DrawCursor (StripWidth);
 		// change the orientation of the strip on the basis of the joystick press right
 		if(OVRInput.Get (OVRInput.Button.PrimaryThumbstickRight, _dominantHand)){
