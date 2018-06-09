@@ -29,7 +29,7 @@ public class InteractionManager: MonoBehaviour {
 	public int state = 10;
 
 	public void interactionStateActivated(stripColor value){
-		Debug.Log (value);
+		
 		onInteraction (value);
 	}
 }

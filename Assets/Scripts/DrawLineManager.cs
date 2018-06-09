@@ -65,7 +65,8 @@ public class DrawLineManager : MonoBehaviour {
 			Vector3 scaledDiffNewX = (((_cursorDistance - 0.1f) * 20.0f) * Vector3.Dot (diff, newX)) * newX.normalized;
 			Vector3 scaledDiffNewY = (((_cursorDistance - 0.1f) * 20.0f) * Vector3.Dot (diff, newY)) * newY.normalized;
 			//Vector3 finalVector = ( * (diffNewX + diffNewY));
-			Vector3 newZ = OVRInput.GetLocalControllerPosition(_dominantHand) + _cursorDistance * (_originCursorRotation * Vector3.forward);
+			//Vector3 newZ = OVRInput.GetLocalControllerPosition(_dominantHand) + _cursorDistance * (_originCursorRotation * Vector3.forward);
+			Vector3 newZ = _originCursorPosition;
 			return scaledDiffNewX + scaledDiffNewY + newZ;
 			//return new Vector3 (_originCursorPosition.x+((controllerPosition.x-_originCursorPosition.x) * ((_cursorDistance-0.1f)*20.0f)), _originCursorPosition.y+((controllerPosition.y-_originCursorPosition.y) * ((_cursorDistance-0.1f)*20.0f)), controllerPosition.z) + _cursorDistance * (Vector3.forward);
 		} else {
@@ -141,30 +142,45 @@ public class DrawLineManager : MonoBehaviour {
 		_cursorRenderer.startWidth = 0.005f;
 		_cursorRenderer.endWidth = 0.005f;
 		//_cursorRenderer.SetWidth (0.005f, 0.005f);
-
+		_cursorRenderer.material = new Material(strokeMat);
 		_baseMeshRenderer = baseMesh.GetComponent<Renderer> ();
-
 		// subscribe to the UI input action
 		InteractionManager.Instance.onInteraction += onUIActivated;
 
 	}
 
+	private string _modeDetermine = "idle";
+	private string ModeDetermine{
+		get{
+			return _modeDetermine;
+		}
+		set{
+			_modeDetermine = value;
+		}
+	}
+
 	// this event is called when the user interacts with the UI elements
 	void onUIActivated(stripColor value){
-		switch (value) {
+		if (ModeDetermine == "idle") {
+			switch (value) {
 			case stripColor.RED:
 				strokeMat.color = Color.red;
+				_cursorRenderer.material.color = Color.red;
 				break;
 			case stripColor.BLUE:
 				strokeMat.color = Color.blue;
+				_cursorRenderer.material.color = Color.blue;
 				break;
 			case stripColor.GREEN:
 				strokeMat.color = Color.green;
+				_cursorRenderer.material.color = Color.green;
 				break;
 			case stripColor.YELLOW:
 				strokeMat.color = Color.yellow;
+				_cursorRenderer.material.color = Color.yellow;
 				break;
-		}
+			}
+		}else if (ModeDetermine == "drawing"){}
 	}
 	// This renders the visual indicator for the orientation of the strip that will be generated
 	private float _cursorOrientationFactor = 0.0f;
@@ -184,7 +200,12 @@ public class DrawLineManager : MonoBehaviour {
 	}
 	public Vector3 calcCursorOrientation (){
 		//get{
+		//if (_originCursorPosition != new Vector3()) {
+		//	return ((1.0f - CursorOrientationFactor) * (_originCursorRotation * Vector3.up) + CursorOrientationFactor * (_originCursorRotation * Vector3.right)).normalized;
+		//}
+		//else{
 		return ((1.0f - CursorOrientationFactor) * (OVRInput.GetLocalControllerRotation (_dominantHand) * Vector3.up) + CursorOrientationFactor * (OVRInput.GetLocalControllerRotation (_dominantHand) * Vector3.right)).normalized;
+		//}
 		//}
 	}
 	// Draw the cursor using the width as a parameter
@@ -221,63 +242,14 @@ public class DrawLineManager : MonoBehaviour {
 		//plane.transform.rotation = Quaternion.Lerp (plane.transform.rotation, rotation);
 		//plane.transform.LookAt(OVRInput.GetLocalControllerPosition(_dominantHand));
 		_grid.transform.localScale = scale;
-		//plane.AddComponent<BoxCollider> ();
-		//plane.AddComponent<MeshRenderer> ();
-		//Texture2D gridImage = new Texture2D(64,64, TextureFormat.ARGB32, false);
-		//int borderSize = 1;
-		//Color gridColor = Color.cyan;
-		//Color borderColor = Color.black;
-		//Collider floorCollider = plane.GetComponent<Collider>();
-		//Vector3 floorSize = new Vector3(floorCollider.bounds.size.x, floorCollider.bounds.size.z);
-		/*
-		for (int x = 0; x < gridImage.width; x++)
-		{
-			for (int y = 0; y < gridImage.height; y++)
-			{
-				gridImage.SetPixel (x, y, Color.clear);
-				/*
-				if (x < borderSize || x > gridImage.width - borderSize || y < borderSize || y > gridImage.height - borderSize)
-				{
-					gridImage.SetPixel(x, y, new Color(borderColor.r, borderColor.g, borderColor.b, 0.5f));
-				}
-				else gridImage.SetPixel(x, y, new Color(gridColor.r, gridColor.g, gridColor.b, 0.0f));
-				///// end the nested multi line comment here
-			}
-			gridImage.Apply();
-			for (int y = 0; y < gridImage.height; y++)
-			{
-				
-				if (x < borderSize || x > gridImage.width - borderSize || y < borderSize || y > gridImage.height - borderSize)
-				{
-					gridImage.SetPixel(x, y, new Color(borderColor.r, borderColor.g, borderColor.b, 0.5f));
-				}
-				else gridImage.SetPixel(x, y, new Color(gridColor.r, gridColor.g, gridColor.b, 0.0f));
-
-			}
-			gridImage.Apply ();
-		}
-		*/
 		MeshRenderer floorRenderer = _grid.GetComponent<MeshRenderer>();
 		floorRenderer.material = gridMat;
 		_grid.SetActive (true);
-		/*
-		floorRenderer.material.mainTexture = gridImage;
-		floorRenderer.material.mainTextureScale = 100.0f * new Vector2(floorCollider.bounds.size.x, floorCollider.bounds.size.z);
-		floorRenderer.material.mainTextureOffset = new Vector2(.5f, .5f);
-		floorRenderer.sharedMaterial.SetFloat ("_Mode", 3.0f);
-		*/
 	}
 
 	// Update is called once per frame
 	void Update () {
-		//if (instance != null) {
-		//Debug.Log (CollisionDetector.CollidingBodyPart.transform);
-		//}
-		/*
-		else {
-			instance = new CollisionDetector ();
-		}
-		*/
+		
 		// the interaction cursor is positioned where the cursor is
 		interactionCursor.transform.position = calcInteractionCursorPosition ();
 
@@ -318,6 +290,7 @@ public class DrawLineManager : MonoBehaviour {
 		}
 
 		// Start and stop the strip drawing process
+		// create the strip gameobject and setup initial parameters
 		if (OVRInput.GetDown (OVRInput.Button.PrimaryIndexTrigger, _dominantHand)) {
 			GameObject go = createStrokeGameObject ();
 			_currLine = go.AddComponent<MeshLineRenderer> ();
@@ -327,7 +300,9 @@ public class DrawLineManager : MonoBehaviour {
 			//currLine.endWidth = 0.1f;
 			numClicks = 0;
 			_prevPoint = calcCursorPosition();
+			ModeDetermine = "drawing";
 		}
+		// add strips to the existing stroke that you are drawing
 		else if (OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger, _dominantHand)){
 			//currLine.positionCount = numClicks + 1;
 			//currLine.SetPosition (numClicks, OVRInput.GetLocalControllerPosition (OVRInput.Controller.RTouch));
@@ -337,6 +312,11 @@ public class DrawLineManager : MonoBehaviour {
 			_currLine.SetOrientation (calcCursorOrientation());
 			numClicks++;
 		}
+		// when you stop drawing change the mode to idle so that you can respond to ui changes again
+		else if (OVRInput.GetUp (OVRInput.Button.PrimaryIndexTrigger, _dominantHand)){
+			ModeDetermine = "idle";
+		}
+
 
 		/*
 		if (CollisionDetector.CollidingBodyPart != null) {
