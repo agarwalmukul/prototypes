@@ -22,6 +22,8 @@ public class InteractiveElement : MonoBehaviour {
 
 	void OnTriggerEnter(){
 		//onInteraction (colorValue);
-		InteractionManager.interactionStateActivated(colorValue);
+		InteractionManager.Instance.state++;
+		InteractionManager.Instance.interactionStateActivated(colorValue);
+
 	}
 }

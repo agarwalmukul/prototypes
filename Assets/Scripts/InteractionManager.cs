@@ -3,14 +3,33 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public enum stripColor{
-	Green, Red, Blue, Yellow
+	GREEN, RED, BLUE, YELLOW
 };
 	
-public static class InteractionManager {
+public class InteractionManager: MonoBehaviour {
 
+	private static InteractionManager _instance;
+	public static InteractionManager Instance { 
+		get{
+			if (_instance == null) {
+				GameObject go = new GameObject ();
+				go.AddComponent<InteractionManager> ();
+			}
+			return _instance;
+		}
+	}
 
+	public delegate void Interaction(stripColor value);
+	public event Interaction onInteraction;
 
-	public static void interactionStateActivated(stripColor value){
+	void Awake(){
+		_instance = this;
+	}
+
+	public int state = 10;
+
+	public void interactionStateActivated(stripColor value){
 		Debug.Log (value);
+		onInteraction (value);
 	}
 }

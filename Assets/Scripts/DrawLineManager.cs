@@ -138,9 +138,33 @@ public class DrawLineManager : MonoBehaviour {
 		_cursor.AddComponent<LineRenderer> ();
 		_cursorRenderer = _cursor.GetComponent<LineRenderer> ();
 		_cursorRenderer.positionCount = 2;
-		_cursorRenderer.SetWidth (0.005f, 0.005f);
+		_cursorRenderer.startWidth = 0.005f;
+		_cursorRenderer.endWidth = 0.005f;
+		//_cursorRenderer.SetWidth (0.005f, 0.005f);
 
 		_baseMeshRenderer = baseMesh.GetComponent<Renderer> ();
+
+		// subscribe to the UI input action
+		InteractionManager.Instance.onInteraction += onUIActivated;
+
+	}
+
+	// this event is called when the user interacts with the UI elements
+	void onUIActivated(stripColor value){
+		switch (value) {
+			case stripColor.RED:
+				strokeMat.color = Color.red;
+				break;
+			case stripColor.BLUE:
+				strokeMat.color = Color.blue;
+				break;
+			case stripColor.GREEN:
+				strokeMat.color = Color.green;
+				break;
+			case stripColor.YELLOW:
+				strokeMat.color = Color.yellow;
+				break;
+		}
 	}
 	// This renders the visual indicator for the orientation of the strip that will be generated
 	private float _cursorOrientationFactor = 0.0f;
@@ -297,7 +321,7 @@ public class DrawLineManager : MonoBehaviour {
 		if (OVRInput.GetDown (OVRInput.Button.PrimaryIndexTrigger, _dominantHand)) {
 			GameObject go = createStrokeGameObject ();
 			_currLine = go.AddComponent<MeshLineRenderer> ();
-			_currLine.SetMaterial (strokeMat);
+			_currLine.SetMaterial (new Material(strokeMat));
 			_currLine.setWidth(StripWidth);
 			_currLine.SetOrientation (calcCursorOrientation());
 			//currLine.endWidth = 0.1f;
