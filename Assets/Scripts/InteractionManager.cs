@@ -26,8 +26,6 @@ public class InteractionManager: MonoBehaviour {
 		_instance = this;
 	}
 
-	public int state = 10;
-
 	public void interactionStateActivated(stripColor value){
 		
 		onInteraction (value);

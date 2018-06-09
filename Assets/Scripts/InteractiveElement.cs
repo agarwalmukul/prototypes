@@ -20,10 +20,26 @@ public class InteractiveElement : MonoBehaviour {
 		
 	}
 
+	// manage the hover state of the cuboid button
+	void clickState(bool value){
+		Renderer rend = GetComponent<Renderer> ();
+		if (value) {
+			rend.material.shader = Shader.Find ("Custom/ToyCubeOutline");
+		} 
+		else {
+			rend.material.shader = Shader.Find ("Standard");
+		}
+	}
+
 	void OnTriggerEnter(){
 		//onInteraction (colorValue);
-		InteractionManager.Instance.state++;
+		//InteractionManager.Instance.state++;
+		clickState(true);
 		InteractionManager.Instance.interactionStateActivated(colorValue);
 
+	}
+
+	void OnTriggerExit(){
+		clickState (false);
 	}
 }

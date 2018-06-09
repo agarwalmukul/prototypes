@@ -204,8 +204,21 @@ public class DrawLineManager : MonoBehaviour {
 		//	return ((1.0f - CursorOrientationFactor) * (_originCursorRotation * Vector3.up) + CursorOrientationFactor * (_originCursorRotation * Vector3.right)).normalized;
 		//}
 		//else{
+		/***
+		 * experiment to see if we can predict what orientation the user wants the stroke in without lookahead like tilt brush
+		 if (_currPoint != new Vector3 ()) {
+			Vector3 curr = _currPoint - OVRInput.GetLocalControllerPosition (_dominantHand);
+			Vector3 prev = _prevPoint - OVRInput.GetLocalControllerPosition (_dominantHand);
+			Vector3 orientation = Vector3.Cross (curr, prev).normalized;
+
+			return orientation;
+		} else {
+			return ((1.0f - CursorOrientationFactor) * (OVRInput.GetLocalControllerRotation (_dominantHand) * Vector3.up) + CursorOrientationFactor * (OVRInput.GetLocalControllerRotation (_dominantHand) * Vector3.right)).normalized;
+		}
+		***/
+		
 		return ((1.0f - CursorOrientationFactor) * (OVRInput.GetLocalControllerRotation (_dominantHand) * Vector3.up) + CursorOrientationFactor * (OVRInput.GetLocalControllerRotation (_dominantHand) * Vector3.right)).normalized;
-		//}
+			//}
 		//}
 	}
 	// Draw the cursor using the width as a parameter
@@ -310,6 +323,7 @@ public class DrawLineManager : MonoBehaviour {
 			_currPoint = calcCursorPosition();
 			cleanPoint (_currLine, _currPoint);
 			_currLine.SetOrientation (calcCursorOrientation());
+			_prevPoint = _currPoint;
 			numClicks++;
 		}
 		// when you stop drawing change the mode to idle so that you can respond to ui changes again
