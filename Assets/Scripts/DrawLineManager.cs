@@ -17,6 +17,8 @@ public class DrawLineManager : MonoBehaviour {
 	}
 	public operations currentOperation;
 	*/
+
+
 	public GameObject interactionCursor;
 	private float stripWidthChangeFactor = 0.001f;
 	private float _stripWidth = 0.1f;
@@ -45,10 +47,16 @@ public class DrawLineManager : MonoBehaviour {
 	private OVRInput.Controller _dominantHand = OVRInput.Controller.RTouch;
 	private OVRInput.Controller _nonDominantHand = OVRInput.Controller.LTouch;
 
+
+	// setup the plane detection class
+	public ZEDPlaneDetectionManager testOne = new ZEDPlaneDetectionManager();
+	//test.DetectPlaneAtHit(new Vector2());
+	public GameObject frame;
+
 	// calculate the position of the interaction cursor, put it 0.1 m in front of the touch controller
 	private Vector3 calcInteractionCursorPosition(){
 		Vector3 controllerPosition = OVRInput.GetLocalControllerPosition (_dominantHand);
-		return OVRInput.GetLocalControllerPosition (_dominantHand) + 0.1f * (OVRInput.GetLocalControllerRotation(_dominantHand) * Vector3.forward);
+		return controllerPosition + 0.1f * (OVRInput.GetLocalControllerRotation(_dominantHand) * Vector3.forward);
 	}
 
 	private Vector3 calcCursorPosition(){
@@ -128,6 +136,11 @@ public class DrawLineManager : MonoBehaviour {
 
 	private GameObject _cursor;
 	private LineRenderer _cursorRenderer;
+
+	public bool debugMode = true;
+	private GameObject _debugGO;
+	private LineRenderer _debugRenderer;
+
 	private Renderer _baseMeshRenderer;
 	// Use this for initialization
 
@@ -147,6 +160,9 @@ public class DrawLineManager : MonoBehaviour {
 		// subscribe to the UI input action
 		InteractionManager.Instance.onInteraction += onUIActivated;
 
+		if (debugMode) {
+			SetupDebug ();
+		}
 	}
 
 	private string _modeDetermine = "idle";
@@ -262,9 +278,14 @@ public class DrawLineManager : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		
+		findPlaneClosestTo3DCursor ();
 		// the interaction cursor is positioned where the cursor is
 		interactionCursor.transform.position = calcInteractionCursorPosition ();
+
+		// debugging purposes
+		if(debugMode){
+			DrawDebug ();
+		}
 
 		DrawCursor (StripWidth);
 		// change the orientation of the strip on the basis of the joystick press right
@@ -368,4 +389,34 @@ public class DrawLineManager : MonoBehaviour {
 	private GameObject _grid;
 	private bool _gripDown = false;
 	private int _gripDownCount = 0;
+
+	void findPlaneClosestTo3DCursor(){
+		//testOne.DetectPlaneAtHit (Vector3);
+		// the origin is moved beyond the interaction cursor position so as not to detect the raycast collision with it
+		Vector3 origin = OVRInput.GetLocalControllerPosition (_dominantHand) + 0.3f * (OVRInput.GetLocalControllerRotation(_dominantHand) * Vector3.forward);
+		Ray ray = new Ray(origin, OVRInput.GetLocalControllerRotation(_dominantHand)* Vector3.forward);
+		RaycastHit hit;
+		if(Physics.Raycast(ray, out hit, 100.0f)){
+			Debug.Log ("hit detected" + hit.collider.transform.gameObject.name);
+		}
+		//Debug.Log (Camera.main.gameObject.name);
+	}
+
+	void SetupDebug(){
+		_debugGO = new GameObject();
+		_debugGO.AddComponent<LineRenderer> ();
+		_debugGO.layer = 18;
+		_debugRenderer = _debugGO.GetComponent<LineRenderer> ();
+		_debugRenderer.positionCount = 2;
+		_debugRenderer.startWidth = 0.005f;
+		_debugRenderer.endWidth = 0.005f;
+		//_cursorRenderer.SetWidth (0.005f, 0.005f);
+		_debugRenderer.material = new Material(strokeMat);
+	}
+
+	void DrawDebug(){
+		_debugRenderer.SetPosition (0, OVRInput.GetLocalControllerPosition (_dominantHand));
+		_debugRenderer.SetPosition (1, OVRInput.GetLocalControllerPosition (_dominantHand) + 10.0f*(OVRInput.GetLocalControllerRotation (_dominantHand) * Vector3.forward));
+	}
+
 }

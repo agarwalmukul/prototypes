@@ -50,7 +50,7 @@ public class ZEDPlaneRenderer : MonoBehaviour
 			planeTex.Create();
 		}
 
-		cam.enabled = false;
+		cam.enabled = true;
 		cam.cullingMask = (1 << sl.ZEDCamera.TagOneObject);
 		cam.targetTexture = planeTex;
 		cam.nearClipPlane = 0.1f;

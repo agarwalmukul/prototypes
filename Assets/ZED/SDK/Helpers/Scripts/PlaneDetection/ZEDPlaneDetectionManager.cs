@@ -10,7 +10,7 @@ using UnityEditor;
 /// <summary>
 /// Contols the ZEDSpatialMapping and hides its implementation
 /// </summary>
-[DisallowMultipleComponent]
+//[DisallowMultipleComponent]
 public class ZEDPlaneDetectionManager : MonoBehaviour
 { 
 	private GameObject holder;
