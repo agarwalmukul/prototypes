@@ -28,7 +28,7 @@ public class ZEDRenderingPlane : MonoBehaviour
     /// The screen is the quad where the textures are displayed
     /// </summary>
     public GameObject canvas;
-
+	public RenderTexture depthMap;
     /// <summary>
     /// It's the main material, used to set the color and the depth
     /// </summary>
@@ -659,6 +659,11 @@ public class ZEDRenderingPlane : MonoBehaviour
 			switch (view_mode) {
 			case sl.VIEW_MODE.VIEW_IMAGE: 
 				textureEye = zedCamera.CreateTextureImageType (sl.VIEW.LEFT);
+				// depth render texture to determine the point in the real world where a ray hits
+				//depthMap = Graphics.Blit (zedCamera.CreateTextureImageType (sl.VIEW.DEPTH));
+				//Graphics.CopyTexture (zedCamera.CreateTextureImageType (sl.VIEW.DEPTH), depthMap);
+				//Graphics.CopyTexture (textureEye, depthMap);
+				Graphics.CopyTexture (zedCamera.CreateTextureImageType (sl.VIEW.LEFT), depthMap);
 				break;
 			case sl.VIEW_MODE.VIEW_DEPTH: 
 				textureEye = zedCamera.CreateTextureImageType (sl.VIEW.DEPTH);

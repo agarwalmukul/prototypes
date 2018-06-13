@@ -6,6 +6,10 @@ public class WorldMeshRayCollision : MonoBehaviour {
 
 	public GameObject leftEye;
 
+	void Awake () {
+		GetComponent<Camera> ().depthTextureMode = DepthTextureMode.Depth;
+	}
+
 	// Use this for initialization
 	void Start () {
 		
