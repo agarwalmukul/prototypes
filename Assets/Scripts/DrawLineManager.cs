@@ -137,7 +137,7 @@ public class DrawLineManager : MonoBehaviour {
 	private GameObject _cursor;
 	private LineRenderer _cursorRenderer;
 
-	public bool debugMode = true;
+	public bool debugMode = false;
 	private GameObject _debugGO;
 	private LineRenderer _debugRenderer;
 

@@ -711,7 +711,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &402653180
 Transform:
   m_ObjectHideFlags: 0
@@ -1246,7 +1246,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &661360822
 Transform:
   m_ObjectHideFlags: 0
@@ -1277,7 +1277,7 @@ MonoBehaviour:
   baseMesh: {fileID: 1891354893}
   strokeMat: {fileID: 2100000, guid: aeb54ae1b95708a4fae0ea90312c3996, type: 2}
   gridMat: {fileID: 2100000, guid: 66b2688fa8a957a4faa00e619c011559, type: 2}
-  debugMode: 1
+  debugMode: 0
 --- !u!1 &692546937
 GameObject:
   m_ObjectHideFlags: 0
