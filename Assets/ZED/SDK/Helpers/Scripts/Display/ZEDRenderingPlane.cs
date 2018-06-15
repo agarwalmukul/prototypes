@@ -663,7 +663,7 @@ public class ZEDRenderingPlane : MonoBehaviour
 				//depthMap = Graphics.Blit (zedCamera.CreateTextureImageType (sl.VIEW.DEPTH));
 				//Graphics.CopyTexture (zedCamera.CreateTextureImageType (sl.VIEW.DEPTH), depthMap);
 				//Graphics.CopyTexture (textureEye, depthMap);
-				Graphics.CopyTexture (zedCamera.CreateTextureImageType (sl.VIEW.LEFT), depthMap);
+				//Graphics.CopyTexture (zedCamera.CreateTextureImageType (sl.VIEW.LEFT), depthMap);
 				break;
 			case sl.VIEW_MODE.VIEW_DEPTH: 
 				textureEye = zedCamera.CreateTextureImageType (sl.VIEW.DEPTH);
