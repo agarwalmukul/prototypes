@@ -19,7 +19,7 @@ public class DrawLineManager : MonoBehaviour {
 	*/
 
 
-	public GameObject interactionCursor;
+	//public GameObject interactionCursor;
 	private float stripWidthChangeFactor = 0.001f;
 	private float _stripWidth = 0.1f;
 	public float StripWidth {
@@ -53,12 +53,13 @@ public class DrawLineManager : MonoBehaviour {
 	//test.DetectPlaneAtHit(new Vector2());
 	public GameObject frame;
 
+	/**
 	// calculate the position of the interaction cursor, put it 0.1 m in front of the touch controller
 	private Vector3 calcInteractionCursorPosition(){
 		Vector3 controllerPosition = OVRInput.GetLocalControllerPosition (_dominantHand);
 		return controllerPosition + 0.1f * (OVRInput.GetLocalControllerRotation(_dominantHand) * Vector3.forward);
 	}
-
+	*/
 	private Vector3 calcCursorPosition(){
 		//return OVRInput.GetLocalControllerPosition (OVRInput.Controller.RTouch) + 0.1f * (OVRInput.GetLocalControllerRotation (OVRInput.Controller.RTouch) * Vector3.forward);
 		Vector3 controllerPosition = OVRInput.GetLocalControllerPosition (_dominantHand);
@@ -280,7 +281,7 @@ public class DrawLineManager : MonoBehaviour {
 	void Update () {
 		findPlaneClosestTo3DCursor ();
 		// the interaction cursor is positioned where the cursor is
-		interactionCursor.transform.position = calcInteractionCursorPosition ();
+		//interactionCursor.transform.position = calcInteractionCursorPosition ();
 
 		// debugging purposes
 		if(debugMode){
