@@ -6,14 +6,14 @@ public enum stripColor{
 	GREEN, RED, BLUE, YELLOW
 };
 	
-public class InteractionManager: MonoBehaviour {
+public class InteractionManage: MonoBehaviour {
 
-	private static InteractionManager _instance;
-	public static InteractionManager Instance { 
+	private static InteractionManage _instance;
+	public static InteractionManage Instance { 
 		get{
 			if (_instance == null) {
 				GameObject go = new GameObject ();
-				go.AddComponent<InteractionManager> ();
+				go.AddComponent<InteractionManage> ();
 			}
 			return _instance;
 		}

@@ -35,7 +35,7 @@ public class InteractiveElement : MonoBehaviour {
 		//onInteraction (colorValue);
 		//InteractionManager.Instance.state++;
 		clickState(true);
-		InteractionManager.Instance.interactionStateActivated(colorValue);
+		InteractionManage.Instance.interactionStateActivated(colorValue);
 
 	}
 

@@ -159,7 +159,7 @@ public class DrawLineManager : MonoBehaviour {
 		_cursorRenderer.material = new Material(strokeMat);
 		_baseMeshRenderer = baseMesh.GetComponent<Renderer> ();
 		// subscribe to the UI input action
-		InteractionManager.Instance.onInteraction += onUIActivated;
+		InteractionManage.Instance.onInteraction += onUIActivated;
 
 		if (debugMode) {
 			SetupDebug ();
