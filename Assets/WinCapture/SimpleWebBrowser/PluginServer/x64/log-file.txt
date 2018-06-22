@@ -1,0 +1,1115 @@
+2016-09-02 18:03:10,302 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2016-09-02 18:03:10,437 [1] INFO  SharedPluginServer.Program [(null)] - ARGS:
+2017-02-27 17:15:56,645 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2017-02-27 17:15:56,743 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:500,height:500,url:http://www.google.com,memfile:48184c0b-8d2c-4074-bc0b-1011dae9f8a3,port:8315
+2017-02-27 17:16:05,327 [7] INFO  SharedPluginServer.App [(null)] - ==============SHUTTING DOWN==========
+2017-02-27 17:16:07,998 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2017-02-27 17:16:08,062 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:500,height:500,url:http://www.google.com,memfile:9bb0b443-e767-4514-a92c-de677ad8941e,port:8135
+2017-02-27 17:16:11,097 [7] INFO  SharedPluginServer.App [(null)] - ==============SHUTTING DOWN==========
+2017-02-27 18:24:29,979 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2017-02-27 18:24:30,046 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:500,height:500,url:http://www.google.com,memfile:0fdef6cd-1bda-4815-84fa-aabf5c41bc1b,port:8008
+2017-02-27 18:24:35,168 [1] ERROR SharedPluginServer.Program [(null)] - CefRuntime return 0
+2017-02-27 18:24:35,803 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2017-02-27 18:24:35,863 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:500,height:500,url:http://www.google.com,memfile:0fdef6cd-1bda-4815-84fa-aabf5c41bc1b,port:8008
+2017-02-27 18:24:40,837 [7] INFO  SharedPluginServer.App [(null)] - ==============SHUTTING DOWN==========
+2017-02-27 18:24:55,005 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2017-02-27 18:24:55,072 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:500,height:500,url:http://www.google.com,memfile:e3e562f6-4ddb-424d-b290-4f2f7fb63fb8,port:8426
+2017-02-27 18:25:06,324 [9] INFO  SharedPluginServer.App [(null)] - ==============SHUTTING DOWN==========
+2017-07-05 12:33:57,276 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2017-07-05 12:33:57,317 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:500,height:500,url:http://www.google.com,memfile:d9d03a59-c2eb-43b9-99d5-f85d108e2383,port:8920
+2017-07-05 12:34:02,218 [8] INFO  SharedPluginServer.App [(null)] - ==============SHUTTING DOWN==========
+2017-07-05 12:34:10,529 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2017-07-05 12:34:10,559 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:5b4920e8-080e-4d8c-bc0a-f76f36c3a9e4,port:8576
+2017-07-05 12:34:19,207 [3] INFO  SharedPluginServer.App [(null)] - ==============SHUTTING DOWN==========
+2017-07-05 12:37:22,704 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2017-07-05 12:37:22,733 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:b283db3d-9c40-4ccc-af4a-eaf2b51383b9,port:8919
+2017-07-05 12:38:05,457 [3] INFO  SharedPluginServer.App [(null)] - ==============SHUTTING DOWN==========
+2017-07-05 12:38:51,998 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2017-07-05 12:38:52,027 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:64b5dd63-780d-44e3-8908-707cf8a007e4,port:8389
+2017-07-05 12:39:09,038 [8] INFO  SharedPluginServer.App [(null)] - ==============SHUTTING DOWN==========
+2017-07-05 12:56:31,442 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2017-07-05 12:56:31,470 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:f5286f45-2d79-43ae-b637-a546fc0b4b0c,port:8489
+2017-07-05 12:56:45,474 [8] INFO  SharedPluginServer.App [(null)] - ==============SHUTTING DOWN==========
+2018-06-20 23:31:25,897 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:31:25,919 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:31:25,921 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:df1fe953-9b1a-4a9b-9e30-1bef8f92886c,port:8163
+2018-06-20 23:31:25,936 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:31:27,967 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:31:27,985 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:31:27,986 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:df1fe953-9b1a-4a9b-9e30-1bef8f92886c,port:8163
+2018-06-20 23:31:27,994 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:31:29,014 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:31:29,032 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:31:29,034 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:df1fe953-9b1a-4a9b-9e30-1bef8f92886c,port:8163
+2018-06-20 23:31:29,042 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:31:31,086 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:31:31,103 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:31:31,105 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:df1fe953-9b1a-4a9b-9e30-1bef8f92886c,port:8163
+2018-06-20 23:31:31,113 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:31:32,127 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:31:32,144 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:31:32,146 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:df1fe953-9b1a-4a9b-9e30-1bef8f92886c,port:8163
+2018-06-20 23:31:32,154 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:31:33,164 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:31:33,182 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:31:33,183 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:df1fe953-9b1a-4a9b-9e30-1bef8f92886c,port:8163
+2018-06-20 23:31:33,191 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:31:34,204 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:31:34,221 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:31:34,222 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:df1fe953-9b1a-4a9b-9e30-1bef8f92886c,port:8163
+2018-06-20 23:31:34,230 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:31:35,245 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:31:35,263 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:31:35,263 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:df1fe953-9b1a-4a9b-9e30-1bef8f92886c,port:8163
+2018-06-20 23:31:35,272 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:31:36,291 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:31:36,308 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:31:36,310 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:df1fe953-9b1a-4a9b-9e30-1bef8f92886c,port:8163
+2018-06-20 23:31:36,318 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:31:38,373 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:31:38,392 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:31:38,394 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:df1fe953-9b1a-4a9b-9e30-1bef8f92886c,port:8163
+2018-06-20 23:31:38,402 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:31:39,409 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:31:39,428 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:31:39,430 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:df1fe953-9b1a-4a9b-9e30-1bef8f92886c,port:8163
+2018-06-20 23:31:39,438 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:31:41,494 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:31:41,511 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:31:41,513 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:df1fe953-9b1a-4a9b-9e30-1bef8f92886c,port:8163
+2018-06-20 23:31:41,521 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:31:42,529 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:31:42,547 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:31:42,548 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:df1fe953-9b1a-4a9b-9e30-1bef8f92886c,port:8163
+2018-06-20 23:31:42,557 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:31:43,589 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:31:44,608 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:31:44,625 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:31:44,627 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:df1fe953-9b1a-4a9b-9e30-1bef8f92886c,port:8163
+2018-06-20 23:31:44,635 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:31:46,696 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:31:46,714 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:31:46,715 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:df1fe953-9b1a-4a9b-9e30-1bef8f92886c,port:8163
+2018-06-20 23:31:46,722 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:31:47,737 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:31:47,754 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:31:47,756 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:df1fe953-9b1a-4a9b-9e30-1bef8f92886c,port:8163
+2018-06-20 23:31:47,764 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:31:48,792 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:31:48,809 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:31:48,811 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:df1fe953-9b1a-4a9b-9e30-1bef8f92886c,port:8163
+2018-06-20 23:31:48,821 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:31:49,813 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:31:49,830 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:31:49,832 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:df1fe953-9b1a-4a9b-9e30-1bef8f92886c,port:8163
+2018-06-20 23:31:49,841 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:31:50,850 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:31:50,868 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:31:50,870 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:df1fe953-9b1a-4a9b-9e30-1bef8f92886c,port:8163
+2018-06-20 23:31:50,878 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:31:51,890 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:31:51,908 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:31:51,909 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:df1fe953-9b1a-4a9b-9e30-1bef8f92886c,port:8163
+2018-06-20 23:31:51,917 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:31:52,933 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:31:52,951 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:31:52,952 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:df1fe953-9b1a-4a9b-9e30-1bef8f92886c,port:8163
+2018-06-20 23:31:52,960 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:31:55,020 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:31:55,038 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:31:55,039 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:df1fe953-9b1a-4a9b-9e30-1bef8f92886c,port:8163
+2018-06-20 23:31:55,047 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:31:56,055 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:31:56,073 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:31:56,075 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:df1fe953-9b1a-4a9b-9e30-1bef8f92886c,port:8163
+2018-06-20 23:31:56,088 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:31:58,134 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:31:58,152 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:31:58,154 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:df1fe953-9b1a-4a9b-9e30-1bef8f92886c,port:8163
+2018-06-20 23:31:58,162 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:31:59,180 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:31:59,198 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:31:59,199 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:df1fe953-9b1a-4a9b-9e30-1bef8f92886c,port:8163
+2018-06-20 23:31:59,208 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:32:00,217 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:32:00,234 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:32:00,236 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:df1fe953-9b1a-4a9b-9e30-1bef8f92886c,port:8163
+2018-06-20 23:32:00,244 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:32:01,261 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:32:01,277 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:32:01,279 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:df1fe953-9b1a-4a9b-9e30-1bef8f92886c,port:8163
+2018-06-20 23:32:01,287 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:32:02,293 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:32:02,323 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:32:02,325 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:df1fe953-9b1a-4a9b-9e30-1bef8f92886c,port:8163
+2018-06-20 23:32:02,332 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:32:03,339 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:32:03,357 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:32:03,359 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:df1fe953-9b1a-4a9b-9e30-1bef8f92886c,port:8163
+2018-06-20 23:32:03,367 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:32:05,414 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:32:05,432 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:32:05,433 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:df1fe953-9b1a-4a9b-9e30-1bef8f92886c,port:8163
+2018-06-20 23:32:05,442 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:32:06,459 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:32:06,477 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:32:06,478 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:df1fe953-9b1a-4a9b-9e30-1bef8f92886c,port:8163
+2018-06-20 23:32:06,486 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:32:07,512 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:32:07,531 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:32:07,532 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:df1fe953-9b1a-4a9b-9e30-1bef8f92886c,port:8163
+2018-06-20 23:32:07,541 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:32:09,587 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:32:09,606 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:32:09,607 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:df1fe953-9b1a-4a9b-9e30-1bef8f92886c,port:8163
+2018-06-20 23:32:09,615 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:32:11,667 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:32:11,685 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:32:11,686 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:df1fe953-9b1a-4a9b-9e30-1bef8f92886c,port:8163
+2018-06-20 23:32:11,694 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:32:13,743 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:32:13,760 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:32:13,762 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:df1fe953-9b1a-4a9b-9e30-1bef8f92886c,port:8163
+2018-06-20 23:32:13,770 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:32:18,942 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:32:18,960 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:32:18,961 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:df1fe953-9b1a-4a9b-9e30-1bef8f92886c,port:8163
+2018-06-20 23:32:18,969 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:32:21,033 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:32:21,051 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:32:21,052 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:df1fe953-9b1a-4a9b-9e30-1bef8f92886c,port:8163
+2018-06-20 23:32:21,061 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:32:23,119 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:32:23,137 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:32:23,138 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:df1fe953-9b1a-4a9b-9e30-1bef8f92886c,port:8163
+2018-06-20 23:32:23,147 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:32:25,191 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:32:25,208 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:32:25,210 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:df1fe953-9b1a-4a9b-9e30-1bef8f92886c,port:8163
+2018-06-20 23:32:25,218 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:32:27,284 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:32:27,301 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:32:27,303 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:df1fe953-9b1a-4a9b-9e30-1bef8f92886c,port:8163
+2018-06-20 23:32:27,311 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:32:29,352 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:32:29,370 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:32:29,372 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:df1fe953-9b1a-4a9b-9e30-1bef8f92886c,port:8163
+2018-06-20 23:32:29,380 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:32:31,429 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:32:31,447 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:32:31,448 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:df1fe953-9b1a-4a9b-9e30-1bef8f92886c,port:8163
+2018-06-20 23:32:31,457 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:32:33,507 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:32:33,525 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:32:33,526 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:df1fe953-9b1a-4a9b-9e30-1bef8f92886c,port:8163
+2018-06-20 23:32:33,534 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:32:35,587 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:32:35,606 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:32:35,608 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:df1fe953-9b1a-4a9b-9e30-1bef8f92886c,port:8163
+2018-06-20 23:32:35,616 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:32:37,666 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:32:37,684 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:32:37,686 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:df1fe953-9b1a-4a9b-9e30-1bef8f92886c,port:8163
+2018-06-20 23:32:37,694 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:32:39,744 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:32:39,762 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:32:39,763 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:df1fe953-9b1a-4a9b-9e30-1bef8f92886c,port:8163
+2018-06-20 23:32:39,771 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:32:41,837 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:32:41,855 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:32:41,856 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:df1fe953-9b1a-4a9b-9e30-1bef8f92886c,port:8163
+2018-06-20 23:32:41,864 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:32:43,917 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:32:43,934 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:32:43,936 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:df1fe953-9b1a-4a9b-9e30-1bef8f92886c,port:8163
+2018-06-20 23:32:43,944 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:32:46,010 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:32:46,029 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:32:46,030 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:df1fe953-9b1a-4a9b-9e30-1bef8f92886c,port:8163
+2018-06-20 23:32:46,041 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:32:48,080 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:32:48,097 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:32:48,099 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:df1fe953-9b1a-4a9b-9e30-1bef8f92886c,port:8163
+2018-06-20 23:32:48,107 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:32:50,173 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:32:50,190 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:32:50,192 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:df1fe953-9b1a-4a9b-9e30-1bef8f92886c,port:8163
+2018-06-20 23:32:50,200 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:32:52,269 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:32:52,287 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:32:52,288 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:df1fe953-9b1a-4a9b-9e30-1bef8f92886c,port:8163
+2018-06-20 23:32:52,297 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:32:53,304 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:32:53,325 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:df1fe953-9b1a-4a9b-9e30-1bef8f92886c,port:8163
+2018-06-20 23:32:53,335 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:33:08,925 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:33:08,943 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:33:08,945 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:f2ffa2b8-75d4-464d-84be-93d484f2bdb4,port:8525
+2018-06-20 23:33:08,953 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:33:11,009 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:33:11,026 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:33:11,028 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:f2ffa2b8-75d4-464d-84be-93d484f2bdb4,port:8525
+2018-06-20 23:33:11,036 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:33:13,087 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:33:13,105 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:33:13,107 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:f2ffa2b8-75d4-464d-84be-93d484f2bdb4,port:8525
+2018-06-20 23:33:13,115 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:33:15,169 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:33:15,186 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:33:15,188 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:f2ffa2b8-75d4-464d-84be-93d484f2bdb4,port:8525
+2018-06-20 23:33:15,196 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:33:17,251 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:33:17,270 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:33:17,271 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:f2ffa2b8-75d4-464d-84be-93d484f2bdb4,port:8525
+2018-06-20 23:33:17,280 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:33:19,329 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:33:19,348 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:33:19,349 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:f2ffa2b8-75d4-464d-84be-93d484f2bdb4,port:8525
+2018-06-20 23:33:19,358 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:33:20,396 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:33:22,439 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:33:22,456 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:33:22,457 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:f2ffa2b8-75d4-464d-84be-93d484f2bdb4,port:8525
+2018-06-20 23:33:22,465 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:33:24,522 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:33:24,540 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:33:24,541 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:f2ffa2b8-75d4-464d-84be-93d484f2bdb4,port:8525
+2018-06-20 23:33:24,549 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:33:26,599 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:33:26,617 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:33:26,619 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:f2ffa2b8-75d4-464d-84be-93d484f2bdb4,port:8525
+2018-06-20 23:33:26,627 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:33:28,678 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:33:28,696 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:33:28,698 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:f2ffa2b8-75d4-464d-84be-93d484f2bdb4,port:8525
+2018-06-20 23:33:28,706 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:33:30,764 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:33:30,781 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:33:30,783 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:f2ffa2b8-75d4-464d-84be-93d484f2bdb4,port:8525
+2018-06-20 23:33:30,791 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:33:32,839 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:33:32,856 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:33:32,858 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:f2ffa2b8-75d4-464d-84be-93d484f2bdb4,port:8525
+2018-06-20 23:33:32,866 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:33:34,918 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:33:34,937 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:33:34,939 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:f2ffa2b8-75d4-464d-84be-93d484f2bdb4,port:8525
+2018-06-20 23:33:34,947 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:33:37,002 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:33:37,019 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:33:37,021 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:f2ffa2b8-75d4-464d-84be-93d484f2bdb4,port:8525
+2018-06-20 23:33:37,030 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:33:39,078 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:33:39,095 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:33:39,096 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:f2ffa2b8-75d4-464d-84be-93d484f2bdb4,port:8525
+2018-06-20 23:33:39,104 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:33:41,170 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:33:41,188 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:33:41,189 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:f2ffa2b8-75d4-464d-84be-93d484f2bdb4,port:8525
+2018-06-20 23:33:41,197 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:33:43,268 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:33:43,285 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:33:43,287 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:f2ffa2b8-75d4-464d-84be-93d484f2bdb4,port:8525
+2018-06-20 23:33:43,295 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:33:45,427 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:33:45,445 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:33:45,447 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:f2ffa2b8-75d4-464d-84be-93d484f2bdb4,port:8525
+2018-06-20 23:33:45,455 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:36:57,490 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:36:57,508 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:36:57,510 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:500,height:500,url:http://www.google.com,memfile:c37a53bc-92e5-43a6-910c-ca7033dc909c,port:8612
+2018-06-20 23:36:57,518 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:36:59,581 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:36:59,599 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:36:59,601 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:500,height:500,url:http://www.google.com,memfile:c37a53bc-92e5-43a6-910c-ca7033dc909c,port:8612
+2018-06-20 23:36:59,611 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:37:01,667 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:37:01,685 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:37:01,686 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:500,height:500,url:http://www.google.com,memfile:c37a53bc-92e5-43a6-910c-ca7033dc909c,port:8612
+2018-06-20 23:37:01,694 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:37:03,745 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:37:03,765 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:37:03,766 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:500,height:500,url:http://www.google.com,memfile:c37a53bc-92e5-43a6-910c-ca7033dc909c,port:8612
+2018-06-20 23:37:03,774 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:37:05,819 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:37:05,836 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:37:05,838 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:500,height:500,url:http://www.google.com,memfile:c37a53bc-92e5-43a6-910c-ca7033dc909c,port:8612
+2018-06-20 23:37:05,846 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:37:07,898 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:37:07,916 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:37:07,918 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:500,height:500,url:http://www.google.com,memfile:c37a53bc-92e5-43a6-910c-ca7033dc909c,port:8612
+2018-06-20 23:37:07,926 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:37:09,984 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:37:10,001 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:37:10,003 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:500,height:500,url:http://www.google.com,memfile:c37a53bc-92e5-43a6-910c-ca7033dc909c,port:8612
+2018-06-20 23:37:10,011 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:37:13,953 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:37:13,970 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:37:13,972 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:500,height:500,url:http://www.google.com,memfile:c37a53bc-92e5-43a6-910c-ca7033dc909c,port:8612
+2018-06-20 23:37:13,980 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:37:17,071 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:37:17,088 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:37:17,090 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:500,height:500,url:http://www.google.com,memfile:c37a53bc-92e5-43a6-910c-ca7033dc909c,port:8612
+2018-06-20 23:37:17,098 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:37:19,171 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:37:19,186 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:500,height:500,url:http://www.google.com,memfile:c37a53bc-92e5-43a6-910c-ca7033dc909c,port:8612
+2018-06-20 23:37:19,194 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:37:22,282 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:37:22,300 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:37:22,302 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:500,height:500,url:http://www.google.com,memfile:c37a53bc-92e5-43a6-910c-ca7033dc909c,port:8612
+2018-06-20 23:37:22,310 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:37:25,401 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:37:25,419 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:37:25,420 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:500,height:500,url:http://www.google.com,memfile:c37a53bc-92e5-43a6-910c-ca7033dc909c,port:8612
+2018-06-20 23:37:25,428 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:37:27,482 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:37:27,499 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:37:27,501 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:500,height:500,url:http://www.google.com,memfile:c37a53bc-92e5-43a6-910c-ca7033dc909c,port:8612
+2018-06-20 23:37:27,509 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:37:29,555 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:37:29,572 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:37:29,574 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:500,height:500,url:http://www.google.com,memfile:c37a53bc-92e5-43a6-910c-ca7033dc909c,port:8612
+2018-06-20 23:37:29,582 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:37:32,683 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:37:32,701 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:37:32,702 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:500,height:500,url:http://www.google.com,memfile:c37a53bc-92e5-43a6-910c-ca7033dc909c,port:8612
+2018-06-20 23:37:32,710 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:37:34,769 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:37:34,786 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:37:34,787 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:500,height:500,url:http://www.google.com,memfile:c37a53bc-92e5-43a6-910c-ca7033dc909c,port:8612
+2018-06-20 23:37:34,795 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:37:36,846 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:37:36,863 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:37:36,865 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:500,height:500,url:http://www.google.com,memfile:c37a53bc-92e5-43a6-910c-ca7033dc909c,port:8612
+2018-06-20 23:37:36,873 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:37:39,956 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:37:39,974 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:37:39,975 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:500,height:500,url:http://www.google.com,memfile:c37a53bc-92e5-43a6-910c-ca7033dc909c,port:8612
+2018-06-20 23:37:39,983 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:37:42,035 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:37:42,053 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:37:42,054 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:500,height:500,url:http://www.google.com,memfile:c37a53bc-92e5-43a6-910c-ca7033dc909c,port:8612
+2018-06-20 23:37:42,062 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:37:44,122 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:37:44,140 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:37:44,141 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:500,height:500,url:http://www.google.com,memfile:c37a53bc-92e5-43a6-910c-ca7033dc909c,port:8612
+2018-06-20 23:37:44,150 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:37:46,203 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:37:46,221 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:37:46,222 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:500,height:500,url:http://www.google.com,memfile:c37a53bc-92e5-43a6-910c-ca7033dc909c,port:8612
+2018-06-20 23:37:46,232 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:37:48,279 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:37:48,296 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:37:48,298 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:500,height:500,url:http://www.google.com,memfile:c37a53bc-92e5-43a6-910c-ca7033dc909c,port:8612
+2018-06-20 23:37:48,306 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:37:50,373 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:37:50,390 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:37:50,392 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:500,height:500,url:http://www.google.com,memfile:c37a53bc-92e5-43a6-910c-ca7033dc909c,port:8612
+2018-06-20 23:37:50,400 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:37:52,439 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:37:52,457 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:37:52,458 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:500,height:500,url:http://www.google.com,memfile:c37a53bc-92e5-43a6-910c-ca7033dc909c,port:8612
+2018-06-20 23:37:52,468 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:37:54,523 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:37:54,540 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:37:54,542 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:500,height:500,url:http://www.google.com,memfile:c37a53bc-92e5-43a6-910c-ca7033dc909c,port:8612
+2018-06-20 23:37:54,550 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:37:56,597 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:37:56,615 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:37:56,616 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:500,height:500,url:http://www.google.com,memfile:c37a53bc-92e5-43a6-910c-ca7033dc909c,port:8612
+2018-06-20 23:37:56,624 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:37:58,678 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:37:58,696 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:37:58,697 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:500,height:500,url:http://www.google.com,memfile:c37a53bc-92e5-43a6-910c-ca7033dc909c,port:8612
+2018-06-20 23:37:58,705 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:38:00,764 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:38:00,781 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:38:00,783 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:500,height:500,url:http://www.google.com,memfile:c37a53bc-92e5-43a6-910c-ca7033dc909c,port:8612
+2018-06-20 23:38:00,791 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:38:02,845 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:38:02,873 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:38:02,874 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:500,height:500,url:http://www.google.com,memfile:c37a53bc-92e5-43a6-910c-ca7033dc909c,port:8612
+2018-06-20 23:38:02,882 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:38:04,916 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:38:04,937 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:38:04,939 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:500,height:500,url:http://www.google.com,memfile:c37a53bc-92e5-43a6-910c-ca7033dc909c,port:8612
+2018-06-20 23:38:04,947 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:42:11,765 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:42:11,782 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:42:11,784 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:768,url:http://www.google.com,memfile:cb11de73-fee1-475c-a54f-30a595e43b9e,port:8577
+2018-06-20 23:42:11,792 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:42:13,875 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:42:13,892 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:42:13,894 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:768,url:http://www.google.com,memfile:cb11de73-fee1-475c-a54f-30a595e43b9e,port:8577
+2018-06-20 23:42:13,902 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:42:15,965 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:42:15,983 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:42:15,984 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:768,url:http://www.google.com,memfile:cb11de73-fee1-475c-a54f-30a595e43b9e,port:8577
+2018-06-20 23:42:15,993 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:42:18,041 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:42:18,064 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:42:18,066 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:768,url:http://www.google.com,memfile:cb11de73-fee1-475c-a54f-30a595e43b9e,port:8577
+2018-06-20 23:42:18,075 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:42:20,121 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:42:20,138 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:42:20,140 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:768,url:http://www.google.com,memfile:cb11de73-fee1-475c-a54f-30a595e43b9e,port:8577
+2018-06-20 23:42:20,148 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:42:22,201 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:42:22,219 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:42:22,221 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:768,url:http://www.google.com,memfile:cb11de73-fee1-475c-a54f-30a595e43b9e,port:8577
+2018-06-20 23:42:22,251 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:42:24,305 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:42:24,324 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:42:24,325 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:768,url:http://www.google.com,memfile:cb11de73-fee1-475c-a54f-30a595e43b9e,port:8577
+2018-06-20 23:42:24,334 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:42:26,380 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:42:26,403 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:42:26,405 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:768,url:http://www.google.com,memfile:cb11de73-fee1-475c-a54f-30a595e43b9e,port:8577
+2018-06-20 23:42:26,414 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:42:28,449 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:42:28,467 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:42:28,469 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:768,url:http://www.google.com,memfile:cb11de73-fee1-475c-a54f-30a595e43b9e,port:8577
+2018-06-20 23:42:28,477 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:42:32,833 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:42:32,851 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:42:32,852 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:768,url:http://www.google.com,memfile:cb11de73-fee1-475c-a54f-30a595e43b9e,port:8577
+2018-06-20 23:42:32,860 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:42:34,899 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:42:34,925 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:42:34,927 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:768,url:http://www.google.com,memfile:cb11de73-fee1-475c-a54f-30a595e43b9e,port:8577
+2018-06-20 23:42:34,935 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:42:36,974 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:42:36,991 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:42:36,993 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:768,url:http://www.google.com,memfile:cb11de73-fee1-475c-a54f-30a595e43b9e,port:8577
+2018-06-20 23:42:37,001 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:42:39,056 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:42:39,073 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:42:39,075 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:768,url:http://www.google.com,memfile:cb11de73-fee1-475c-a54f-30a595e43b9e,port:8577
+2018-06-20 23:42:39,083 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:42:41,141 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:42:41,158 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:42:41,160 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:768,url:http://www.google.com,memfile:cb11de73-fee1-475c-a54f-30a595e43b9e,port:8577
+2018-06-20 23:42:41,168 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:42:43,228 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:42:43,247 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:42:43,249 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:768,url:http://www.google.com,memfile:cb11de73-fee1-475c-a54f-30a595e43b9e,port:8577
+2018-06-20 23:42:43,257 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:42:45,305 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:42:45,324 [1] ERROR SharedPluginServer.Program [(null)] - Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E) error
+2018-06-20 23:42:45,326 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:768,url:http://www.google.com,memfile:cb11de73-fee1-475c-a54f-30a595e43b9e,port:8577
+2018-06-20 23:42:45,336 [1] INFO  SharedPluginServer.Program [(null)] - EXCEPTION ON CEF INITIALIZATION:Unable to load DLL 'libcef': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+   at Xilium.CefGlue.Interop.libcef.api_hash(Int32 entry)
+   at Xilium.CefGlue.CefRuntime.CheckVersionByApiHash()
+   at Xilium.CefGlue.CefRuntime.Load(String path)
+   at Xilium.CefGlue.CefRuntime.ExecuteProcess(CefMainArgs args, CefApp application, IntPtr windowsSandboxInfo)
+   at SharedPluginServer.Program.Main(String[] args)
+2018-06-20 23:45:23,724 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:45:23,750 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:500,height:500,url:http://www.google.com,memfile:a656b6e1-cf6f-44c0-9fe6-44cadef1c39c,port:8606
+2018-06-20 23:45:37,368 [8] INFO  SharedPluginServer.App [(null)] - ==============SHUTTING DOWN==========
+2018-06-20 23:45:56,749 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:45:56,771 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:8be5a2f7-2ee6-4d24-adbe-5b75025d6804,port:8783
+2018-06-20 23:48:46,843 [14] INFO  SharedPluginServer.App [(null)] - ==============SHUTTING DOWN==========
+2018-06-20 23:55:32,612 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-20 23:55:32,636 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:40b56942-b4c5-401f-8d72-29a93b9d1c6a,port:8870
+2018-06-20 23:56:17,641 [8] INFO  SharedPluginServer.App [(null)] - ==============SHUTTING DOWN==========
+2018-06-21 00:00:52,585 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-21 00:00:52,607 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:30c8a032-18e6-4329-96c4-cf9e6513d7ac,port:8047
+2018-06-21 00:01:14,706 [8] INFO  SharedPluginServer.App [(null)] - ==============SHUTTING DOWN==========
+2018-06-21 00:01:23,043 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-21 00:01:23,065 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:8cc6cb9b-444f-4d45-a887-ddcf3605a9fb,port:8821
+2018-06-21 00:01:56,940 [3] INFO  SharedPluginServer.App [(null)] - ==============SHUTTING DOWN==========
+2018-06-21 00:02:12,088 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-21 00:02:12,110 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:ca441fc6-bbab-4ec9-badf-1e407333fd72,port:8802
+2018-06-21 00:03:47,740 [3] INFO  SharedPluginServer.App [(null)] - ==============SHUTTING DOWN==========
+2018-06-21 00:03:56,150 [1] INFO  SharedPluginServer.Program [(null)] - ===============START================
+2018-06-21 00:03:56,173 [1] INFO  SharedPluginServer.Program [(null)] - Starting plugin, settings:width:1024,height:1024,url:http://google.com,memfile:6a8d9c16-ddde-460e-ad48-9cdae7ff583e,port:8412

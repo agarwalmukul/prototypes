@@ -1,0 +1,74 @@
+[0227/161838:INFO:user_input_monitor_win.cc(168)] RegisterRawInputDevices() failed for RIDEV_REMOVE: The parameter is incorrect. (0x57)
+[0227/161842:ERROR:audio_output_device.cc(369)] IO loop going away before the audio device has been stopped
+[0227/161842:ERROR:audio_input_device.cc(269)] IO loop going away before the input device has been stopped
+[0227/163741.322:ERROR:audio_output_device.cc(425)] IO loop going away before the audio device has been stopped
+[0227/163756.015:INFO:user_input_monitor_win.cc(171)] RegisterRawInputDevices() failed for RIDEV_REMOVE: The parameter is incorrect. (0x57)
+[0227/163812.534:INFO:user_input_monitor_win.cc(171)] RegisterRawInputDevices() failed for RIDEV_REMOVE: The parameter is incorrect. (0x57)
+[0227/163816.970:ERROR:audio_output_device.cc(425)] IO loop going away before the audio device has been stopped
+[0227/165104.252:ERROR:audio_output_device.cc(425)] IO loop going away before the audio device has been stopped
+[0227/165741.013:ERROR:audio_output_device.cc(425)] IO loop going away before the audio device has been stopped
+[0227/170132.406:ERROR:audio_output_device.cc(425)] IO loop going away before the audio device has been stopped
+[0227/170431.307:ERROR:audio_output_device.cc(425)] IO loop going away before the audio device has been stopped
+[0227/170436.887:ERROR:audio_output_device.cc(425)] IO loop going away before the audio device has been stopped
+[0227/170438.201:INFO:user_input_monitor_win.cc(171)] RegisterRawInputDevices() failed for RIDEV_REMOVE: The parameter is incorrect. (0x57)
+[0227/170449.972:INFO:user_input_monitor_win.cc(171)] RegisterRawInputDevices() failed for RIDEV_REMOVE: The parameter is incorrect. (0x57)
+[0227/170452.622:ERROR:audio_output_device.cc(425)] IO loop going away before the audio device has been stopped
+[0227/170453.974:INFO:user_input_monitor_win.cc(171)] RegisterRawInputDevices() failed for RIDEV_REMOVE: The parameter is incorrect. (0x57)
+[0227/170505.326:ERROR:audio_output_device.cc(425)] IO loop going away before the audio device has been stopped
+[0227/170506.672:INFO:user_input_monitor_win.cc(171)] RegisterRawInputDevices() failed for RIDEV_REMOVE: The parameter is incorrect. (0x57)
+[0621/000436.451:ERROR:render_media_log.cc(25)] MediaEvent: PIPELINE_ERROR demuxer: could not open
+[0621/000500.281:ERROR:render_media_log.cc(25)] MediaEvent: PIPELINE_ERROR demuxer: could not open
+[0621/000500.464:ERROR:render_media_log.cc(25)] MediaEvent: PIPELINE_ERROR demuxer: could not open
+[0621/000507.104:ERROR:render_media_log.cc(25)] MediaEvent: PIPELINE_ERROR demuxer: could not open
+[0621/000728.225:ERROR:render_media_log.cc(25)] MediaEvent: PIPELINE_ERROR demuxer: could not open
+[0621/000745.322:ERROR:render_media_log.cc(25)] MediaEvent: PIPELINE_ERROR demuxer: could not open
+[0621/000745.926:ERROR:render_media_log.cc(25)] MediaEvent: PIPELINE_ERROR demuxer: could not open
+[0621/000820.420:ERROR:render_media_log.cc(25)] MediaEvent: PIPELINE_ERROR demuxer: could not open
+[0621/001143.489:ERROR:render_media_log.cc(25)] MediaEvent: PIPELINE_ERROR demuxer: could not open
+[0621/001158.279:ERROR:render_media_log.cc(25)] MediaEvent: PIPELINE_ERROR demuxer: could not open
+[0621/001159.271:ERROR:render_media_log.cc(25)] MediaEvent: PIPELINE_ERROR demuxer: could not open
+[0621/001423.141:ERROR:render_media_log.cc(25)] MediaEvent: PIPELINE_ERROR demuxer: could not open
+[0621/001436.621:ERROR:render_media_log.cc(25)] MediaEvent: PIPELINE_ERROR demuxer: could not open
+[0621/001437.137:ERROR:render_media_log.cc(25)] MediaEvent: PIPELINE_ERROR demuxer: could not open
+[0621/182655.766:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0621/182655.869:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0621/182656.032:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0621/182659.740:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0621/182659.748:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0621/182659.768:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0621/182700.854:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0621/182700.875:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0621/182701.036:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0621/205309.889:ERROR:render_media_log.cc(25)] MediaEvent: PIPELINE_ERROR demuxer: could not open
+[0621/205311.719:ERROR:render_media_log.cc(25)] MediaEvent: PIPELINE_ERROR demuxer: could not open
+[0621/205311.721:ERROR:render_media_log.cc(25)] MediaEvent: PIPELINE_ERROR demuxer: could not open
+[0621/205316.133:ERROR:render_media_log.cc(25)] MediaEvent: PIPELINE_ERROR demuxer: could not open
+[0621/205318.867:ERROR:render_media_log.cc(25)] MediaEvent: PIPELINE_ERROR demuxer: could not open
+[0621/205322.091:ERROR:render_media_log.cc(25)] MediaEvent: PIPELINE_ERROR demuxer: could not open
+[0621/205325.558:ERROR:render_media_log.cc(25)] MediaEvent: PIPELINE_ERROR demuxer: could not open
+[0621/205551.423:WARNING:spdy_session.cc(2224)] Received HEADERS for invalid stream 13
+[0621/205557.872:ERROR:render_media_log.cc(25)] MediaEvent: PIPELINE_ERROR demuxer: could not open
+[0621/205607.403:ERROR:render_media_log.cc(25)] MediaEvent: PIPELINE_ERROR demuxer: could not open
+[0621/205611.071:ERROR:render_media_log.cc(25)] MediaEvent: PIPELINE_ERROR demuxer: could not open
+[0621/205612.841:ERROR:render_media_log.cc(25)] MediaEvent: PIPELINE_ERROR demuxer: could not open
+[0621/205616.513:ERROR:render_media_log.cc(25)] MediaEvent: PIPELINE_ERROR demuxer: could not open
+[0621/205620.298:ERROR:render_media_log.cc(25)] MediaEvent: PIPELINE_ERROR demuxer: could not open
+[0621/205623.893:ERROR:render_media_log.cc(25)] MediaEvent: PIPELINE_ERROR demuxer: could not open
+[0621/211520.614:ERROR:render_media_log.cc(25)] MediaEvent: PIPELINE_ERROR demuxer: could not open
+[0621/211521.725:ERROR:render_media_log.cc(25)] MediaEvent: PIPELINE_ERROR demuxer: could not open
+[0621/211524.163:ERROR:render_media_log.cc(25)] MediaEvent: PIPELINE_ERROR demuxer: could not open
+[0621/211524.261:WARNING:spdy_session.cc(2224)] Received HEADERS for invalid stream 179
+[0621/211527.321:ERROR:render_media_log.cc(25)] MediaEvent: PIPELINE_ERROR demuxer: could not open
+[0621/211529.889:ERROR:render_media_log.cc(25)] MediaEvent: PIPELINE_ERROR demuxer: could not open
+[0621/211532.175:ERROR:render_media_log.cc(25)] MediaEvent: PIPELINE_ERROR demuxer: could not open
+[0621/211534.160:ERROR:render_media_log.cc(25)] MediaEvent: PIPELINE_ERROR demuxer: could not open
+[0621/211534.660:WARNING:quota_manager.cc(1833)] Create directory failed for path
+[0621/211534.662:WARNING:quota_manager.cc(1833)] Create directory failed for path
+[0621/211738.404:ERROR:render_media_log.cc(25)] MediaEvent: PIPELINE_ERROR demuxer: could not open
+[0621/211740.930:ERROR:render_media_log.cc(25)] MediaEvent: PIPELINE_ERROR demuxer: could not open
+[0621/211743.287:ERROR:render_media_log.cc(25)] MediaEvent: PIPELINE_ERROR demuxer: could not open
+[0621/211743.298:WARNING:spdy_session.cc(2224)] Received HEADERS for invalid stream 171
+[0621/211745.425:ERROR:render_media_log.cc(25)] MediaEvent: PIPELINE_ERROR demuxer: could not open
+[0621/211746.402:ERROR:render_media_log.cc(25)] MediaEvent: PIPELINE_ERROR demuxer: could not open
+[0621/211747.762:ERROR:render_media_log.cc(25)] MediaEvent: PIPELINE_ERROR demuxer: could not open
+[0621/211754.427:ERROR:render_media_log.cc(25)] MediaEvent: PIPELINE_ERROR demuxer: could not open
