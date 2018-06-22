@@ -39,7 +39,7 @@ public class ExampleUsage : MonoBehaviour {
         lastPollWindowsTime = Time.time;
 
 
-		/*
+
         int displayNum = 0;
         desktopCapture1 = new DesktopCapture(displayNum);
 
@@ -48,16 +48,16 @@ public class ExampleUsage : MonoBehaviour {
         desktopObject.transform.GetComponent<Renderer>().material = new Material(desktopShader);
 		desktopObject.transform.localEulerAngles = new Vector3(104.19f, 8.9f, 0.33f);
 		desktopObject.transform.position = new Vector3(-0.319f,1.003f,0.516f);
-		*/
 
-        chromiumCapture = new ChromiumCapture(1080, 720, "http://google.com");
+		/*
+        chromiumCapture = new ChromiumCapture(1024, 1024, "http://google.com");
 
         chromiumObject = GameObject.CreatePrimitive(PrimitiveType.Plane);
         chromiumObject.name = "chromium capture";
         chromiumObject.transform.GetComponent<Renderer>().material = new Material(chromiumShader);
         chromiumObject.transform.localEulerAngles = new Vector3(90, 0, 0);
-		chromiumObject.transform.position = new Vector3(-0.319f,1.003f,0.516f);
-
+		chromiumObject.transform.position = new Vector3(0.0f,1.2f,0.0f);
+		*/
     }
 
     // You need to do this because the desktop capture API will only work if we are on the graphics thread
@@ -119,7 +119,7 @@ public class ExampleUsage : MonoBehaviour {
     {
 		
         bool didChange;
-
+		/*
         Texture2D chromiumTexture = chromiumCapture.GetChromiumTexture(out didChange);
         if (didChange)
         {
@@ -130,7 +130,7 @@ public class ExampleUsage : MonoBehaviour {
 
         if (Time.frameCount == 400)
         {
-            //chromiumCapture.SetUrl("http://reddit.com");
+            chromiumCapture.SetUrl("http://reddit.com");
         }
 
         if (Time.time - lastUpdateTime < 1.0f / captureRateFps)
@@ -141,9 +141,9 @@ public class ExampleUsage : MonoBehaviour {
         {
             lastUpdateTime = Time.time;
         }
+		*/
 
 
-		/*
         // Capture the desktop
         Texture2D desktopTexture = desktopCapture1.GetWindowTexture(out didChange);
 
@@ -189,6 +189,5 @@ public class ExampleUsage : MonoBehaviour {
             // calls OnAddWindow or OnRemoveWindow above if any windows have been added or removed
             captureManager.Poll();
         }
-		*/
     }
 }
