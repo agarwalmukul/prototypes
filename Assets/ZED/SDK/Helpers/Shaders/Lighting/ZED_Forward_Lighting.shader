@@ -40,6 +40,7 @@
 #include "ZED_Lighting.cginc"
 
 		sampler2D _MainTex;
+		sampler2D _handsDepthTex;
 
 	struct Input {
 		float2 uv_MainTex;
@@ -99,7 +100,17 @@
 	#ifdef NO_DEPTH_OCC
 	    outDepth = 0;
 	#else
-		outDepth = computeDepthXYZ(zed_xyz.z);
+		
+		//if (tex2D(_handsDepthTex, fixed2( (0.8f* (uv.x-0.5f)) + 0.5f, 0.8f * (1- uv.y) + 0.5f ) ).r != 0.0f){
+			//outDepth = computeDepthXYZ(zed_xyz.z);
+			//outDepth = tex2D(_handsDepthTex, 0.8f * fixed2( uv.x - 0.1f, 1- uv.y) ).r;
+			//outDepth = tex2D(_handsDepthTex, fixed2( (0.8f* (uv.x-0.5f)) + 0.5f, 0.8f * (1- uv.y) + 0.5f ) ).r;
+		if(tex2D(_handsDepthTex, fixed2(uv.x, 1 - uv.y)).r != 0.0f){
+			outDepth = tex2D(_handsDepthTex, fixed2(uv.x, 1 - uv.y)).r;
+		} else {
+			outDepth = computeDepthXYZ(zed_xyz.z);
+		}
+
 	#endif
 
 
@@ -130,7 +141,6 @@
 
 		//Add light
 	    c += saturate(computeLighting(color.rgb, normals, worldspace, 1));
-
 
 		c.a = 0;
 		outColor.rgb = c;

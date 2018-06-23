@@ -28,7 +28,12 @@ public class ZEDRenderingPlane : MonoBehaviour
     /// The screen is the quad where the textures are displayed
     /// </summary>
     public GameObject canvas;
-	public RenderTexture depthMap;
+	// declare these to get the depth map of hands from Leap Motion and render it on top of the depth map of zedCamera to get a better approximation of hand depth
+	private RenderTexture handsDepthMapRenderTex;
+	public RenderTexture LeftHandsDepthMap;
+	public RenderTexture rightHandsDepthMap;
+	public Material handsMaterial;
+	public RenderTexture dest;
     /// <summary>
     /// It's the main material, used to set the color and the depth
     /// </summary>
@@ -289,6 +294,9 @@ public class ZEDRenderingPlane : MonoBehaviour
         blurMaterial.SetFloatArray("offset", offsets);
         blurMaterial.SetTexture("_Mask", mask);
 
+		// set up render texture for hands depth data to pass into the texture
+		handsDepthMapRenderTex = new RenderTexture (LeftHandsDepthMap.width, LeftHandsDepthMap.height, LeftHandsDepthMap.depth, LeftHandsDepthMap.format);
+
 
         //Force unity the 16:9 mode
 #if UNITY_EDITOR
@@ -453,6 +461,7 @@ public class ZEDRenderingPlane : MonoBehaviour
         matRGB.SetTexture("_DepthXYZTex", depth);
         matRGB.SetTexture("_NormalsTex", normals);
 
+		matRGB.SetTexture ("_handsDepthTex", handsDepthMapRenderTex);
 
         forwardMat.SetTexture("_MainTex", textureEye);
         forwardMat.SetTexture("_DepthXYZTex", depth);
@@ -676,6 +685,8 @@ public class ZEDRenderingPlane : MonoBehaviour
             normals = zedCamera.CreateTextureMeasureType(sl.MEASURE.NORMALS, resolution);
             depth = zedCamera.CreateTextureMeasureType(sl.MEASURE.DEPTH, resolution);
 
+			handsDepthMapRenderTex = LeftHandsDepthMap;
+
         }
         else if (StereoTargetEyeMask.Right == mainCamera.stereoTargetEye)
         {
@@ -700,6 +711,8 @@ public class ZEDRenderingPlane : MonoBehaviour
             normals = zedCamera.CreateTextureMeasureType(sl.MEASURE.NORMALS_RIGHT, resolution);
             depth = zedCamera.CreateTextureMeasureType(sl.MEASURE.DEPTH_RIGHT, resolution);
 
+			handsDepthMapRenderTex = rightHandsDepthMap;
+
         }
         else
         {
@@ -718,6 +731,7 @@ public class ZEDRenderingPlane : MonoBehaviour
             normals = zedCamera.CreateTextureMeasureType(sl.MEASURE.NORMALS, resolution);
             depth = zedCamera.CreateTextureMeasureType(sl.MEASURE.DEPTH, resolution);
 
+			handsDepthMapRenderTex = LeftHandsDepthMap;
         }
     }
 
@@ -1044,18 +1058,27 @@ public class ZEDRenderingPlane : MonoBehaviour
 
                     RenderTexture.ReleaseTemporary(buffer);
                     RenderTexture.ReleaseTemporary(bluredMask);
+					Debug.Log ("3");
                 }
                 else
                 {
                     RenderTexture bluredMask = RenderTexture.GetTemporary(mask.width, mask.height, mask.depth, mask.format);
                     ApplyPostProcess(source, destination, bluredMask);
                     RenderTexture.ReleaseTemporary(bluredMask);
+					Debug.Log ("4");
                 }
+				Debug.Log ("2");
             }
 
             else
             {
                 Graphics.Blit(source, destination);
+				Debug.Log ("1");
+				//handsMaterial.SetTexture ("_handTex", handsDepthMapRenderTex);
+				//Debug.Log ("2");
+				//Graphics.Blit (depth, dest, handsMaterial);
+				//Debug.Log ("3");
+				//depth = Texture2D (dest);
             }
         }
     }

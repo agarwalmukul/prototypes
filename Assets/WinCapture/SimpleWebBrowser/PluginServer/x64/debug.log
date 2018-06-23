@@ -72,3 +72,12 @@
 [0621/211746.402:ERROR:render_media_log.cc(25)] MediaEvent: PIPELINE_ERROR demuxer: could not open
 [0621/211747.762:ERROR:render_media_log.cc(25)] MediaEvent: PIPELINE_ERROR demuxer: could not open
 [0621/211754.427:ERROR:render_media_log.cc(25)] MediaEvent: PIPELINE_ERROR demuxer: could not open
+[0622/075316.210:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0622/075318.405:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0622/183933.334:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0622/183937.873:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0622/183938.371:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0622/183941.834:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0622/183942.878:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0622/183943.375:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0622/183946.843:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
