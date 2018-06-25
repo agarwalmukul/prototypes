@@ -97,21 +97,7 @@
 
 		float3 zed_xyz = tex2D(_DepthXYZTex, uv.zw).xxx;
 
-	#ifdef NO_DEPTH_OCC
-	    outDepth = 0;
-	#else
-		
-		//if (tex2D(_handsDepthTex, fixed2( (0.8f* (uv.x-0.5f)) + 0.5f, 0.8f * (1- uv.y) + 0.5f ) ).r != 0.0f){
-			//outDepth = computeDepthXYZ(zed_xyz.z);
-			//outDepth = tex2D(_handsDepthTex, 0.8f * fixed2( uv.x - 0.1f, 1- uv.y) ).r;
-			//outDepth = tex2D(_handsDepthTex, fixed2( (0.8f* (uv.x-0.5f)) + 0.5f, 0.8f * (1- uv.y) + 0.5f ) ).r;
-		if(tex2D(_handsDepthTex, fixed2(uv.x, 1 - uv.y)).r != 0.0f){
-			outDepth = tex2D(_handsDepthTex, fixed2(uv.x, 1 - uv.y)).r;
-		} else {
-			outDepth = computeDepthXYZ(zed_xyz.z);
-		}
-
-	#endif
+	
 
 
 		fixed4 c = 0;
@@ -145,8 +131,42 @@
 		c.a = 0;
 		outColor.rgb = c;
 
-	}
+	#ifdef NO_DEPTH_OCC
+	    outDepth = 0;
+	#else
+		
+		//if (tex2D(_handsDepthTex, fixed2( (0.8f* (uv.x-0.5f)) + 0.5f, 0.8f * (1- uv.y) + 0.5f ) ).r != 0.0f){
+			//outDepth = computeDepthXYZ(zed_xyz.z);
+			//outDepth = tex2D(_handsDepthTex, 0.8f * fixed2( uv.x - 0.1f, 1- uv.y) ).r;
+			//outDepth = tex2D(_handsDepthTex, fixed2( (0.8f* (uv.x-0.5f)) + 0.5f, 0.8f * (1- uv.y) + 0.5f ) ).r;
+		if(tex2D(_handsDepthTex, fixed2(uv.x, 1 - uv.y)).r != 0.0f){
+			fixed4 col = c;
+			float per = 0.1f;
+			fixed4 t = fixed4(0.5078, 0.2343, 0.1289, 0);
+			//if (((col.r - t.r)/t.r)<per && ((col.g - t.g)/t.g)<per && ((col.b - t.b)/t.b)<per){
+			//if (((col.r - t.r))<per && ((col.g - t.g))<per && ((col.b - t.b))<per){
+			//if (((col.r - 0.50))<per && ((col.g - 0.23))<per && ((col.b - 0.12))<per){
+			//if (((col.r))<per && ((col.g))<per && ((col.b))<per){
+			//if ( 0.45f<col.r<0.55f && 0.18f<col.g<0.28f && 0.10f<col.b<0.15f){
+			//if ( col.r>0.49f && col.r<0.51f && col.g>0.22f && col.g<0.24f && col.b>0.11f && col.b<0.13f){
+			if ( col.r>0.1f && col.r<0.2f && col.g<0.2f && col.b<0.13f){
+				outDepth = tex2D(_handsDepthTex, fixed2(uv.x, 1 - uv.y)).r;
+				//outDepth = 0.0f;
+			}
+			else {
+				float3 depthxyz = tex2D(_DepthXYZTex, float2( uv.z, 0.0f)).xxx;
+				outDepth = computeDepthXYZ(depthxyz.z);
+				//outDepth = 0.0f;
+			}
+		} else {
+			outDepth = computeDepthXYZ(zed_xyz.z);
+		}
 
+	#endif
+			//130/256, 60/256, 33/256
+			//if (abs((col.r - 0.5078f)/0.5078.0f)<per && abs((col.g - 0.2343f)/0.2343f)<per && abs((col.b - 0.1289f)/0.1289f)<per){
+		
+		}
 	ENDCG
 
 	}
