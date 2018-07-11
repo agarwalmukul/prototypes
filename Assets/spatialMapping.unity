@@ -157,6 +157,16 @@ Prefab:
       propertyPath: saveWhenOver
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114238232927226582, guid: 0f7ebf7eb8cb0994da72a59d31376ee2,
+        type: 2}
+      propertyPath: resolution_preset
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114238232927226582, guid: 0f7ebf7eb8cb0994da72a59d31376ee2,
+        type: 2}
+      propertyPath: filterParameters
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0f7ebf7eb8cb0994da72a59d31376ee2, type: 2}
   m_IsPrefabParent: 0
