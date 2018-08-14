@@ -32,10 +32,10 @@ TagManager:
   - DemoUI
   - Toys
   - debugGo
-  - 
-  - 
-  - 
-  - 
+  - ARGameObject
+  - Map
+  - Path
+  - Both
   - 
   - 
   - 

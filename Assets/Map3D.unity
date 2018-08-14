@@ -1394,6 +1394,52 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2aa010a1e75292e49a24f3f71bb9cddb, type: 2}
   m_IsPrefabParent: 0
+--- !u!1001 &45505828
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4580065472578918, guid: c0ce4c9dacbd84ff09f18011abded7e6, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4580065472578918, guid: c0ce4c9dacbd84ff09f18011abded7e6, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4580065472578918, guid: c0ce4c9dacbd84ff09f18011abded7e6, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4580065472578918, guid: c0ce4c9dacbd84ff09f18011abded7e6, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4580065472578918, guid: c0ce4c9dacbd84ff09f18011abded7e6, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4580065472578918, guid: c0ce4c9dacbd84ff09f18011abded7e6, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4580065472578918, guid: c0ce4c9dacbd84ff09f18011abded7e6, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4580065472578918, guid: c0ce4c9dacbd84ff09f18011abded7e6, type: 2}
+      propertyPath: m_RootOrder
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1272331924038672, guid: c0ce4c9dacbd84ff09f18011abded7e6, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: c0ce4c9dacbd84ff09f18011abded7e6, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &55905557
 GameObject:
   m_ObjectHideFlags: 0
@@ -1590,8 +1636,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a7f9a3badb4bc44aabae55ceff39209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screenT: {fileID: 870221262}
-  matScreen: {fileID: 2100000, guid: 273ea6659b43a904e85b219a1ea9e29d, type: 2}
 --- !u!23 &85877764
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1821,6 +1865,37 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 102893083}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &105685869
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 824645597}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 105685870}
+  m_Layer: 0
+  m_Name: Missing Prefab
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &105685870
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 824645597}
+  m_GameObject: {fileID: 105685869}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1817268345}
+  - {fileID: 1817268346}
+  - {fileID: 691218256}
+  m_Father: {fileID: 1307187616}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &109467879
 GameObject:
   m_ObjectHideFlags: 0
@@ -1868,7 +1943,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5b02a13ecb41e4469cdc443cd70e92b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
 --- !u!114 &109467882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1880,70 +1954,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd4030d81fcbf26428dd00669ec0168f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnShouldShowHandle:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 109467881}
-        m_MethodName: ShowRenderer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnShouldHideHandle:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 109467881}
-        m_MethodName: HideRenderer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnHandleActivated:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 109467881}
-        m_MethodName: SetToActivationColor
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnHandleDeactivated:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 109467881}
-        m_MethodName: SetToOriginalColor
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &109467883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1955,24 +1965,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f10fa40360571247a7ca806d6859557, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _manager: {fileID: 0}
-  _ignoreHoverMode: 0
-  _isIgnoringAllHoverState: 0
-  _ignorePrimaryHover: 0
-  _ignoreContact: 1
-  _ignoreGrasping: 0
-  _contactForceMode: 0
-  _allowMultiGrasp: 0
-  _moveObjectWhenGrasped: 1
-  graspedMovementType: 0
-  _overrideInteractionLayer: 0
-  _interactionLayer:
-    layerIndex: 0
-  _overrideNoContactLayer: 0
-  _noContactLayer:
-    layerIndex: 0
-  _eventTable:
-    _entries: []
 --- !u!54 &109467884
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2315,8 +2307,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dce46feb2641b644ba8730b3c5e5a66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionManager: {fileID: 0}
-  target: {fileID: 788374404}
 --- !u!54 &209539522
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2641,7 +2631,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5b02a13ecb41e4469cdc443cd70e92b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
 --- !u!114 &292998910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2653,71 +2642,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: beced83bfcb78914bb2ea23362ee2508, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnShouldShowHandle:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 292998909}
-        m_MethodName: ShowRenderer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnShouldHideHandle:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 292998909}
-        m_MethodName: HideRenderer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnHandleActivated:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 292998909}
-        m_MethodName: SetToActivationColor
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnHandleDeactivated:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 292998909}
-        m_MethodName: SetToOriginalColor
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  axis: 1
 --- !u!114 &292998911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2729,24 +2653,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f10fa40360571247a7ca806d6859557, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _manager: {fileID: 0}
-  _ignoreHoverMode: 0
-  _isIgnoringAllHoverState: 0
-  _ignorePrimaryHover: 0
-  _ignoreContact: 1
-  _ignoreGrasping: 0
-  _contactForceMode: 0
-  _allowMultiGrasp: 0
-  _moveObjectWhenGrasped: 1
-  graspedMovementType: 0
-  _overrideInteractionLayer: 0
-  _interactionLayer:
-    layerIndex: 0
-  _overrideNoContactLayer: 0
-  _noContactLayer:
-    layerIndex: 0
-  _eventTable:
-    _entries: []
 --- !u!135 &292998912
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2891,11 +2797,6 @@ CapsuleCollider:
   m_Height: 0.4952382
   m_Direction: 0
   m_Center: {x: -0.15821874, y: 0.0225104, z: -0.0043765907}
---- !u!137 &312115551 stripped
-SkinnedMeshRenderer:
-  m_PrefabParentObject: {fileID: 137091762490896592, guid: 2aa010a1e75292e49a24f3f71bb9cddb,
-    type: 2}
-  m_PrefabInternal: {fileID: 42133807}
 --- !u!1 &339853647
 GameObject:
   m_ObjectHideFlags: 0
@@ -2984,13 +2885,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b02e2f8ae628ac4f9faca951fe12db4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useHover: 0
-  usePrimaryHover: 1
-  defaultColor: {r: 0.1, g: 0.1, b: 0.1, a: 1}
-  suspendedColor: {r: 1, g: 0, b: 0, a: 1}
-  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
-  primaryHoverColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  pressedColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &343929216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3003,61 +2897,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ebbb41b110e5794ab82d986ca172460, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _manager: {fileID: 0}
-  _ignoreHoverMode: 1
-  _isIgnoringAllHoverState: 0
-  _ignorePrimaryHover: 0
-  _ignoreContact: 0
-  _ignoreGrasping: 0
-  _contactForceMode: 1
-  _allowMultiGrasp: 0
-  _moveObjectWhenGrasped: 1
-  graspedMovementType: 0
-  _overrideInteractionLayer: 0
-  _interactionLayer:
-    layerIndex: 0
-  _overrideNoContactLayer: 0
-  _noContactLayer:
-    layerIndex: 0
-  _eventTable:
-    _entries: []
-  _controlEnabled: 1
-  startingPositionMode: 0
-  minMaxHeight: {x: 0, y: 0.02}
-  restingHeight: 0.5
-  _springForce: 0.1
-  _OnPress:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  _OnUnpress:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  sliderType: 1
-  dispatchSlideValueOnStart: 1
-  overrideRectLimits: 0
-  _parentHasRectTransform: 0
-  defaultHorizontalValue: 0
-  _horizontalValueRange: {x: 0, y: 1}
-  horizontalSlideLimits: {x: -0.042, y: 0.042}
-  horizontalSteps: 0
-  _horizontalSlideEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: Leap.Unity.Interaction.InteractionSlider+FloatEvent, Assembly-CSharp,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-  defaultVerticalValue: 0
-  _verticalValueRange: {x: 0, y: 1}
-  verticalSlideLimits: {x: 0, y: 0}
-  verticalSteps: 0
-  _verticalSlideEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: Leap.Unity.Interaction.InteractionSlider+FloatEvent, Assembly-CSharp,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!54 &343929217
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3121,7 +2960,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5b02a13ecb41e4469cdc443cd70e92b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
 --- !u!114 &344310827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3133,70 +2971,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd4030d81fcbf26428dd00669ec0168f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnShouldShowHandle:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 344310826}
-        m_MethodName: ShowRenderer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnShouldHideHandle:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 344310826}
-        m_MethodName: HideRenderer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnHandleActivated:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 344310826}
-        m_MethodName: SetToActivationColor
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnHandleDeactivated:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 344310826}
-        m_MethodName: SetToOriginalColor
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &344310828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3208,24 +2982,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f10fa40360571247a7ca806d6859557, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _manager: {fileID: 0}
-  _ignoreHoverMode: 0
-  _isIgnoringAllHoverState: 0
-  _ignorePrimaryHover: 0
-  _ignoreContact: 1
-  _ignoreGrasping: 0
-  _contactForceMode: 0
-  _allowMultiGrasp: 0
-  _moveObjectWhenGrasped: 1
-  graspedMovementType: 0
-  _overrideInteractionLayer: 0
-  _interactionLayer:
-    layerIndex: 0
-  _overrideNoContactLayer: 0
-  _noContactLayer:
-    layerIndex: 0
-  _eventTable:
-    _entries: []
 --- !u!54 &344310829
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3363,16 +3119,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: -2.9180002, z: 0}
---- !u!1 &367321339 stripped
+--- !u!1 &367321339
 GameObject:
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 1257637052428748, guid: 72368278d054cda4bb18e5aa08ce971d,
     type: 2}
   m_PrefabInternal: {fileID: 908367912}
---- !u!4 &367321340 stripped
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 367321342}
+  - component: {fileID: 367321341}
+  m_Layer: 0
+  m_Name: Missing Prefab (Dummy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &367321340
 Transform:
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 4527397571117942, guid: 72368278d054cda4bb18e5aa08ce971d,
     type: 2}
   m_PrefabInternal: {fileID: 908367912}
+  m_GameObject: {fileID: 550982470}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 717605671}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &367321341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3384,68 +3161,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820cd3c2c5bc5794d9179a4f453271f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intCtrl: {fileID: 367321343}
-  intHand: {fileID: 561959908}
-  OnInteractionHandEnabled:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2090342243}
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1657702509}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnInteractionHandDisabled:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2090342243}
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1657702509}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!114 &367321343 stripped
+--- !u!4 &367321342
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 908367912}
+  m_GameObject: {fileID: 367321339}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 717605671}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &367321343
 MonoBehaviour:
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 114446365300099102, guid: 72368278d054cda4bb18e5aa08ce971d,
     type: 2}
   m_PrefabInternal: {fileID: 908367912}
+  m_GameObject: {fileID: 1685176930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e55d3703de8ab5d418cb97104179cb49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &371459509
 GameObject:
   m_ObjectHideFlags: 0
@@ -3649,7 +3389,7 @@ Transform:
   - {fileID: 863606985}
   - {fileID: 1672970111}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: -27.48, y: 15.17, z: 0}
 --- !u!1 &420787115
 GameObject:
@@ -3788,7 +3528,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5b02a13ecb41e4469cdc443cd70e92b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
 --- !u!114 &427632705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3800,71 +3539,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: beced83bfcb78914bb2ea23362ee2508, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnShouldShowHandle:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 427632704}
-        m_MethodName: ShowRenderer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnShouldHideHandle:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 427632704}
-        m_MethodName: HideRenderer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnHandleActivated:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 427632704}
-        m_MethodName: SetToActivationColor
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnHandleDeactivated:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 427632704}
-        m_MethodName: SetToOriginalColor
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  axis: 1
 --- !u!114 &427632706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3876,24 +3550,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f10fa40360571247a7ca806d6859557, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _manager: {fileID: 0}
-  _ignoreHoverMode: 0
-  _isIgnoringAllHoverState: 0
-  _ignorePrimaryHover: 0
-  _ignoreContact: 1
-  _ignoreGrasping: 0
-  _contactForceMode: 0
-  _allowMultiGrasp: 0
-  _moveObjectWhenGrasped: 1
-  graspedMovementType: 0
-  _overrideInteractionLayer: 0
-  _interactionLayer:
-    layerIndex: 0
-  _overrideNoContactLayer: 0
-  _noContactLayer:
-    layerIndex: 0
-  _eventTable:
-    _entries: []
 --- !u!135 &427632707
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4105,39 +3761,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e515312faef93140a27bcb9c8e30eb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toFaceCamera: {fileID: 1122388870}
-  OnBeginFacingCamera:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1554238125}
-        m_MethodName: PlayForward
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnEndFacingCamera:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1554238125}
-        m_MethodName: PlayBackward
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!1 &468525933
 GameObject:
   m_ObjectHideFlags: 0
@@ -4973,6 +4596,36 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 538003679}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &549275800
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 1654061734}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1654061735}
+  m_Layer: 0
+  m_Name: Missing Prefab (Dummy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &550982470
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 908367912}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 367321340}
+  m_Layer: 0
+  m_Name: Missing Prefab (Dummy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &561006004
 GameObject:
   m_ObjectHideFlags: 0
@@ -5086,13 +4739,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29207d17cdd06e84d9fecbdef2401c1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 1307187617}
-  _hoverEnabled: 1
-  _contactEnabled: 1
-  _graspingEnabled: 1
-  _leapProvider: {fileID: 0}
-  _handDataMode: 1
-  enabledPrimaryHoverFingertips: 0101010000
 --- !u!4 &561959909
 Transform:
   m_ObjectHideFlags: 0
@@ -5506,7 +5152,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &661360823
 MonoBehaviour:
@@ -5519,12 +5165,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edf1c648f687d9b4e943f1f9b2e05b20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactionCursor: {fileID: 0}
   testOne: {fileID: 0}
   frame: {fileID: 0}
   baseMesh: {fileID: 1891354893}
   strokeMat: {fileID: 2100000, guid: aeb54ae1b95708a4fae0ea90312c3996, type: 2}
   gridMat: {fileID: 2100000, guid: 66b2688fa8a957a4faa00e619c011559, type: 2}
   debugMode: 0
+--- !u!1 &691218255
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 824645597}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 691218256}
+  - component: {fileID: 1817268343}
+  m_Layer: 0
+  m_Name: Missing Prefab (Dummy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &691218256
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 824645597}
+  m_GameObject: {fileID: 691218255}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 105685870}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &692546937
 GameObject:
   m_ObjectHideFlags: 0
@@ -5654,13 +5330,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b02e2f8ae628ac4f9faca951fe12db4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useHover: 0
-  usePrimaryHover: 1
-  defaultColor: {r: 0.1, g: 0.1, b: 0.1, a: 1}
-  suspendedColor: {r: 1, g: 0, b: 0, a: 1}
-  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
-  primaryHoverColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  pressedColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &697681478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5673,61 +5342,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ebbb41b110e5794ab82d986ca172460, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _manager: {fileID: 0}
-  _ignoreHoverMode: 1
-  _isIgnoringAllHoverState: 0
-  _ignorePrimaryHover: 0
-  _ignoreContact: 0
-  _ignoreGrasping: 0
-  _contactForceMode: 1
-  _allowMultiGrasp: 0
-  _moveObjectWhenGrasped: 1
-  graspedMovementType: 0
-  _overrideInteractionLayer: 0
-  _interactionLayer:
-    layerIndex: 0
-  _overrideNoContactLayer: 0
-  _noContactLayer:
-    layerIndex: 0
-  _eventTable:
-    _entries: []
-  _controlEnabled: 1
-  startingPositionMode: 0
-  minMaxHeight: {x: 0, y: 0.02}
-  restingHeight: 0.5
-  _springForce: 0.1
-  _OnPress:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  _OnUnpress:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  sliderType: 1
-  dispatchSlideValueOnStart: 1
-  overrideRectLimits: 0
-  _parentHasRectTransform: 0
-  defaultHorizontalValue: 0
-  _horizontalValueRange: {x: 0, y: 1}
-  horizontalSlideLimits: {x: -0.042, y: 0.042}
-  horizontalSteps: 0
-  _horizontalSlideEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: Leap.Unity.Interaction.InteractionSlider+FloatEvent, Assembly-CSharp,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-  defaultVerticalValue: 0
-  _verticalValueRange: {x: 0, y: 1}
-  verticalSlideLimits: {x: 0, y: 0}
-  verticalSteps: 0
-  _verticalSlideEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: Leap.Unity.Interaction.InteractionSlider+FloatEvent, Assembly-CSharp,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!54 &697681479
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5906,6 +5520,37 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 713367718}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &717605670
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 908367912}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 717605671}
+  m_Layer: 0
+  m_Name: Missing Prefab
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &717605671
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 908367912}
+  m_GameObject: {fileID: 717605670}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 367321342}
+  - {fileID: 367321340}
+  - {fileID: 1685176931}
+  m_Father: {fileID: 1307187616}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &762103104
 GameObject:
   m_ObjectHideFlags: 0
@@ -5934,6 +5579,37 @@ Transform:
   - {fileID: 709667221}
   m_Father: {fileID: 965445716}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &766199079
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 64772813}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 766199080}
+  m_Layer: 0
+  m_Name: Missing Prefab
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &766199080
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 64772813}
+  m_GameObject: {fileID: 766199079}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1050002924}
+  - {fileID: 1050002925}
+  - {fileID: 1567934180}
+  m_Father: {fileID: 1307187616}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &775094550
 GameObject:
@@ -6159,7 +5835,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5b02a13ecb41e4469cdc443cd70e92b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
 --- !u!114 &799099865
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6171,70 +5846,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd4030d81fcbf26428dd00669ec0168f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnShouldShowHandle:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 799099864}
-        m_MethodName: ShowRenderer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnShouldHideHandle:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 799099864}
-        m_MethodName: HideRenderer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnHandleActivated:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 799099864}
-        m_MethodName: SetToActivationColor
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnHandleDeactivated:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 799099864}
-        m_MethodName: SetToOriginalColor
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &799099866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6246,24 +5857,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f10fa40360571247a7ca806d6859557, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _manager: {fileID: 0}
-  _ignoreHoverMode: 0
-  _isIgnoringAllHoverState: 0
-  _ignorePrimaryHover: 0
-  _ignoreContact: 1
-  _ignoreGrasping: 0
-  _contactForceMode: 0
-  _allowMultiGrasp: 0
-  _moveObjectWhenGrasped: 1
-  graspedMovementType: 0
-  _overrideInteractionLayer: 0
-  _interactionLayer:
-    layerIndex: 0
-  _overrideNoContactLayer: 0
-  _noContactLayer:
-    layerIndex: 0
-  _eventTable:
-    _entries: []
 --- !u!54 &799099867
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6406,7 +5999,7 @@ Transform:
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &805950075
 GameObject:
@@ -6454,13 +6047,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b02e2f8ae628ac4f9faca951fe12db4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useHover: 0
-  usePrimaryHover: 1
-  defaultColor: {r: 0.1, g: 0.1, b: 0.1, a: 1}
-  suspendedColor: {r: 1, g: 0, b: 0, a: 1}
-  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
-  primaryHoverColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  pressedColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &805950078
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6473,39 +6059,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cba520a60e47274cb1e5afbb57aae0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _manager: {fileID: 0}
-  _ignoreHoverMode: 1
-  _isIgnoringAllHoverState: 0
-  _ignorePrimaryHover: 0
-  _ignoreContact: 0
-  _ignoreGrasping: 1
-  _contactForceMode: 1
-  _allowMultiGrasp: 0
-  _moveObjectWhenGrasped: 1
-  graspedMovementType: 0
-  _overrideInteractionLayer: 0
-  _interactionLayer:
-    layerIndex: 0
-  _overrideNoContactLayer: 0
-  _noContactLayer:
-    layerIndex: 0
-  _eventTable:
-    _entries: []
-  _controlEnabled: 1
-  startingPositionMode: 0
-  minMaxHeight: {x: 0, y: 0.02}
-  restingHeight: 0.5
-  _springForce: 0.1
-  _OnPress:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  _OnUnpress:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!54 &805950079
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7061,6 +6614,35 @@ Transform:
   m_Father: {fileID: 362292049}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 80.05601, y: 183.034, z: 2.989}
+--- !u!1 &902236723
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 1575030395}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 902236724}
+  m_Layer: 0
+  m_Name: Missing Prefab
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &902236724
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 1575030395}
+  m_GameObject: {fileID: 902236723}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1575030396}
+  m_Father: {fileID: 2013354514}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &903913404
 GameObject:
   m_ObjectHideFlags: 0
@@ -7465,6 +7047,21 @@ Transform:
   m_Father: {fileID: 942332495}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &939290109
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 64772813}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1050002925}
+  m_Layer: 0
+  m_Name: Missing Prefab (Dummy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &942332494
 GameObject:
   m_ObjectHideFlags: 0
@@ -7515,7 +7112,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &957641526
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7935,8 +7532,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a7f9a3badb4bc44aabae55ceff39209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screenT: {fileID: 870221262}
-  matScreen: {fileID: 2100000, guid: a720df695f46e044483410b6bd89b190, type: 2}
 --- !u!23 &989487992
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8257,7 +7852,7 @@ Transform:
   - {fileID: 1891354894}
   - {fileID: 1771903635}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: -170.56801, z: 0}
 --- !u!114 &1044176334
 MonoBehaviour:
@@ -8270,17 +7865,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41135d860bf843849a9acacb61f9faa9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1050002921 stripped
+--- !u!1 &1050002921
 GameObject:
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 1393620680427892, guid: 80e9754fad44e784f97f6c76a2c7255b,
     type: 2}
   m_PrefabInternal: {fileID: 64772813}
---- !u!114 &1050002922 stripped
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1050002924}
+  - component: {fileID: 1050002923}
+  m_Layer: 0
+  m_Name: Missing Prefab (Dummy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1050002922
 MonoBehaviour:
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 114384944290433142, guid: 80e9754fad44e784f97f6c76a2c7255b,
     type: 2}
   m_PrefabInternal: {fileID: 64772813}
+  m_GameObject: {fileID: 1567934179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e55d3703de8ab5d418cb97104179cb49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1050002923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8292,67 +7905,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820cd3c2c5bc5794d9179a4f453271f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intCtrl: {fileID: 1050002922}
-  intHand: {fileID: 1857686671}
-  OnInteractionHandEnabled:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 312115551}
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1875330247}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnInteractionHandDisabled:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 312115551}
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1875330247}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!4 &1050002925 stripped
+--- !u!4 &1050002924
 Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 64772813}
+  m_GameObject: {fileID: 1050002921}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 766199080}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1050002925
+Transform:
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 4360080876800316, guid: 80e9754fad44e784f97f6c76a2c7255b,
     type: 2}
   m_PrefabInternal: {fileID: 64772813}
+  m_GameObject: {fileID: 939290109}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1513559419}
+  - {fileID: 2013859644}
+  - {fileID: 1675786210}
+  m_Father: {fileID: 766199080}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1072352644
 GameObject:
   m_ObjectHideFlags: 0
@@ -8488,6 +8070,37 @@ Transform:
   m_Children:
   - {fileID: 1434921859}
   m_Father: {fileID: 2118374510}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1090520281
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 494208785}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1090520282}
+  m_Layer: 0
+  m_Name: Missing Prefab
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1090520282
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 494208785}
+  m_GameObject: {fileID: 1090520281}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1290056347}
+  - {fileID: 1290056348}
+  - {fileID: 2146725276}
+  m_Father: {fileID: 1307187616}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1105713316
@@ -8760,7 +8373,7 @@ Transform:
   - {fileID: 806517667}
   - {fileID: 593828262}
   m_Father: {fileID: 1817268346}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -28.080002, y: -4.177, z: -10.333}
 --- !u!1 &1144993825
 GameObject:
@@ -9214,6 +8827,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 34670827}
+  depthMap: {fileID: 0}
   viewMode: 1
   numberPointLights: 0
   numberSpotLights: 0
@@ -9329,7 +8943,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5b02a13ecb41e4469cdc443cd70e92b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
 --- !u!114 &1211293270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9341,70 +8954,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd4030d81fcbf26428dd00669ec0168f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnShouldShowHandle:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1211293269}
-        m_MethodName: ShowRenderer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnShouldHideHandle:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1211293269}
-        m_MethodName: HideRenderer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnHandleActivated:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1211293269}
-        m_MethodName: SetToActivationColor
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnHandleDeactivated:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1211293269}
-        m_MethodName: SetToOriginalColor
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &1211293271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9416,24 +8965,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f10fa40360571247a7ca806d6859557, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _manager: {fileID: 0}
-  _ignoreHoverMode: 0
-  _isIgnoringAllHoverState: 0
-  _ignorePrimaryHover: 0
-  _ignoreContact: 1
-  _ignoreGrasping: 0
-  _contactForceMode: 0
-  _allowMultiGrasp: 0
-  _moveObjectWhenGrasped: 1
-  graspedMovementType: 0
-  _overrideInteractionLayer: 0
-  _interactionLayer:
-    layerIndex: 0
-  _overrideNoContactLayer: 0
-  _noContactLayer:
-    layerIndex: 0
-  _eventTable:
-    _entries: []
 --- !u!54 &1211293272
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9724,13 +9255,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b02e2f8ae628ac4f9faca951fe12db4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useHover: 0
-  usePrimaryHover: 1
-  defaultColor: {r: 0.1, g: 0.1, b: 0.1, a: 1}
-  suspendedColor: {r: 1, g: 0, b: 0, a: 1}
-  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
-  primaryHoverColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  pressedColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &1256156816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9743,39 +9267,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cba520a60e47274cb1e5afbb57aae0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _manager: {fileID: 1307187617}
-  _ignoreHoverMode: 1
-  _isIgnoringAllHoverState: 0
-  _ignorePrimaryHover: 0
-  _ignoreContact: 0
-  _ignoreGrasping: 1
-  _contactForceMode: 1
-  _allowMultiGrasp: 0
-  _moveObjectWhenGrasped: 1
-  graspedMovementType: 0
-  _overrideInteractionLayer: 1
-  _interactionLayer:
-    layerIndex: 5
-  _overrideNoContactLayer: 0
-  _noContactLayer:
-    layerIndex: 0
-  _eventTable:
-    _entries: []
-  _controlEnabled: 1
-  startingPositionMode: 0
-  minMaxHeight: {x: 0, y: 0.02}
-  restingHeight: 0.5
-  _springForce: 0.1
-  _OnPress:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  _OnUnpress:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!54 &1256156817
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9838,7 +9329,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5b02a13ecb41e4469cdc443cd70e92b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
 --- !u!114 &1259327473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9850,71 +9340,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: beced83bfcb78914bb2ea23362ee2508, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnShouldShowHandle:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1259327472}
-        m_MethodName: ShowRenderer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnShouldHideHandle:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1259327472}
-        m_MethodName: HideRenderer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnHandleActivated:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1259327472}
-        m_MethodName: SetToActivationColor
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnHandleDeactivated:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1259327472}
-        m_MethodName: SetToOriginalColor
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  axis: 0
 --- !u!114 &1259327474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9926,24 +9351,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f10fa40360571247a7ca806d6859557, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _manager: {fileID: 0}
-  _ignoreHoverMode: 0
-  _isIgnoringAllHoverState: 0
-  _ignorePrimaryHover: 0
-  _ignoreContact: 1
-  _ignoreGrasping: 0
-  _contactForceMode: 0
-  _allowMultiGrasp: 0
-  _moveObjectWhenGrasped: 1
-  graspedMovementType: 0
-  _overrideInteractionLayer: 0
-  _interactionLayer:
-    layerIndex: 0
-  _overrideNoContactLayer: 0
-  _noContactLayer:
-    layerIndex: 0
-  _eventTable:
-    _entries: []
 --- !u!135 &1259327475
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -10062,7 +9469,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5b02a13ecb41e4469cdc443cd70e92b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
 --- !u!114 &1264416376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10074,70 +9480,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd4030d81fcbf26428dd00669ec0168f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnShouldShowHandle:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1264416375}
-        m_MethodName: ShowRenderer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnShouldHideHandle:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1264416375}
-        m_MethodName: HideRenderer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnHandleActivated:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1264416375}
-        m_MethodName: SetToActivationColor
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnHandleDeactivated:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1264416375}
-        m_MethodName: SetToOriginalColor
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &1264416377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10149,24 +9491,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f10fa40360571247a7ca806d6859557, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _manager: {fileID: 0}
-  _ignoreHoverMode: 0
-  _isIgnoringAllHoverState: 0
-  _ignorePrimaryHover: 0
-  _ignoreContact: 1
-  _ignoreGrasping: 0
-  _contactForceMode: 0
-  _allowMultiGrasp: 0
-  _moveObjectWhenGrasped: 1
-  graspedMovementType: 0
-  _overrideInteractionLayer: 0
-  _interactionLayer:
-    layerIndex: 0
-  _overrideNoContactLayer: 0
-  _noContactLayer:
-    layerIndex: 0
-  _eventTable:
-    _entries: []
 --- !u!54 &1264416378
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10309,7 +9633,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1269396464
 Prefab:
@@ -10348,7 +9672,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 126d619cf4daa52469682f85c1378b4a, type: 2}
       propertyPath: _trackingOriginType
@@ -10535,7 +9859,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5b02a13ecb41e4469cdc443cd70e92b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
 --- !u!114 &1280305976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10547,70 +9870,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd4030d81fcbf26428dd00669ec0168f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnShouldShowHandle:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1280305975}
-        m_MethodName: ShowRenderer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnShouldHideHandle:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1280305975}
-        m_MethodName: HideRenderer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnHandleActivated:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1280305975}
-        m_MethodName: SetToActivationColor
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnHandleDeactivated:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1280305975}
-        m_MethodName: SetToOriginalColor
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &1280305977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10622,24 +9881,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f10fa40360571247a7ca806d6859557, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _manager: {fileID: 0}
-  _ignoreHoverMode: 0
-  _isIgnoringAllHoverState: 0
-  _ignorePrimaryHover: 0
-  _ignoreContact: 1
-  _ignoreGrasping: 0
-  _contactForceMode: 0
-  _allowMultiGrasp: 0
-  _moveObjectWhenGrasped: 1
-  graspedMovementType: 0
-  _overrideInteractionLayer: 0
-  _interactionLayer:
-    layerIndex: 0
-  _overrideNoContactLayer: 0
-  _noContactLayer:
-    layerIndex: 0
-  _eventTable:
-    _entries: []
 --- !u!54 &1280305978
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10798,17 +10039,35 @@ MonoBehaviour:
   pinkyTip: {fileID: 0}
   _chirality: 0
   _isTracked: 1
---- !u!1 &1290056344 stripped
+--- !u!1 &1290056344
 GameObject:
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 1180994678239160, guid: 9361ab6d13ee87644bc370bccb524144,
     type: 2}
   m_PrefabInternal: {fileID: 494208785}
---- !u!114 &1290056345 stripped
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1290056347}
+  - component: {fileID: 1290056346}
+  m_Layer: 0
+  m_Name: Missing Prefab (Dummy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1290056345
 MonoBehaviour:
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 114252805458954098, guid: 9361ab6d13ee87644bc370bccb524144,
     type: 2}
   m_PrefabInternal: {fileID: 494208785}
+  m_GameObject: {fileID: 2146725275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e55d3703de8ab5d418cb97104179cb49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1290056346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10820,67 +10079,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820cd3c2c5bc5794d9179a4f453271f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intCtrl: {fileID: 1290056345}
-  intHand: {fileID: 561959908}
-  OnInteractionHandEnabled:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2090342243}
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1657702509}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnInteractionHandDisabled:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2090342243}
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1657702509}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!4 &1290056348 stripped
+--- !u!4 &1290056347
 Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 494208785}
+  m_GameObject: {fileID: 1290056344}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1090520282}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1290056348
+Transform:
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 4911511504652324, guid: 9361ab6d13ee87644bc370bccb524144,
     type: 2}
   m_PrefabInternal: {fileID: 494208785}
+  m_GameObject: {fileID: 1907969278}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1090520282}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1297154713
 GameObject:
   m_ObjectHideFlags: 0
@@ -10971,7 +10196,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1307187616
 Transform:
   m_ObjectHideFlags: 0
@@ -10984,10 +10209,10 @@ Transform:
   m_Children:
   - {fileID: 1857686672}
   - {fileID: 561959909}
-  - {fileID: 1817268346}
-  - {fileID: 1290056348}
-  - {fileID: 1050002925}
-  - {fileID: 367321340}
+  - {fileID: 105685870}
+  - {fileID: 1090520282}
+  - {fileID: 766199080}
+  - {fileID: 717605671}
   m_Father: {fileID: 603640916}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11002,24 +10227,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0625e574c0d47a241b7dfc7a8c67ca2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _interactionControllers:
-    _values:
-    - {fileID: 1857686671}
-    - {fileID: 561959908}
-    - {fileID: 1817268343}
-    - {fileID: 1290056345}
-  hoverActivationRadius: 0.2
-  touchActivationRadius: 0.075
-  _autoGenerateLayers: 1
-  _templateLayer:
-    layerIndex: 0
-  _interactionLayer:
-    layerIndex: 20
-  _interactionNoContactLayer:
-    layerIndex: 21
-  _contactBoneLayer:
-    layerIndex: 22
-  _drawControllerRuntimeGizmos: 0
 --- !u!1 &1350808784
 GameObject:
   m_ObjectHideFlags: 0
@@ -11140,7 +10347,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5b02a13ecb41e4469cdc443cd70e92b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
 --- !u!114 &1354438431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11152,71 +10358,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: beced83bfcb78914bb2ea23362ee2508, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnShouldShowHandle:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1354438430}
-        m_MethodName: ShowRenderer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnShouldHideHandle:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1354438430}
-        m_MethodName: HideRenderer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnHandleActivated:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1354438430}
-        m_MethodName: SetToActivationColor
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnHandleDeactivated:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1354438430}
-        m_MethodName: SetToOriginalColor
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  axis: 2
 --- !u!114 &1354438432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11228,24 +10369,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f10fa40360571247a7ca806d6859557, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _manager: {fileID: 0}
-  _ignoreHoverMode: 0
-  _isIgnoringAllHoverState: 0
-  _ignorePrimaryHover: 0
-  _ignoreContact: 1
-  _ignoreGrasping: 0
-  _contactForceMode: 0
-  _allowMultiGrasp: 0
-  _moveObjectWhenGrasped: 1
-  graspedMovementType: 0
-  _overrideInteractionLayer: 0
-  _interactionLayer:
-    layerIndex: 0
-  _overrideNoContactLayer: 0
-  _noContactLayer:
-    layerIndex: 0
-  _eventTable:
-    _entries: []
 --- !u!135 &1354438433
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -11468,6 +10591,21 @@ Transform:
   m_Father: {fileID: 309251891}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1376501588
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 824645597}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1817268346}
+  m_Layer: 0
+  m_Name: Missing Prefab (Dummy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1384691677
 GameObject:
   m_ObjectHideFlags: 0
@@ -11576,7 +10714,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4309805032874704, guid: e13ee7e0790c7d243b7aa67fe604acac, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 114711245158774928, guid: e13ee7e0790c7d243b7aa67fe604acac,
         type: 2}
@@ -11721,6 +10859,16 @@ Prefab:
       propertyPath: rightHandsDepthMap
       value: 
       objectReference: {fileID: 8400000, guid: fcf73bd06bcc9334baa5bb405dc45f3f, type: 2}
+    - target: {fileID: 20846656237544980, guid: e13ee7e0790c7d243b7aa67fe604acac,
+        type: 2}
+      propertyPath: m_OcclusionCulling
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 20426257081025226, guid: e13ee7e0790c7d243b7aa67fe604acac,
+        type: 2}
+      propertyPath: m_OcclusionCulling
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e13ee7e0790c7d243b7aa67fe604acac, type: 2}
   m_IsPrefabParent: 0
@@ -11826,7 +10974,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a89fb0911aee5842932b78939fd1f97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  renderTexture: {fileID: 0}
 --- !u!4 &1396734819
 Transform:
   m_ObjectHideFlags: 0
@@ -13122,7 +12269,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4695795446731942, guid: 0f7ebf7eb8cb0994da72a59d31376ee2, type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0f7ebf7eb8cb0994da72a59d31376ee2, type: 2}
@@ -13365,13 +12512,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b02e2f8ae628ac4f9faca951fe12db4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useHover: 0
-  usePrimaryHover: 1
-  defaultColor: {r: 0.1, g: 0.1, b: 0.1, a: 1}
-  suspendedColor: {r: 1, g: 0, b: 0, a: 1}
-  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
-  primaryHoverColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  pressedColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &1457236247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13384,39 +12524,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cba520a60e47274cb1e5afbb57aae0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _manager: {fileID: 0}
-  _ignoreHoverMode: 1
-  _isIgnoringAllHoverState: 0
-  _ignorePrimaryHover: 0
-  _ignoreContact: 0
-  _ignoreGrasping: 1
-  _contactForceMode: 1
-  _allowMultiGrasp: 0
-  _moveObjectWhenGrasped: 1
-  graspedMovementType: 0
-  _overrideInteractionLayer: 0
-  _interactionLayer:
-    layerIndex: 0
-  _overrideNoContactLayer: 0
-  _noContactLayer:
-    layerIndex: 0
-  _eventTable:
-    _entries: []
-  _controlEnabled: 1
-  startingPositionMode: 0
-  minMaxHeight: {x: 0, y: 0.02}
-  restingHeight: 0.5
-  _springForce: 0.1
-  _OnPress:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  _OnUnpress:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!54 &1457236248
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -13460,39 +12567,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e515312faef93140a27bcb9c8e30eb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toFaceCamera: {fileID: 1975378589}
-  OnBeginFacingCamera:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1141641781}
-        m_MethodName: PlayForward
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnEndFacingCamera:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1141641781}
-        m_MethodName: PlayBackward
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!4 &1470248553
 Transform:
   m_ObjectHideFlags: 0
@@ -13505,7 +12579,7 @@ Transform:
   m_Children:
   - {fileID: 796428153}
   m_Father: {fileID: 1817268346}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -61.636, y: -151.25801, z: 160.84901}
 --- !u!1 &1472471602
 GameObject:
@@ -13595,7 +12669,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5b02a13ecb41e4469cdc443cd70e92b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
 --- !u!114 &1476990848
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13607,70 +12680,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd4030d81fcbf26428dd00669ec0168f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnShouldShowHandle:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1476990847}
-        m_MethodName: ShowRenderer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnShouldHideHandle:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1476990847}
-        m_MethodName: HideRenderer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnHandleActivated:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1476990847}
-        m_MethodName: SetToActivationColor
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnHandleDeactivated:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1476990847}
-        m_MethodName: SetToOriginalColor
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &1476990849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13682,24 +12691,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f10fa40360571247a7ca806d6859557, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _manager: {fileID: 0}
-  _ignoreHoverMode: 0
-  _isIgnoringAllHoverState: 0
-  _ignorePrimaryHover: 0
-  _ignoreContact: 1
-  _ignoreGrasping: 0
-  _contactForceMode: 0
-  _allowMultiGrasp: 0
-  _moveObjectWhenGrasped: 1
-  graspedMovementType: 0
-  _overrideInteractionLayer: 0
-  _interactionLayer:
-    layerIndex: 0
-  _overrideNoContactLayer: 0
-  _noContactLayer:
-    layerIndex: 0
-  _eventTable:
-    _entries: []
 --- !u!54 &1476990850
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -14057,7 +13048,7 @@ Transform:
   m_Children:
   - {fileID: 965445716}
   m_Father: {fileID: 1050002925}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -61.636, y: -151.25801, z: 160.84901}
 --- !u!114 &1513559420
 MonoBehaviour:
@@ -14070,39 +13061,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e515312faef93140a27bcb9c8e30eb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toFaceCamera: {fileID: 1675786210}
-  OnBeginFacingCamera:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2013859643}
-        m_MethodName: PlayForward
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnEndFacingCamera:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2013859643}
-        m_MethodName: PlayBackward
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1517960184
 GameObject:
   m_ObjectHideFlags: 0
@@ -14322,6 +13280,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _attachmentPoints: 516
+--- !u!1 &1567934179
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 64772813}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1567934180}
+  - component: {fileID: 1050002922}
+  m_Layer: 0
+  m_Name: Missing Prefab (Dummy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1567934180
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 64772813}
+  m_GameObject: {fileID: 1567934179}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 766199080}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1573689971
 GameObject:
   m_ObjectHideFlags: 0
@@ -14369,7 +13356,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5b02a13ecb41e4469cdc443cd70e92b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
 --- !u!114 &1573689974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14381,70 +13367,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd4030d81fcbf26428dd00669ec0168f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnShouldShowHandle:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1573689973}
-        m_MethodName: ShowRenderer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnShouldHideHandle:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1573689973}
-        m_MethodName: HideRenderer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnHandleActivated:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1573689973}
-        m_MethodName: SetToActivationColor
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnHandleDeactivated:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1573689973}
-        m_MethodName: SetToOriginalColor
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &1573689975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14456,24 +13378,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f10fa40360571247a7ca806d6859557, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _manager: {fileID: 0}
-  _ignoreHoverMode: 0
-  _isIgnoringAllHoverState: 0
-  _ignorePrimaryHover: 0
-  _ignoreContact: 1
-  _ignoreGrasping: 0
-  _contactForceMode: 0
-  _allowMultiGrasp: 0
-  _moveObjectWhenGrasped: 1
-  graspedMovementType: 0
-  _overrideInteractionLayer: 0
-  _interactionLayer:
-    layerIndex: 0
-  _overrideNoContactLayer: 0
-  _noContactLayer:
-    layerIndex: 0
-  _eventTable:
-    _entries: []
 --- !u!54 &1573689976
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -14624,11 +13528,20 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d53bbce24b78fb742ba7b93ce8a36f86, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &1575030396 stripped
+--- !u!4 &1575030396
 Transform:
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 4481135769011950, guid: d53bbce24b78fb742ba7b93ce8a36f86,
     type: 2}
   m_PrefabInternal: {fileID: 1575030395}
+  m_GameObject: {fileID: 1845328619}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 902236724}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1579034190
 GameObject:
   m_ObjectHideFlags: 0
@@ -14864,7 +13777,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5b02a13ecb41e4469cdc443cd70e92b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
 --- !u!114 &1591132951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14876,70 +13788,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd4030d81fcbf26428dd00669ec0168f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnShouldShowHandle:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1591132950}
-        m_MethodName: ShowRenderer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnShouldHideHandle:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1591132950}
-        m_MethodName: HideRenderer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnHandleActivated:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1591132950}
-        m_MethodName: SetToActivationColor
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnHandleDeactivated:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1591132950}
-        m_MethodName: SetToOriginalColor
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &1591132952
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14951,24 +13799,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f10fa40360571247a7ca806d6859557, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _manager: {fileID: 0}
-  _ignoreHoverMode: 0
-  _isIgnoringAllHoverState: 0
-  _ignorePrimaryHover: 0
-  _ignoreContact: 1
-  _ignoreGrasping: 0
-  _contactForceMode: 0
-  _allowMultiGrasp: 0
-  _moveObjectWhenGrasped: 1
-  graspedMovementType: 0
-  _overrideInteractionLayer: 0
-  _interactionLayer:
-    layerIndex: 0
-  _overrideNoContactLayer: 0
-  _noContactLayer:
-    layerIndex: 0
-  _eventTable:
-    _entries: []
 --- !u!54 &1591132953
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -15300,11 +14130,20 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d53bbce24b78fb742ba7b93ce8a36f86, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &1654061735 stripped
+--- !u!4 &1654061735
 Transform:
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 4481135769011950, guid: d53bbce24b78fb742ba7b93ce8a36f86,
     type: 2}
   m_PrefabInternal: {fileID: 1654061734}
+  m_GameObject: {fileID: 549275800}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2105085082}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1657123331
 GameObject:
   m_ObjectHideFlags: 0
@@ -15352,7 +14191,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5b02a13ecb41e4469cdc443cd70e92b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
 --- !u!114 &1657123334
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15364,70 +14202,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd4030d81fcbf26428dd00669ec0168f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnShouldShowHandle:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1657123333}
-        m_MethodName: ShowRenderer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnShouldHideHandle:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1657123333}
-        m_MethodName: HideRenderer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnHandleActivated:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1657123333}
-        m_MethodName: SetToActivationColor
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnHandleDeactivated:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1657123333}
-        m_MethodName: SetToOriginalColor
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &1657123335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15439,24 +14213,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f10fa40360571247a7ca806d6859557, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _manager: {fileID: 0}
-  _ignoreHoverMode: 0
-  _isIgnoringAllHoverState: 0
-  _ignorePrimaryHover: 0
-  _ignoreContact: 1
-  _ignoreGrasping: 0
-  _contactForceMode: 0
-  _allowMultiGrasp: 0
-  _moveObjectWhenGrasped: 1
-  graspedMovementType: 0
-  _overrideInteractionLayer: 0
-  _interactionLayer:
-    layerIndex: 0
-  _overrideNoContactLayer: 0
-  _noContactLayer:
-    layerIndex: 0
-  _eventTable:
-    _entries: []
 --- !u!54 &1657123336
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -15631,7 +14387,7 @@ Transform:
   - {fileID: 610585959}
   - {fileID: 1144993826}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1658970730
 GameObject:
@@ -15874,7 +14630,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1050002925}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 61.636, y: -7.774, z: -19.151001}
 --- !u!1 &1680803903
 GameObject:
@@ -15906,6 +14662,35 @@ Transform:
   - {fileID: 2093475539}
   m_Father: {fileID: 209539520}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1685176930
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 908367912}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1685176931}
+  - component: {fileID: 367321343}
+  m_Layer: 0
+  m_Name: Missing Prefab (Dummy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1685176931
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 908367912}
+  m_GameObject: {fileID: 1685176930}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 717605671}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1688742414
 GameObject:
@@ -16025,7 +14810,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5b02a13ecb41e4469cdc443cd70e92b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
 --- !u!114 &1696653273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16037,70 +14821,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd4030d81fcbf26428dd00669ec0168f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnShouldShowHandle:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1696653272}
-        m_MethodName: ShowRenderer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnShouldHideHandle:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1696653272}
-        m_MethodName: HideRenderer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnHandleActivated:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1696653272}
-        m_MethodName: SetToActivationColor
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnHandleDeactivated:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1696653272}
-        m_MethodName: SetToOriginalColor
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &1696653274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16112,24 +14832,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f10fa40360571247a7ca806d6859557, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _manager: {fileID: 0}
-  _ignoreHoverMode: 0
-  _isIgnoringAllHoverState: 0
-  _ignorePrimaryHover: 0
-  _ignoreContact: 1
-  _ignoreGrasping: 0
-  _contactForceMode: 0
-  _allowMultiGrasp: 0
-  _moveObjectWhenGrasped: 1
-  graspedMovementType: 0
-  _overrideInteractionLayer: 0
-  _interactionLayer:
-    layerIndex: 0
-  _overrideNoContactLayer: 0
-  _noContactLayer:
-    layerIndex: 0
-  _eventTable:
-    _entries: []
 --- !u!54 &1696653275
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -16235,13 +14937,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b02e2f8ae628ac4f9faca951fe12db4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useHover: 0
-  usePrimaryHover: 1
-  defaultColor: {r: 0.1, g: 0.1, b: 0.1, a: 1}
-  suspendedColor: {r: 1, g: 0, b: 0, a: 1}
-  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
-  primaryHoverColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  pressedColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &1734954284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16254,50 +14949,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cba520a60e47274cb1e5afbb57aae0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _manager: {fileID: 1307187617}
-  _ignoreHoverMode: 1
-  _isIgnoringAllHoverState: 0
-  _ignorePrimaryHover: 0
-  _ignoreContact: 0
-  _ignoreGrasping: 1
-  _contactForceMode: 1
-  _allowMultiGrasp: 0
-  _moveObjectWhenGrasped: 1
-  graspedMovementType: 0
-  _overrideInteractionLayer: 1
-  _interactionLayer:
-    layerIndex: 5
-  _overrideNoContactLayer: 0
-  _noContactLayer:
-    layerIndex: 0
-  _eventTable:
-    _entries: []
-  _controlEnabled: 1
-  startingPositionMode: 0
-  minMaxHeight: {x: 0, y: 0.02}
-  restingHeight: 0.5
-  _springForce: 0.1
-  _OnPress:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1798828925}
-        m_MethodName: spawnCube
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  _OnUnpress:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!54 &1734954285
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -16448,13 +15099,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b02e2f8ae628ac4f9faca951fe12db4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useHover: 0
-  usePrimaryHover: 1
-  defaultColor: {r: 0.1, g: 0.1, b: 0.1, a: 1}
-  suspendedColor: {r: 1, g: 0, b: 0, a: 1}
-  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
-  primaryHoverColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  pressedColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &1781607904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16467,39 +15111,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cba520a60e47274cb1e5afbb57aae0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _manager: {fileID: 0}
-  _ignoreHoverMode: 1
-  _isIgnoringAllHoverState: 0
-  _ignorePrimaryHover: 0
-  _ignoreContact: 0
-  _ignoreGrasping: 1
-  _contactForceMode: 1
-  _allowMultiGrasp: 0
-  _moveObjectWhenGrasped: 1
-  graspedMovementType: 0
-  _overrideInteractionLayer: 0
-  _interactionLayer:
-    layerIndex: 0
-  _overrideNoContactLayer: 0
-  _noContactLayer:
-    layerIndex: 0
-  _eventTable:
-    _entries: []
-  _controlEnabled: 1
-  startingPositionMode: 0
-  minMaxHeight: {x: 0, y: 0.02}
-  restingHeight: 0.5
-  _springForce: 0.1
-  _OnPress:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  _OnUnpress:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!54 &1781607905
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -16602,13 +15213,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b02e2f8ae628ac4f9faca951fe12db4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useHover: 0
-  usePrimaryHover: 1
-  defaultColor: {r: 0.1, g: 0.1, b: 0.1, a: 1}
-  suspendedColor: {r: 1, g: 0, b: 0, a: 1}
-  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
-  primaryHoverColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  pressedColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &1784563653
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16621,61 +15225,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ebbb41b110e5794ab82d986ca172460, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _manager: {fileID: 1307187617}
-  _ignoreHoverMode: 1
-  _isIgnoringAllHoverState: 0
-  _ignorePrimaryHover: 0
-  _ignoreContact: 0
-  _ignoreGrasping: 0
-  _contactForceMode: 1
-  _allowMultiGrasp: 0
-  _moveObjectWhenGrasped: 1
-  graspedMovementType: 0
-  _overrideInteractionLayer: 1
-  _interactionLayer:
-    layerIndex: 5
-  _overrideNoContactLayer: 0
-  _noContactLayer:
-    layerIndex: 0
-  _eventTable:
-    _entries: []
-  _controlEnabled: 1
-  startingPositionMode: 0
-  minMaxHeight: {x: 0, y: 0.02}
-  restingHeight: 0.5
-  _springForce: 0.1
-  _OnPress:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  _OnUnpress:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  sliderType: 1
-  dispatchSlideValueOnStart: 1
-  overrideRectLimits: 0
-  _parentHasRectTransform: 0
-  defaultHorizontalValue: 0
-  _horizontalValueRange: {x: 0, y: 1}
-  horizontalSlideLimits: {x: -0.042, y: 0.042}
-  horizontalSteps: 0
-  _horizontalSlideEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: Leap.Unity.Interaction.InteractionSlider+FloatEvent, Assembly-CSharp,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-  defaultVerticalValue: 0
-  _verticalValueRange: {x: 0, y: 1}
-  verticalSlideLimits: {x: 0, y: 0}
-  verticalSteps: 0
-  _verticalSlideEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: Leap.Unity.Interaction.InteractionSlider+FloatEvent, Assembly-CSharp,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!54 &1784563654
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -16720,7 +15269,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &1789997261
 Camera:
@@ -16864,7 +15413,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cfb9ba725bdff94d89da1779fcdeab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cube: {fileID: 2013354513}
 --- !u!4 &1798828926
 Transform:
   m_ObjectHideFlags: 0
@@ -17014,7 +15562,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5b02a13ecb41e4469cdc443cd70e92b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
 --- !u!114 &1814675813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17026,71 +15573,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: beced83bfcb78914bb2ea23362ee2508, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnShouldShowHandle:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1814675812}
-        m_MethodName: ShowRenderer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnShouldHideHandle:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1814675812}
-        m_MethodName: HideRenderer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnHandleActivated:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1814675812}
-        m_MethodName: SetToActivationColor
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnHandleDeactivated:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1814675812}
-        m_MethodName: SetToOriginalColor
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  axis: 0
 --- !u!114 &1814675814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17102,24 +15584,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f10fa40360571247a7ca806d6859557, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _manager: {fileID: 1307187617}
-  _ignoreHoverMode: 0
-  _isIgnoringAllHoverState: 0
-  _ignorePrimaryHover: 0
-  _ignoreContact: 1
-  _ignoreGrasping: 0
-  _contactForceMode: 0
-  _allowMultiGrasp: 0
-  _moveObjectWhenGrasped: 1
-  graspedMovementType: 0
-  _overrideInteractionLayer: 0
-  _interactionLayer:
-    layerIndex: 0
-  _overrideNoContactLayer: 0
-  _noContactLayer:
-    layerIndex: 0
-  _eventTable:
-    _entries: []
 --- !u!135 &1814675815
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -17191,17 +15655,35 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1814675810}
   m_Mesh: {fileID: 4300000, guid: 630161d5d4c851c468f6070be2ed3ea5, type: 3}
---- !u!1 &1817268342 stripped
+--- !u!1 &1817268342
 GameObject:
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 1135166102121244, guid: 40e809833d307ef4983e1e71fe56e23b,
     type: 2}
   m_PrefabInternal: {fileID: 824645597}
---- !u!114 &1817268343 stripped
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1817268345}
+  - component: {fileID: 1817268344}
+  m_Layer: 0
+  m_Name: Missing Prefab (Dummy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1817268343
 MonoBehaviour:
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 114205148317838364, guid: 40e809833d307ef4983e1e71fe56e23b,
     type: 2}
   m_PrefabInternal: {fileID: 824645597}
+  m_GameObject: {fileID: 691218255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e55d3703de8ab5d418cb97104179cb49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1817268344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17213,67 +15695,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820cd3c2c5bc5794d9179a4f453271f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intCtrl: {fileID: 1817268343}
-  intHand: {fileID: 1857686671}
-  OnInteractionHandEnabled:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 312115551}
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1875330247}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnInteractionHandDisabled:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 312115551}
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1875330247}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!4 &1817268346 stripped
+--- !u!4 &1817268345
 Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 824645597}
+  m_GameObject: {fileID: 1817268342}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 105685870}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1817268346
+Transform:
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 4829828358790816, guid: 40e809833d307ef4983e1e71fe56e23b,
     type: 2}
   m_PrefabInternal: {fileID: 824645597}
+  m_GameObject: {fileID: 1376501588}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1975378589}
+  - {fileID: 1141641782}
+  - {fileID: 1470248553}
+  m_Father: {fileID: 105685870}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1817317518
 GameObject:
   m_ObjectHideFlags: 0
@@ -17358,8 +15809,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a7f9a3badb4bc44aabae55ceff39209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screenT: {fileID: 870221262}
-  matScreen: {fileID: 2100000, guid: 0cc0dad617884c34eac272a0e17d7c9f, type: 2}
 --- !u!23 &1820433064
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17579,8 +16028,23 @@ Transform:
   m_LocalScale: {x: 0.03581005, y: 0.025713345, z: 0.025713345}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 90, y: -90, z: 90}
+--- !u!1 &1845328619
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 1575030395}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1575030396}
+  m_Layer: 0
+  m_Name: Missing Prefab (Dummy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1851687528
 GameObject:
   m_ObjectHideFlags: 0
@@ -17756,8 +16220,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a7f9a3badb4bc44aabae55ceff39209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screenT: {fileID: 870221262}
-  matScreen: {fileID: 2100000, guid: 98f43acdbeef55c4a8348cd4e5aeb335, type: 2}
 --- !u!23 &1856787932
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17839,13 +16301,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29207d17cdd06e84d9fecbdef2401c1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 1307187617}
-  _hoverEnabled: 1
-  _contactEnabled: 1
-  _graspingEnabled: 1
-  _leapProvider: {fileID: 0}
-  _handDataMode: 0
-  enabledPrimaryHoverFingertips: 0101010000
 --- !u!4 &1857686672
 Transform:
   m_ObjectHideFlags: 0
@@ -18303,7 +16758,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400096, guid: 320b1c2af77554f99a1658df4a6d3d5c, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400096, guid: 320b1c2af77554f99a1658df4a6d3d5c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -18320,6 +16775,21 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 320b1c2af77554f99a1658df4a6d3d5c, type: 3}
   m_IsPrefabParent: 0
+--- !u!1 &1907969278
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 494208785}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1290056348}
+  m_Layer: 0
+  m_Name: Missing Prefab (Dummy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1909681236
 GameObject:
   m_ObjectHideFlags: 0
@@ -18452,7 +16922,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5b02a13ecb41e4469cdc443cd70e92b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
 --- !u!114 &1969293609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18464,71 +16933,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: beced83bfcb78914bb2ea23362ee2508, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnShouldShowHandle:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1969293608}
-        m_MethodName: ShowRenderer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnShouldHideHandle:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1969293608}
-        m_MethodName: HideRenderer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnHandleActivated:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1969293608}
-        m_MethodName: SetToActivationColor
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnHandleDeactivated:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1969293608}
-        m_MethodName: SetToOriginalColor
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  axis: 2
 --- !u!114 &1969293610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18540,24 +16944,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f10fa40360571247a7ca806d6859557, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _manager: {fileID: 0}
-  _ignoreHoverMode: 0
-  _isIgnoringAllHoverState: 0
-  _ignorePrimaryHover: 0
-  _ignoreContact: 1
-  _ignoreGrasping: 0
-  _contactForceMode: 0
-  _allowMultiGrasp: 0
-  _moveObjectWhenGrasped: 1
-  graspedMovementType: 0
-  _overrideInteractionLayer: 0
-  _interactionLayer:
-    layerIndex: 0
-  _overrideNoContactLayer: 0
-  _noContactLayer:
-    layerIndex: 0
-  _eventTable:
-    _entries: []
 --- !u!135 &1969293611
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -18676,7 +17062,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5b02a13ecb41e4469cdc443cd70e92b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activationColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
 --- !u!114 &1972920902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18688,70 +17073,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd4030d81fcbf26428dd00669ec0168f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnShouldShowHandle:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1972920901}
-        m_MethodName: ShowRenderer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnShouldHideHandle:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1972920901}
-        m_MethodName: HideRenderer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnHandleActivated:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1972920901}
-        m_MethodName: SetToActivationColor
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnHandleDeactivated:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1972920901}
-        m_MethodName: SetToOriginalColor
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &1972920903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18763,24 +17084,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f10fa40360571247a7ca806d6859557, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _manager: {fileID: 0}
-  _ignoreHoverMode: 0
-  _isIgnoringAllHoverState: 0
-  _ignorePrimaryHover: 0
-  _ignoreContact: 1
-  _ignoreGrasping: 0
-  _contactForceMode: 0
-  _allowMultiGrasp: 0
-  _moveObjectWhenGrasped: 1
-  graspedMovementType: 0
-  _overrideInteractionLayer: 0
-  _interactionLayer:
-    layerIndex: 0
-  _overrideNoContactLayer: 0
-  _noContactLayer:
-    layerIndex: 0
-  _eventTable:
-    _entries: []
 --- !u!54 &1972920904
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -18866,7 +17169,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1817268346}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 61.636, y: -7.774, z: -19.151001}
 --- !u!1 &1984837045
 GameObject:
@@ -18981,9 +17284,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdc48b5b75063204087989ca886e7d2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  captureRateFps: 30
-  windowPollPerSecond: 2
-  windowScale: 0.00005
 --- !u!81 &2007547880
 AudioListener:
   m_ObjectHideFlags: 0
@@ -19081,8 +17381,8 @@ Transform:
   m_Children:
   - {fileID: 788374404}
   - {fileID: 209539520}
-  - {fileID: 1575030396}
-  - {fileID: 1654061735}
+  - {fileID: 902236724}
+  - {fileID: 2105085082}
   m_Father: {fileID: 0}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -19137,7 +17437,7 @@ Transform:
   - {fileID: 775094551}
   - {fileID: 1759898918}
   m_Father: {fileID: 1050002925}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -28.080002, y: -4.177, z: -10.333}
 --- !u!1 &2026319063
 GameObject:
@@ -19226,13 +17526,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b02e2f8ae628ac4f9faca951fe12db4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useHover: 0
-  usePrimaryHover: 1
-  defaultColor: {r: 0.1, g: 0.1, b: 0.1, a: 1}
-  suspendedColor: {r: 1, g: 0, b: 0, a: 1}
-  hoverColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
-  primaryHoverColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  pressedColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &2028105647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19245,39 +17538,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cba520a60e47274cb1e5afbb57aae0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _manager: {fileID: 0}
-  _ignoreHoverMode: 1
-  _isIgnoringAllHoverState: 0
-  _ignorePrimaryHover: 0
-  _ignoreContact: 0
-  _ignoreGrasping: 1
-  _contactForceMode: 1
-  _allowMultiGrasp: 0
-  _moveObjectWhenGrasped: 1
-  graspedMovementType: 0
-  _overrideInteractionLayer: 0
-  _interactionLayer:
-    layerIndex: 0
-  _overrideNoContactLayer: 0
-  _noContactLayer:
-    layerIndex: 0
-  _eventTable:
-    _entries: []
-  _controlEnabled: 1
-  startingPositionMode: 0
-  minMaxHeight: {x: 0, y: 0.02}
-  restingHeight: 0.5
-  _springForce: 0.1
-  _OnPress:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  _OnUnpress:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!54 &2028105648
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -19438,8 +17698,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a7f9a3badb4bc44aabae55ceff39209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screenT: {fileID: 870221262}
-  matScreen: {fileID: 2100000, guid: 4cd98a0bfe18b12448ee037e4c70b982, type: 2}
 --- !u!23 &2054301035
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -19537,8 +17795,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a7f9a3badb4bc44aabae55ceff39209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screenT: {fileID: 870221262}
-  matScreen: {fileID: 2100000, guid: dc74a833d07dfb6498e6f4afe05f511d, type: 2}
 --- !u!23 &2054316194
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -19593,11 +17849,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2054316191}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!137 &2090342243 stripped
-SkinnedMeshRenderer:
-  m_PrefabParentObject: {fileID: 137723638835135990, guid: 2276723046d707c4f94d431ceb80ab92,
-    type: 2}
-  m_PrefabInternal: {fileID: 1398551222}
 --- !u!1 &2093475538
 GameObject:
   m_ObjectHideFlags: 0
@@ -19673,6 +17924,35 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2105085081
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 1654061734}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2105085082}
+  m_Layer: 0
+  m_Name: Missing Prefab
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2105085082
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 1654061734}
+  m_GameObject: {fileID: 2105085081}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1654061735}
+  m_Father: {fileID: 2013354514}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2118374509
 GameObject:
   m_ObjectHideFlags: 0
@@ -19790,4 +18070,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1394494354}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2146725275
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 494208785}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2146725276}
+  - component: {fileID: 1290056345}
+  m_Layer: 0
+  m_Name: Missing Prefab (Dummy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2146725276
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 494208785}
+  m_GameObject: {fileID: 2146725275}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1090520282}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
