@@ -6921,6 +6921,17 @@ MonoBehaviour:
   _mapManager: {fileID: 921353089}
   rightHandPalm: {fileID: 1404294881}
   leftHandPalm: {fileID: 561006004}
+--- !u!114 &921353087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 921353085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15eed3c0528a3498dae4ff8f7b8ae77f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &921353089 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
