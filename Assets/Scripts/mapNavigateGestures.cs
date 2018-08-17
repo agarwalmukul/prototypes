@@ -19,6 +19,39 @@ public class mapNavigateGestures : MonoBehaviour {
 	[SerializeField]
 	AbstractMap _mapManager;
 
+	private bool _isRightHandPinch;
+
+	public bool IsRightHandPinch {
+		get {
+			return _isRightHandPinch;
+		}
+		set {
+			_isRightHandPinch = value;
+		}
+	}
+
+	private bool _isLeftHandPinch;
+
+	public bool IsLeftHandPinch {
+		get {
+			return _isLeftHandPinch;
+		}
+		set {
+			_isLeftHandPinch = value;
+		}
+	}
+
+	public GameObject rightHandPalm;
+	public GameObject leftHandPalm;
+
+	private Vector3 prevHandCenterPosition;
+	private Vector3 currentHandCenterPosition;
+	private float prevHandDistance;
+	private float currentHandDistance;
+	// this is true only when the pinch in both the hands has started. similar to buttonDown frame. only exists true for one frame. this is done to reset the prev... variables from
+	// last time the pinch gesture was true.
+	private bool manipulationFrame = false;
+
 	private bool _isInitialized = false;
 
 	void Awake(){
@@ -33,14 +66,37 @@ public class mapNavigateGestures : MonoBehaviour {
 	void Start () {
 		
 	}
-	
-	// Update is called once per frame
-	void LateUpdate () {
-		
+
+	private Vector3 calcHandCenterPosition(){
+		return ((rightHandPalm.transform.position + leftHandPalm.transform.position) * 0.5f);
 	}
 
-	public void OnPinchDetection(){
-		Debug.Log ("pinch detected");
+	// Update is called once per frame
+	void LateUpdate () {
+		if (IsRightHandPinch && IsLeftHandPinch) {
+			if (!manipulationFrame) {
+				manipulationFrame = true;
+				prevHandCenterPosition = calcHandCenterPosition ();
+				currentHandCenterPosition = calcHandCenterPosition ();
+			} else {
+				currentHandCenterPosition = calcHandCenterPosition ();
+				Vector3 displacementCenterHand = 100.0f * (currentHandCenterPosition - prevHandCenterPosition);
+				//Debug.Log(" " + displacementCenterHand.x + "," + displacementCenterHand.z);
+				PanMapUsingHands (-displacementCenterHand.x, -displacementCenterHand.z);
+				prevHandCenterPosition = currentHandCenterPosition;
+			}
+		} else {
+			manipulationFrame = false;
+		}
+	}
+
+	public void OnPinchDetectionRightHand(bool value){
+		//Debug.Log ("pinch detected right hand" + value);
+		IsRightHandPinch = value;
+	}
+	public void OnPinchDetectionLeftHand(bool value){
+		//Debug.Log ("pinch detected left hand" + value);
+		IsLeftHandPinch = value;
 	}
 
 	void ZoomMapUsingTouchOrMouse(float zoomFactor)
@@ -50,7 +106,7 @@ public class mapNavigateGestures : MonoBehaviour {
 		_mapManager.UpdateMap(_mapManager.CenterLatitudeLongitude, zoom);
 	}
 
-	void PanMapUsingKeyBoard(float xMove, float zMove)
+	void PanMapUsingHands(float xMove, float zMove)
 	{
 		if (Math.Abs(xMove) > 0.0f || Math.Abs(zMove) > 0.0f)
 		{
