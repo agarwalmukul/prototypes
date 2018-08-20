@@ -40,7 +40,7 @@ public class mapNavigateGestures : MonoBehaviour {
 			_isLeftHandPinch = value;
 		}
 	}
-
+		
 	public GameObject rightHandPalm;
 	public GameObject leftHandPalm;
 
@@ -70,6 +70,9 @@ public class mapNavigateGestures : MonoBehaviour {
 	private Vector3 calcHandCenterPosition(){
 		return ((rightHandPalm.transform.position + leftHandPalm.transform.position) * 0.5f);
 	}
+	private float calcHandDistance(){
+		return ((rightHandPalm.transform.position - leftHandPalm.transform.position).magnitude);
+	}
 
 	// Update is called once per frame
 	void LateUpdate () {
@@ -78,16 +81,27 @@ public class mapNavigateGestures : MonoBehaviour {
 				manipulationFrame = true;
 				prevHandCenterPosition = calcHandCenterPosition ();
 				currentHandCenterPosition = calcHandCenterPosition ();
+				prevHandDistance = calcHandDistance ();
+				currentHandDistance = calcHandDistance ();
 			} else {
+				// code to pan the map
 				currentHandCenterPosition = calcHandCenterPosition ();
 				Vector3 displacementCenterHand = 100.0f * (currentHandCenterPosition - prevHandCenterPosition);
 				//Debug.Log(" " + displacementCenterHand.x + "," + displacementCenterHand.z);
 				PanMapUsingHands (-displacementCenterHand.x, -displacementCenterHand.z);
 				prevHandCenterPosition = currentHandCenterPosition;
+
+				// code to zoom in/out the map
+				currentHandDistance = calcHandDistance();
+				float distanceDifferenceHands = ( currentHandDistance - prevHandDistance);
+				ZoomMapUsingHands (distanceDifferenceHands);
+				prevHandDistance = currentHandDistance;
 			}
 		} else {
 			manipulationFrame = false;
 		}
+		// the map gameobject moves around on pan and zoom which makes it harder for the camera to see it. so I constrained its position
+		this.transform.position = new Vector3(0, 0, 0);
 	}
 
 	public void OnPinchDetectionRightHand(bool value){
@@ -99,7 +113,7 @@ public class mapNavigateGestures : MonoBehaviour {
 		IsLeftHandPinch = value;
 	}
 
-	void ZoomMapUsingTouchOrMouse(float zoomFactor)
+	void ZoomMapUsingHands(float zoomFactor)
 	{
 		var zoom = Mathf.Max(0.0f, Mathf.Min(_mapManager.Zoom + zoomFactor * _zoomSpeed, 21.0f));
 
