@@ -125,11 +125,11 @@ public class mapNavigateGestures : MonoBehaviour {
 	}
 
 	public void OnPinchDetectionRightHand(bool value){
-		Debug.Log ("pinch detected right hand" + value);
+		//Debug.Log ("pinch detected right hand" + value);
 		IsRightHandPinch = value;
 	}
 	public void OnPinchDetectionLeftHand(bool value){
-		Debug.Log ("pinch detected left hand" + value);
+		//Debug.Log ("pinch detected left hand" + value);
 		IsLeftHandPinch = value;
 	}
 
