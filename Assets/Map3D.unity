@@ -6931,7 +6931,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _panSpeed: 5
-  _zoomSpeed: 5
+  _zoomSpeed: 10
   _rotationSpeed: 100
   _mapManager: {fileID: 921353089}
   rightHandPalm: {fileID: 1404294881}

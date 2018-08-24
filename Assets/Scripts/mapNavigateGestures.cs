@@ -72,7 +72,7 @@ public class mapNavigateGestures : MonoBehaviour {
 	void Start () {
 		
 	}
-
+	/* prototype 1 functions		
 	private Vector3 calcHandCenterPosition(){
 		return ((rightHandPalm.transform.position + leftHandPalm.transform.position) * 0.5f);
 	}
@@ -123,6 +123,62 @@ public class mapNavigateGestures : MonoBehaviour {
 		// the map gameobject moves around on pan and zoom which makes it harder for the camera to see it. so I constrained its position
 		this.transform.position = new Vector3(0, 0, 0);
 	}
+
+	*/
+
+
+	private Vector3 calcHandCenterPosition(){
+		return (rightHandPalm.transform.position);
+	}
+	private float calcHandDistance(){
+		return (rightHandPalm.transform.position.y);
+	}
+	private float calcHandDiffRotation(){
+		Vector3 diff = rightHandPalm.transform.rotation * Vector3.forward;
+		//Vector3 diff = rightHandPalm.transform.position - leftHandPalm.transform.position;
+		Vector2 diffxz = diff.ToVector2xz ();
+		diffxz.Normalize ();
+		return (Mathf.Atan2 (diffxz.x, diffxz.y));
+	}
+
+	// Update is called once per frame
+	void LateUpdate () {
+		if (IsRightHandPinch) {
+			if (!manipulationFrame) {
+				manipulationFrame = true;
+				prevHandCenterPosition = calcHandCenterPosition ();
+				currentHandCenterPosition = calcHandCenterPosition ();
+				prevHandDistance = calcHandDistance ();
+				currentHandDistance = calcHandDistance ();
+				prevHandDiffRotation = calcHandDiffRotation ();
+				currentHandDiffRotation = calcHandDiffRotation ();
+			} else {
+				// code to pan the map
+				currentHandCenterPosition = calcHandCenterPosition ();
+				Vector3 displacementCenterHand = 100.0f * (currentHandCenterPosition - prevHandCenterPosition);
+				//Debug.Log(" " + displacementCenterHand.x + "," + displacementCenterHand.z);
+				PanMapUsingHands (-displacementCenterHand.x, -displacementCenterHand.z);
+				prevHandCenterPosition = currentHandCenterPosition;
+
+				// code to zoom in/out the map
+				currentHandDistance = calcHandDistance();
+				float distanceDifferenceHands = ( currentHandDistance - prevHandDistance);
+				ZoomMapUsingHands (distanceDifferenceHands);
+				prevHandDistance = currentHandDistance;
+
+				// code to rotate the map
+				currentHandDiffRotation = calcHandDiffRotation();
+				float rotationDifferenceHands = currentHandDiffRotation - prevHandDiffRotation;
+				RotateMapUsingHands (rotationDifferenceHands);
+				prevHandDiffRotation = currentHandDiffRotation;
+			}
+		} else {
+			manipulationFrame = false;
+		}
+		// the map gameobject moves around on pan and zoom which makes it harder for the camera to see it. so I constrained its position
+		this.transform.position = new Vector3(0, 0, 0);
+	}
+
 
 	public void OnPinchDetectionRightHand(bool value){
 		//Debug.Log ("pinch detected right hand" + value);
