@@ -17,6 +17,9 @@ public class mapNavigateGestures : MonoBehaviour {
 	float _zoomSpeed = 0.25f;
 
 	[SerializeField]
+	float _rotationSpeed = 1.0f;
+
+	[SerializeField]
 	AbstractMap _mapManager;
 
 	private bool _isRightHandPinch;
@@ -48,6 +51,9 @@ public class mapNavigateGestures : MonoBehaviour {
 	private Vector3 currentHandCenterPosition;
 	private float prevHandDistance;
 	private float currentHandDistance;
+	private float prevHandDiffRotation;
+	private float currentHandDiffRotation;
+
 	// this is true only when the pinch in both the hands has started. similar to buttonDown frame. only exists true for one frame. this is done to reset the prev... variables from
 	// last time the pinch gesture was true.
 	private bool manipulationFrame = false;
@@ -73,6 +79,12 @@ public class mapNavigateGestures : MonoBehaviour {
 	private float calcHandDistance(){
 		return ((rightHandPalm.transform.position - leftHandPalm.transform.position).magnitude);
 	}
+	private float calcHandDiffRotation(){
+		Vector3 diff = rightHandPalm.transform.position - leftHandPalm.transform.position;
+		Vector2 diffxz = diff.ToVector2xz ();
+		diffxz.Normalize ();
+		return (Mathf.Atan2 (diffxz.x, diffxz.y));
+	}
 
 	// Update is called once per frame
 	void LateUpdate () {
@@ -83,6 +95,8 @@ public class mapNavigateGestures : MonoBehaviour {
 				currentHandCenterPosition = calcHandCenterPosition ();
 				prevHandDistance = calcHandDistance ();
 				currentHandDistance = calcHandDistance ();
+				prevHandDiffRotation = calcHandDiffRotation ();
+				currentHandDiffRotation = calcHandDiffRotation ();
 			} else {
 				// code to pan the map
 				currentHandCenterPosition = calcHandCenterPosition ();
@@ -96,6 +110,12 @@ public class mapNavigateGestures : MonoBehaviour {
 				float distanceDifferenceHands = ( currentHandDistance - prevHandDistance);
 				ZoomMapUsingHands (distanceDifferenceHands);
 				prevHandDistance = currentHandDistance;
+
+				// code to rotate the map
+				currentHandDiffRotation = calcHandDiffRotation();
+				float rotationDifferenceHands = currentHandDiffRotation - prevHandDiffRotation;
+				RotateMapUsingHands (rotationDifferenceHands);
+				prevHandDiffRotation = currentHandDiffRotation;
 			}
 		} else {
 			manipulationFrame = false;
@@ -132,6 +152,10 @@ public class mapNavigateGestures : MonoBehaviour {
 			var latitudeLongitude = new Vector2d(_mapManager.CenterLatitudeLongitude.x + zMove * factor * 2.0f, _mapManager.CenterLatitudeLongitude.y + xMove * factor * 4.0f);
 			_mapManager.UpdateMap(latitudeLongitude, _mapManager.Zoom);
 		}
+	}
+
+	void RotateMapUsingHands (float rotateFactor){
+		this.transform.RotateAround (this.transform.position, new Vector3 (0, 1, 0), _rotationSpeed * rotateFactor);
 	}
 }
 

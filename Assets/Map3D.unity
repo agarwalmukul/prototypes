@@ -6916,8 +6916,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4ce6acc3e8a7d44eb89e3a2edc9f11c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _panSpeed: 2.27
+  _panSpeed: 5
   _zoomSpeed: 5
+  _rotationSpeed: 100
   _mapManager: {fileID: 921353089}
   rightHandPalm: {fileID: 1404294881}
   leftHandPalm: {fileID: 561006004}

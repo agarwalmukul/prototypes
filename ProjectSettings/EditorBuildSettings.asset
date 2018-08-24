@@ -8,6 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
+  - enabled: 0
     path: Assets/LeapMotion/Core/Examples/Capsule Hand (VR - Infrared Viewer).unity
     guid: 480afe764b344a64688bf3a502bc612a
+  - enabled: 1
+    path: Assets/Map3D.unity
+    guid: d7e2cd79e8df90942870a7d7cca73661
+  m_configObjects: {}
