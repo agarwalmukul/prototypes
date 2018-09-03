@@ -191,10 +191,27 @@ public class mapNavigateGestures : MonoBehaviour {
 	}
 
 	void transitionBetweenHorizontalAndVerticalMap(float zoom){
-		if (zoom < 14.0f && zoom > 13.0f) {
-			float rotationAngle = -1.0f * (14.0f - zoom) * (45.0f);
+		if (zoom < 14.0f && zoom >= 13.0f) {
+			// rotate the canvas upwards to face the user
+			float xRotationAngle = -1.0f * (14.0f - zoom) * (45.0f);
 			//Vector3 rotation = new Vector3 (rotationAngle, 0, 0);
-			parentMapGo.transform.rotation = Quaternion.Euler(rotationAngle, 0, 0);
+			parentMapGo.transform.rotation = Quaternion.Euler(xRotationAngle, 0, 0);
+
+			// rotate the canvas to always be aligned with the ground
+			//this.transform.localRotation = (zoom - 13.0f) * this.transform.localRotation; 
+			//this.transform.localRotation *= (zoom - 14.0f) * this.transform.localRotation;
+			//this.transform.localRotation.eulerAngles = new Vector3 (0.0f, (zoom - 13.0f) * this.transform.eulerAngles.y ,0.0f);
+			float yRotationAngle = (zoom - 13.0f) * this.transform.localEulerAngles.y;
+			// setting the yRotationAngle when less than 0.1f was leading to random rotations, probably because of gimbal lock prevention
+			if (yRotationAngle > 0.1f || yRotationAngle < -0.1f) {
+				this.transform.localEulerAngles = new Vector3 (0.0f, yRotationAngle, 0.0f);
+			} else {
+				this.transform.localEulerAngles = new Vector3 (0.0f, 0.0f, 0.0f);
+			}
+			Debug.Log ((zoom - 13.0f) * this.transform.localEulerAngles.y + " ,"  + zoom);
+
+			// bring the canvas closer to the user and at eye level so that the user can see what the map and the map
+			// is within the grabbing distance of the user
 			float positionChange = -1.0f * (14.0f - zoom) / 10.0f;
 			// x, 0.7442,  0.001198292
 			parentMapGo.transform.position = new Vector3 ( parentMapGo.transform.position.x, 0.7442f + (positionChange / 2.0f), positionChange * 2.0f );
@@ -207,6 +224,7 @@ public class mapNavigateGestures : MonoBehaviour {
 		var zoom = Mathf.Max(0.0f, Mathf.Min(_mapManager.Zoom + zoomFactor * _zoomSpeed, 21.0f));
 		transitionBetweenHorizontalAndVerticalMap (zoom);
 		_mapManager.UpdateMap(_mapManager.CenterLatitudeLongitude, zoom);
+		//_mapManager.
 	}
 
 	void PanMapUsingHands(float xMove, float zMove)
@@ -225,8 +243,14 @@ public class mapNavigateGestures : MonoBehaviour {
 
 	void RotateMapUsingHands (float rotateFactor){
 		//this.transform.RotateAround (this.transform.position, new Vector3 (0, 1, 0), _rotationSpeed * rotateFactor);
-		this.transform.RotateAround (this.transform.position, this.transform.rotation * Vector3.up, _rotationSpeed * rotateFactor);
-		//this.transform.rotation = Quaternion.Euler(0, _rotationSpeed * rotateFactor, 0);
+		//this.transform.RotateAround (this.transform.position, this.transform.rotation * Vector3.up, _rotationSpeed * rotateFactor);
+
+		// if zoom level is less than 14.0f, this means the canvas is being rotated from horizontal to vertical and will remain vertical, 
+		//so user input for rotation should not be taken into account in this case
+		if(_mapManager.Zoom > 14.0f){
+			this.transform.localRotation *= Quaternion.Euler(0, _rotationSpeed * rotateFactor, 0);
+			//this.transform.rotation = Quaternion.Euler(0, _rotationSpeed * rotateFactor, 0);
+		}
 	}
 }
 
