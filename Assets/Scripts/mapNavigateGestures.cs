@@ -197,8 +197,8 @@ public class mapNavigateGestures : MonoBehaviour {
 			parentMapGo.transform.rotation = Quaternion.Euler(rotationAngle, 0, 0);
 			float positionChange = -1.0f * (14.0f - zoom) / 10.0f;
 			// x, 0.7442,  0.001198292
-			parentMapGo.transform.position = new Vector3 ( parentMapGo.transform.position.x, 0.7442f + positionChange, positionChange * 3.3f );
-			//x, 0.58, -0.33
+			parentMapGo.transform.position = new Vector3 ( parentMapGo.transform.position.x, 0.7442f + (positionChange / 2.0f), positionChange * 2.0f );
+			//x, 0.58, -0.2
 		}
 	}
 
