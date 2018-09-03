@@ -43,7 +43,7 @@ public class mapNavigateGestures : MonoBehaviour {
 			_isLeftHandPinch = value;
 		}
 	}
-		
+	public GameObject parentMapGo;
 	public GameObject rightHandPalm;
 	public GameObject leftHandPalm;
 
@@ -176,7 +176,8 @@ public class mapNavigateGestures : MonoBehaviour {
 			manipulationFrame = false;
 		}
 		// the map gameobject moves around on pan and zoom which makes it harder for the camera to see it. so I constrained its position
-		this.transform.position = new Vector3(0, 0, 0);
+		//this.transform.position = new Vector3(0, 0, 0);
+		this.transform.localPosition = new Vector3(-1.536775f, -446.4198f, -0.7188137f);
 	}
 
 
@@ -189,10 +190,22 @@ public class mapNavigateGestures : MonoBehaviour {
 		IsLeftHandPinch = value;
 	}
 
+	void transitionBetweenHorizontalAndVerticalMap(float zoom){
+		if (zoom < 14.0f && zoom > 13.0f) {
+			float rotationAngle = -1.0f * (14.0f - zoom) * (45.0f);
+			//Vector3 rotation = new Vector3 (rotationAngle, 0, 0);
+			parentMapGo.transform.rotation = Quaternion.Euler(rotationAngle, 0, 0);
+			float positionChange = -1.0f * (14.0f - zoom) / 10.0f;
+			// x, 0.7442,  0.001198292
+			parentMapGo.transform.position = new Vector3 ( parentMapGo.transform.position.x, 0.7442f + positionChange, positionChange * 3.3f );
+			//x, 0.58, -0.33
+		}
+	}
+
 	void ZoomMapUsingHands(float zoomFactor)
 	{
 		var zoom = Mathf.Max(0.0f, Mathf.Min(_mapManager.Zoom + zoomFactor * _zoomSpeed, 21.0f));
-
+		transitionBetweenHorizontalAndVerticalMap (zoom);
 		_mapManager.UpdateMap(_mapManager.CenterLatitudeLongitude, zoom);
 	}
 
@@ -211,7 +224,9 @@ public class mapNavigateGestures : MonoBehaviour {
 	}
 
 	void RotateMapUsingHands (float rotateFactor){
-		this.transform.RotateAround (this.transform.position, new Vector3 (0, 1, 0), _rotationSpeed * rotateFactor);
+		//this.transform.RotateAround (this.transform.position, new Vector3 (0, 1, 0), _rotationSpeed * rotateFactor);
+		this.transform.RotateAround (this.transform.position, this.transform.rotation * Vector3.up, _rotationSpeed * rotateFactor);
+		//this.transform.rotation = Quaternion.Euler(0, _rotationSpeed * rotateFactor, 0);
 	}
 }
 

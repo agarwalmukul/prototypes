@@ -4266,14 +4266,14 @@ AudioListener:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 507372606}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!124 &507372609
 Behaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 507372606}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &507372610
 Camera:
   m_ObjectHideFlags: 0
@@ -6932,8 +6932,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _panSpeed: 5
   _zoomSpeed: 10
-  _rotationSpeed: 100
+  _rotationSpeed: 20
   _mapManager: {fileID: 921353089}
+  parentMapGo: {fileID: 1705104807}
   rightHandPalm: {fileID: 1404294881}
   leftHandPalm: {fileID: 561006004}
 --- !u!114 &921353087
@@ -8344,15 +8345,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4187505068457818, guid: 5bb46bae81bf04608ac699be504c5e66, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -1.5367754
       objectReference: {fileID: 0}
     - target: {fileID: 4187505068457818, guid: 5bb46bae81bf04608ac699be504c5e66, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -446.4198
       objectReference: {fileID: 0}
     - target: {fileID: 4187505068457818, guid: 5bb46bae81bf04608ac699be504c5e66, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.7188137
       objectReference: {fileID: 0}
     - target: {fileID: 4187505068457818, guid: 5bb46bae81bf04608ac699be504c5e66, type: 2}
       propertyPath: m_LocalRotation.x
@@ -8510,6 +8511,21 @@ Prefab:
     - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
         type: 2}
       propertyPath: _terrain._layerProperty.elevationLayerType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
+        type: 2}
+      propertyPath: _options.extentOptions.rangeAroundCenterOptions.west
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
+        type: 2}
+      propertyPath: _options.extentOptions.rangeAroundCenterOptions.east
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
+        type: 2}
+      propertyPath: _options.extentOptions.rangeAroundCenterOptions.north
       value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -10820,14 +10836,14 @@ AudioListener:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1354549105}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!124 &1354549108
 Behaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1354549105}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &1354549109
 Camera:
   m_ObjectHideFlags: 0
@@ -15289,7 +15305,7 @@ Transform:
   m_GameObject: {fileID: 1705104807}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.0025618672, y: 0.7442, z: 0.0011982918}
-  m_LocalScale: {x: 0.0038470756, y: 0.0038470752, z: 0.0038470752}
+  m_LocalScale: {x: 0.0016670406, y: 0.0016670407, z: 0.0016670407}
   m_Children:
   - {fileID: 921353088}
   m_Father: {fileID: 0}
