@@ -201,7 +201,7 @@ public class mapNavigateGestures : MonoBehaviour {
 			//this.transform.localRotation = (zoom - 13.0f) * this.transform.localRotation; 
 			//this.transform.localRotation *= (zoom - 14.0f) * this.transform.localRotation;
 			//this.transform.localRotation.eulerAngles = new Vector3 (0.0f, (zoom - 13.0f) * this.transform.eulerAngles.y ,0.0f);
-			float yRotationAngle = (zoom - 13.0f) * this.transform.localEulerAngles.y;
+			float yRotationAngle = (zoom - 13.0f) * ((this.transform.localEulerAngles.y <= (360.0f - this.transform.localEulerAngles.y ))? this.transform.localEulerAngles.y : (this.transform.localEulerAngles.y -360.0f)) ;
 			// setting the yRotationAngle when less than 0.1f was leading to random rotations, probably because of gimbal lock prevention
 			if (yRotationAngle > 0.1f || yRotationAngle < -0.1f) {
 				this.transform.localEulerAngles = new Vector3 (0.0f, yRotationAngle, 0.0f);
