@@ -157,6 +157,7 @@ public class mapNavigateGestures : MonoBehaviour {
 				currentHandCenterPosition = calcHandCenterPosition ();
 				Vector3 displacementCenterHand = 100.0f * (currentHandCenterPosition - prevHandCenterPosition);
 				//Debug.Log(" " + displacementCenterHand.x + "," + displacementCenterHand.z);
+				ConvertWorldToLocalAxis(displacementCenterHand);
 				PanMapUsingHands (-displacementCenterHand.x, -displacementCenterHand.z);
 				prevHandCenterPosition = currentHandCenterPosition;
 
@@ -180,6 +181,23 @@ public class mapNavigateGestures : MonoBehaviour {
 		this.transform.localPosition = new Vector3(-1.536775f, -446.4198f, -0.7188137f);
 	}
 
+	// input to the function is the world axes vector, output of the function is a vector converted into the local axes of the map
+	private Vector3 ConvertWorldToLocalAxis(Vector3 vec){
+
+
+		return vec;
+
+
+		/*
+		// x is horizontal axis, z is posterior anterior axis. if the local map is rotated along the y axis, then the xmove, zmove values are not aligned to the current
+		// viewing angle and will make the move along the local xmove, zmove axis. we want the map to move in xmove, zmove according to the user. so let's do some math
+		float localXMove;
+		float localZMove;
+		Vector2 move = new Vector2 (xMove, zMove);
+		Vector2 localMove = new Vector2 (0, 0);
+		*/
+
+	}
 
 	public void OnPinchDetectionRightHand(bool value){
 		//Debug.Log ("pinch detected right hand" + value);
