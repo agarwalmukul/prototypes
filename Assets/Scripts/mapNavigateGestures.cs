@@ -128,13 +128,14 @@ public class mapNavigateGestures : MonoBehaviour {
 
 
 	private Vector3 calcHandCenterPosition(){
-		return (rightHandPalm.transform.position);
+		return ConvertWorldToLocalAxis(rightHandPalm.transform.position);
 	}
 	private float calcHandDistance(){
-		return (rightHandPalm.transform.position.y);
+		//return (rightHandPalm.transform.position.y);
+		return ((ConvertWorldToLocalAxis(rightHandPalm.transform.position)).y)/100.0f;
 	}
 	private float calcHandDiffRotation(){
-		Vector3 diff = rightHandPalm.transform.rotation * Vector3.forward;
+		Vector3 diff = ConvertWorldToLocalAxis(rightHandPalm.transform.rotation * Vector3.forward);
 		//Vector3 diff = rightHandPalm.transform.position - leftHandPalm.transform.position;
 		Vector2 diffxz = diff.ToVector2xz ();
 		diffxz.Normalize ();
@@ -155,15 +156,20 @@ public class mapNavigateGestures : MonoBehaviour {
 			} else {
 				// code to pan the map
 				currentHandCenterPosition = calcHandCenterPosition ();
-				Vector3 displacementCenterHand = 100.0f * (currentHandCenterPosition - prevHandCenterPosition);
+				Vector3 displacementCenterHand = 1.0f * (currentHandCenterPosition - prevHandCenterPosition);
 				//Debug.Log(" " + displacementCenterHand.x + "," + displacementCenterHand.z);
-				ConvertWorldToLocalAxis(displacementCenterHand);
+				//Vector3 displacementCenterHandLocal = ConvertWorldToLocalAxis(displacementCenterHand);
 				PanMapUsingHands (-displacementCenterHand.x, -displacementCenterHand.z);
 				prevHandCenterPosition = currentHandCenterPosition;
 
 				// code to zoom in/out the map
 				currentHandDistance = calcHandDistance();
+				//currentHandDistance = displacementCenterHand.y;
 				float distanceDifferenceHands = ( currentHandDistance - prevHandDistance);
+				//float distanceDifferenceHands = displacementCenterHand.y/10.0f;
+				//float distanceDifferenceHands = Vector3.Dot(displacementCenterHand, (this.transform.rotation * Vector3.up) );
+				//Debug.Log (this.transform.rotation * Vector3.up + " , " + distanceDifferenceHands); 
+				Debug.Log (currentHandDistance + " , " + distanceDifferenceHands);
 				ZoomMapUsingHands (distanceDifferenceHands);
 				prevHandDistance = currentHandDistance;
 
@@ -183,9 +189,8 @@ public class mapNavigateGestures : MonoBehaviour {
 
 	// input to the function is the world axes vector, output of the function is a vector converted into the local axes of the map
 	private Vector3 ConvertWorldToLocalAxis(Vector3 vec){
-
-
-		return vec;
+		Debug.Log (parentMapGo.transform.position);
+		return this.transform.InverseTransformVector(vec - parentMapGo.transform.position);
 
 
 		/*
@@ -211,7 +216,7 @@ public class mapNavigateGestures : MonoBehaviour {
 	void transitionBetweenHorizontalAndVerticalMap(float zoom){
 		if (zoom < 14.0f && zoom >= 13.0f) {
 			// rotate the canvas upwards to face the user
-			float xRotationAngle = -1.0f * (14.0f - zoom) * (45.0f);
+			float xRotationAngle = -1.0f * (14.0f - zoom) * (60.0f);
 			//Vector3 rotation = new Vector3 (rotationAngle, 0, 0);
 			parentMapGo.transform.rotation = Quaternion.Euler(xRotationAngle, 0, 0);
 
@@ -219,14 +224,14 @@ public class mapNavigateGestures : MonoBehaviour {
 			//this.transform.localRotation = (zoom - 13.0f) * this.transform.localRotation; 
 			//this.transform.localRotation *= (zoom - 14.0f) * this.transform.localRotation;
 			//this.transform.localRotation.eulerAngles = new Vector3 (0.0f, (zoom - 13.0f) * this.transform.eulerAngles.y ,0.0f);
-			float yRotationAngle = (zoom - 13.0f) * ((this.transform.localEulerAngles.y <= (360.0f - this.transform.localEulerAngles.y ))? this.transform.localEulerAngles.y : (this.transform.localEulerAngles.y -360.0f)) ;
+			float yRotationAngle = (zoom - 13.0f) * ((parentMapGo.transform.localEulerAngles.y <= (360.0f - parentMapGo.transform.localEulerAngles.y ))? parentMapGo.transform.localEulerAngles.y : (parentMapGo.transform.localEulerAngles.y -360.0f)) ;
 			// setting the yRotationAngle when less than 0.1f was leading to random rotations, probably because of gimbal lock prevention
 			if (yRotationAngle > 0.1f || yRotationAngle < -0.1f) {
-				this.transform.localEulerAngles = new Vector3 (0.0f, yRotationAngle, 0.0f);
+				parentMapGo.transform.localEulerAngles = new Vector3 (xRotationAngle, yRotationAngle, 0.0f);
 			} else {
-				this.transform.localEulerAngles = new Vector3 (0.0f, 0.0f, 0.0f);
+				parentMapGo.transform.localEulerAngles = new Vector3 (xRotationAngle, 0.0f, 0.0f);
 			}
-			Debug.Log ((zoom - 13.0f) * this.transform.localEulerAngles.y + " ,"  + zoom);
+			//Debug.Log ((zoom - 13.0f) * parentMapGo.transform.localEulerAngles.y + " ,"  + zoom);
 
 			// bring the canvas closer to the user and at eye level so that the user can see what the map and the map
 			// is within the grabbing distance of the user
@@ -266,7 +271,7 @@ public class mapNavigateGestures : MonoBehaviour {
 		// if zoom level is less than 14.0f, this means the canvas is being rotated from horizontal to vertical and will remain vertical, 
 		//so user input for rotation should not be taken into account in this case
 		if(_mapManager.Zoom > 14.0f){
-			this.transform.localRotation *= Quaternion.Euler(0, _rotationSpeed * rotateFactor, 0);
+			parentMapGo.transform.localRotation *= Quaternion.Euler(0, _rotationSpeed * rotateFactor, 0);
 			//this.transform.rotation = Quaternion.Euler(0, _rotationSpeed * rotateFactor, 0);
 		}
 	}
