@@ -128,14 +128,15 @@ public class mapNavigateGestures : MonoBehaviour {
 
 
 	private Vector3 calcHandCenterPosition(){
-		return ConvertWorldToLocalAxis(rightHandPalm.transform.position);
+		//Debug.Log (ConvertWorldToLocalAxis (rightHandPalm.transform.position));
+		return (rightHandPalm.transform.position);
 	}
 	private float calcHandDistance(){
 		//return (rightHandPalm.transform.position.y);
 		return ((ConvertWorldToLocalAxis(rightHandPalm.transform.position)).y)/100.0f;
 	}
 	private float calcHandDiffRotation(){
-		Vector3 diff = ConvertWorldToLocalAxis(rightHandPalm.transform.rotation * Vector3.forward);
+		Vector3 diff = (rightHandPalm.transform.rotation * Vector3.forward);
 		//Vector3 diff = rightHandPalm.transform.position - leftHandPalm.transform.position;
 		Vector2 diffxz = diff.ToVector2xz ();
 		diffxz.Normalize ();
@@ -159,19 +160,22 @@ public class mapNavigateGestures : MonoBehaviour {
 				Vector3 displacementCenterHand = 1.0f * (currentHandCenterPosition - prevHandCenterPosition);
 				//Debug.Log(" " + displacementCenterHand.x + "," + displacementCenterHand.z);
 				//Vector3 displacementCenterHandLocal = ConvertWorldToLocalAxis(displacementCenterHand);
-				PanMapUsingHands (-displacementCenterHand.x, -displacementCenterHand.z);
+				float panx = Vector3.Dot( displacementCenterHand, (this.transform.rotation * Vector3.left));
+				float pany = - Vector3.Dot( displacementCenterHand, (this.transform.rotation * Vector3.forward));
+				PanMapUsingHands (panx*70.0f, pany*70.0f);
+				//PanMapUsingHands (-displacementCenterHandLocal.x/10.0f, -displacementCenterHandLocal.z/10.0f);
 				prevHandCenterPosition = currentHandCenterPosition;
 
 				// code to zoom in/out the map
-				currentHandDistance = calcHandDistance();
+				//currentHandDistance = calcHandDistance();
 				//currentHandDistance = displacementCenterHand.y;
-				float distanceDifferenceHands = ( currentHandDistance - prevHandDistance);
+				//float distanceDifferenceHands = ( currentHandDistance - prevHandDistance);
 				//float distanceDifferenceHands = displacementCenterHand.y/10.0f;
-				//float distanceDifferenceHands = Vector3.Dot(displacementCenterHand, (this.transform.rotation * Vector3.up) );
-				//Debug.Log (this.transform.rotation * Vector3.up + " , " + distanceDifferenceHands); 
-				Debug.Log (currentHandDistance + " , " + distanceDifferenceHands);
+				float distanceDifferenceHands = Vector3.Dot(displacementCenterHand, (this.transform.rotation * Vector3.up) );
+				Debug.Log ((this.transform.rotation * Vector3.up) + " , " + displacementCenterHand.y + "," + distanceDifferenceHands); 
+				//Debug.Log (currentHandDistance + " , " + distanceDifferenceHands);
 				ZoomMapUsingHands (distanceDifferenceHands);
-				prevHandDistance = currentHandDistance;
+				//prevHandDistance = currentHandDistance;
 
 				// code to rotate the map
 				currentHandDiffRotation = calcHandDiffRotation();
@@ -189,8 +193,8 @@ public class mapNavigateGestures : MonoBehaviour {
 
 	// input to the function is the world axes vector, output of the function is a vector converted into the local axes of the map
 	private Vector3 ConvertWorldToLocalAxis(Vector3 vec){
-		Debug.Log (parentMapGo.transform.position);
-		return this.transform.InverseTransformVector(vec - parentMapGo.transform.position);
+		Debug.Log (this.transform.position);
+		return this.transform.InverseTransformVector(vec - this.transform.position);
 
 
 		/*
