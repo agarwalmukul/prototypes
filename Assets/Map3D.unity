@@ -2194,7 +2194,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: c1c39be84162c0047831714eca6c7df5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2544,6 +2544,11 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 251704266}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &258458627 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1404367628755344, guid: 2276723046d707c4f94d431ceb80ab92,
+    type: 2}
+  m_PrefabInternal: {fileID: 1398551222}
 --- !u!1 &270120111
 GameObject:
   m_ObjectHideFlags: 0
@@ -8552,7 +8557,7 @@ Prefab:
     - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
         type: 2}
       propertyPath: _terrain._layerProperty.elevationLayerType
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
         type: 2}
@@ -8642,7 +8647,7 @@ Prefab:
     - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
         type: 2}
       propertyPath: _terrain._layerProperty.sideWallOptions.isActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5bb46bae81bf04608ac699be504c5e66, type: 2}
@@ -15459,6 +15464,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionCursor: {fileID: 200217894}
+  rightHandGo: {fileID: 258458627}
+  cursorTrailPrefab: {fileID: 1301811679343392, guid: 422ede95e837068488769267e3e8face,
+    type: 2}
 --- !u!4 &1711025973
 Transform:
   m_ObjectHideFlags: 0
