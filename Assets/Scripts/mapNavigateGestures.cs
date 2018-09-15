@@ -46,6 +46,7 @@ public class mapNavigateGestures : MonoBehaviour {
 	public GameObject parentMapGo;
 	public GameObject rightHandPalm;
 	public GameObject leftHandPalm;
+	public GameObject planeObscurer;
 
 	private Vector3 prevHandCenterPosition;
 	private Vector3 currentHandCenterPosition;
@@ -60,6 +61,8 @@ public class mapNavigateGestures : MonoBehaviour {
 
 	private bool _isInitialized = false;
 
+	private Component[] renderersMapTile;
+
 	void Awake(){
 		_mapManager.OnInitialized += () =>
 		{
@@ -70,8 +73,22 @@ public class mapNavigateGestures : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+		StartCoroutine (Example ());
 	}
+
+	IEnumerator Example()
+	{
+		print(Time.time);
+		yield return new WaitForSeconds(2);
+		renderersMapTile = this.transform.GetComponentsInChildren<Renderer> ();
+		Debug.Log ("start");
+		foreach (Renderer rend in renderersMapTile){
+			rend.material.renderQueue = 2003;
+			Debug.Log ("set");
+		}
+		print(Time.time);
+	}
+
 	/* prototype 1 functions		
 	private Vector3 calcHandCenterPosition(){
 		return ((rightHandPalm.transform.position + leftHandPalm.transform.position) * 0.5f);
@@ -239,10 +256,23 @@ public class mapNavigateGestures : MonoBehaviour {
 
 			// bring the canvas closer to the user and at eye level so that the user can see what the map and the map
 			// is within the grabbing distance of the user
-			float positionChange = -1.0f * (14.0f - zoom) / 10.0f;
+			//float positionChange = -1.0f * (14.0f - zoom) / 10.0f;
+			float positionChangeY = (0.6943673f - 0.7442f) * (14.0f - zoom);
+			float positionChangeZ = (-0.42f - (0.001198292f)) * (14.0f - zoom);
 			// x, 0.7442,  0.001198292
-			parentMapGo.transform.position = new Vector3 ( parentMapGo.transform.position.x, 0.7442f + (positionChange / 2.0f), positionChange * 2.0f );
-			//x, 0.58, -0.2
+			//parentMapGo.transform.position = new Vector3 ( parentMapGo.transform.position.x, 0.7442f + (positionChange / 2.0f), positionChange * 2.0f );
+			parentMapGo.transform.position = new Vector3 ( parentMapGo.transform.position.x, 0.7442f + positionChangeY, 0.001198292f + positionChangeZ );
+			//x, 0.58, -0.2  // new x, 0.6943673, -0.42
+
+
+			// 0.166, 0.05371, -0.044
+			// 0, -5.365. 0
+			float planePositionChangeY = (0.30860f - 0.05371f) * (14.0f - zoom);
+			float planePositionChangeZ = (0.173f - (-0.044f)) * (14.0f - zoom);
+			planeObscurer.transform.position = new Vector3 ( planeObscurer.transform.position.x, 0.05371f + planePositionChangeY, -0.044f + planePositionChangeZ );
+			planeObscurer.transform.rotation = Quaternion.Euler(xRotationAngle, - 5.365f, -xRotationAngle/10.0f);
+			// 0.166, 0.3094569, 0.3752506  // new 0.166, 0.30860, 0.173
+			// - 60, - 5.365, 6
 		}
 	}
 
