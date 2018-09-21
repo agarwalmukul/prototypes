@@ -47,6 +47,11 @@ public class mapNavigateGestures : MonoBehaviour {
 	public GameObject rightHandPalm;
 	public GameObject leftHandPalm;
 	public GameObject planeObscurer;
+	public GameObject fakeSquare;
+	private Vector3 fakeSquareOriginalScale;
+	private Vector3 fakeSquareCurrentScale;
+	private float startTime;
+	private float fracTime = 0.0f;
 
 	private Vector3 prevHandCenterPosition;
 	private Vector3 currentHandCenterPosition;
@@ -64,6 +69,7 @@ public class mapNavigateGestures : MonoBehaviour {
 	private Component[] renderersMapTile;
 
 	void Awake(){
+		fakeSquareOriginalScale = fakeSquare.transform.localScale;
 		_mapManager.OnInitialized += () =>
 		{
 			_isInitialized = true;
@@ -73,7 +79,10 @@ public class mapNavigateGestures : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
 		StartCoroutine (Example ());
+
+
 	}
 
 	IEnumerator Example()
@@ -171,6 +180,8 @@ public class mapNavigateGestures : MonoBehaviour {
 				currentHandDistance = calcHandDistance ();
 				prevHandDiffRotation = calcHandDiffRotation ();
 				currentHandDiffRotation = calcHandDiffRotation ();
+				startTime = 0.0f;
+				fracTime = 1.0f;
 			} else {
 				// code to pan the map
 				currentHandCenterPosition = calcHandCenterPosition ();
@@ -200,11 +211,20 @@ public class mapNavigateGestures : MonoBehaviour {
 				RotateMapUsingHands (rotationDifferenceHands);
 				prevHandDiffRotation = currentHandDiffRotation;
 			}
+			fakeSquareCurrentScale = fakeSquare.transform.localScale;
 		} else {
 			manipulationFrame = false;
+			if (startTime == 0.0f) {
+				startTime = Time.time;
+			} else {
+				fracTime = Mathf.Min( (Time.time - startTime) * 20.0f, 1.0f);
+				fakeSquare.transform.localScale = Vector3.Lerp (fakeSquareCurrentScale, fakeSquareOriginalScale, fracTime);
+			}
 		}
 		// the map gameobject moves around on pan and zoom which makes it harder for the camera to see it. so I constrained its position
 		//this.transform.position = new Vector3(0, 0, 0);
+
+
 		this.transform.localPosition = new Vector3(-1.536775f, -446.4198f, -0.7188137f);
 	}
 
@@ -278,6 +298,7 @@ public class mapNavigateGestures : MonoBehaviour {
 
 	void ZoomMapUsingHands(float zoomFactor)
 	{
+		fakeSquare.transform.localScale += (300.0f * new Vector3(zoomFactor, zoomFactor, zoomFactor));
 		var zoom = Mathf.Max(0.0f, Mathf.Min(_mapManager.Zoom + zoomFactor * _zoomSpeed, 21.0f));
 		transitionBetweenHorizontalAndVerticalMap (zoom);
 		_mapManager.UpdateMap(_mapManager.CenterLatitudeLongitude, zoom);
@@ -295,6 +316,8 @@ public class mapNavigateGestures : MonoBehaviour {
 			float factor = (_panSpeed) * (Conversions.GetTileScaleInDegrees((float)_mapManager.CenterLatitudeLongitude.x, _mapManager.AbsoluteZoom));
 			var latitudeLongitude = new Vector2d(_mapManager.CenterLatitudeLongitude.x + zMove * factor * 2.0f, _mapManager.CenterLatitudeLongitude.y + xMove * factor * 4.0f);
 			_mapManager.UpdateMap(latitudeLongitude, _mapManager.Zoom);
+			//_mapManager.MapVisualizer
+			//_mapManager.ImageLayer
 		}
 	}
 
