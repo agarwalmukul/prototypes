@@ -52,6 +52,10 @@ public class mapNavigateGestures : MonoBehaviour {
 	private Vector3 fakeSquareCurrentScale;
 	private float startTime;
 	private float fracTime = 0.0f;
+	private float startTimeCompassRotate = 0.0f;
+	private bool compassRotateStart = false;
+
+	public GameObject compass;
 
 	private Vector3 prevHandCenterPosition;
 	private Vector3 currentHandCenterPosition;
@@ -81,8 +85,7 @@ public class mapNavigateGestures : MonoBehaviour {
 	void Start () {
 
 		StartCoroutine (Example ());
-
-
+		compassUI.clickComplete += OnCompassFingerEnter;
 	}
 
 	IEnumerator Example()
@@ -151,6 +154,28 @@ public class mapNavigateGestures : MonoBehaviour {
 	}
 
 	*/
+	//public delegate void compassFingerEvents();
+	//private compassFingerEvents handler;
+
+	//compassFingerEnter = handleCompassFingerEnter;
+
+	//private void handleCompassEvents(compassFingerEvents input){
+	//	handler = input;
+	//}
+	//public delegate void del();
+
+	/*
+	public static void OnCompassFingerEnter(){
+		Debug.Log ("finger detected");
+	}
+	*/
+	private void OnCompassFingerEnter(){
+		Debug.Log ("finger detected");
+		compassRotateStart = true;
+	}
+
+	//public del onReceivingSignal = OnCompassFingerEnter;
+
 
 
 	private Vector3 calcHandCenterPosition(){
@@ -171,6 +196,7 @@ public class mapNavigateGestures : MonoBehaviour {
 
 	// Update is called once per frame
 	void LateUpdate () {
+		//onReceivingSignal();
 		if (IsRightHandPinch) {
 			if (!manipulationFrame) {
 				manipulationFrame = true;
@@ -224,8 +250,20 @@ public class mapNavigateGestures : MonoBehaviour {
 		// the map gameobject moves around on pan and zoom which makes it harder for the camera to see it. so I constrained its position
 		//this.transform.position = new Vector3(0, 0, 0);
 
-
+		compass.transform.localRotation = Quaternion.Euler( 0.0f, 90.0f + parentMapGo.transform.localEulerAngles.y, -90.0f);
 		this.transform.localPosition = new Vector3(-1.536775f, -446.4198f, -0.7188137f);
+
+		if (compassRotateStart) {
+			if (startTimeCompassRotate == 0.0f) {
+				startTimeCompassRotate = Time.time;
+			}
+			float frac = Time.time - startTimeCompassRotate;
+			RotateMapUsingHands (-1.0f * (parentMapGo.transform.localRotation.y - 0.0f) * frac);
+			if (parentMapGo.transform.localRotation.y == 0.0f) {
+				compassRotateStart = false;
+				startTimeCompassRotate = 0.0f;
+			}
+		}
 	}
 
 	// input to the function is the world axes vector, output of the function is a vector converted into the local axes of the map
@@ -298,7 +336,7 @@ public class mapNavigateGestures : MonoBehaviour {
 
 	void ZoomMapUsingHands(float zoomFactor)
 	{
-		fakeSquare.transform.localScale += (300.0f * new Vector3(zoomFactor, zoomFactor, zoomFactor));
+		fakeSquare.transform.localScale += (45.0f * new Vector3(zoomFactor, zoomFactor, zoomFactor));
 		var zoom = Mathf.Max(0.0f, Mathf.Min(_mapManager.Zoom + zoomFactor * _zoomSpeed, 21.0f));
 		transitionBetweenHorizontalAndVerticalMap (zoom);
 		_mapManager.UpdateMap(_mapManager.CenterLatitudeLongitude, zoom);
