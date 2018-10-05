@@ -72,6 +72,8 @@ public class mapNavigateGestures : MonoBehaviour {
 
 	private Component[] renderersMapTile;
 
+	private Animator compassTransitionRestActive;
+
 	void Awake(){
 		fakeSquareOriginalScale = fakeSquare.transform.localScale;
 		_mapManager.OnInitialized += () =>
@@ -86,6 +88,7 @@ public class mapNavigateGestures : MonoBehaviour {
 
 		StartCoroutine (Example ());
 		compassUI.clickComplete += OnCompassFingerEnter;
+		compassTransitionRestActive = compass.GetComponent<Animator> ();
 	}
 
 	IEnumerator Example()
@@ -171,7 +174,14 @@ public class mapNavigateGestures : MonoBehaviour {
 	*/
 	private void OnCompassFingerEnter(){
 		Debug.Log ("finger detected");
+
 		compassRotateStart = true;
+		// set compass to rest state
+		// move the compass from active to rest state
+		Debug.Log("1");
+		compassTransitionRestActive.SetBool("restToActive", false);
+		Debug.Log("2");
+
 	}
 
 	//public del onReceivingSignal = OnCompassFingerEnter;
@@ -238,6 +248,7 @@ public class mapNavigateGestures : MonoBehaviour {
 				prevHandDiffRotation = currentHandDiffRotation;
 			}
 			fakeSquareCurrentScale = fakeSquare.transform.localScale;
+
 		} else {
 			manipulationFrame = false;
 			if (startTime == 0.0f) {
@@ -286,6 +297,10 @@ public class mapNavigateGestures : MonoBehaviour {
 	public void OnPinchDetectionRightHand(bool value){
 		//Debug.Log ("pinch detected right hand" + value);
 		IsRightHandPinch = value;
+		// if rotation has happened meaning compass has been moved from its resting position
+		//if (compass.transform.localEulerAngles.y != 90.0f) {
+			compassTransitionRestActive.SetBool ("restToActive", true);
+		//}
 	}
 	public void OnPinchDetectionLeftHand(bool value){
 		//Debug.Log ("pinch detected left hand" + value);
