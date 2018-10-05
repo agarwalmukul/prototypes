@@ -56,6 +56,7 @@ public class mapNavigateGestures : MonoBehaviour {
 	private bool compassRotateStart = false;
 
 	public GameObject compass;
+	public GameObject buildingLayer;
 
 	private Vector3 prevHandCenterPosition;
 	private Vector3 currentHandCenterPosition;
@@ -89,6 +90,7 @@ public class mapNavigateGestures : MonoBehaviour {
 		StartCoroutine (Example ());
 		compassUI.clickComplete += OnCompassFingerEnter;
 		compassTransitionRestActive = compass.GetComponent<Animator> ();
+		layerUI.layerUIPressed += OnLayerUIPressed;
 	}
 
 	IEnumerator Example()
@@ -292,6 +294,14 @@ public class mapNavigateGestures : MonoBehaviour {
 		Vector2 localMove = new Vector2 (0, 0);
 		*/
 
+	}
+
+	void OnLayerUIPressed(){
+		if (!buildingLayer.activeSelf) {
+			buildingLayer.SetActive (true);
+		} else {
+			buildingLayer.SetActive (false);
+		}
 	}
 
 	public void OnPinchDetectionRightHand(bool value){
