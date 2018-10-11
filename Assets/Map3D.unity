@@ -3836,417 +3836,6 @@ Transform:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: e9cba53515bea5441a94b9334625a500, type: 3}
   m_PrefabInternal: {fileID: 1105925103}
---- !u!1001 &456593724
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1705104808}
-    m_Modifications:
-    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-        type: 2}
-      propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-        type: 2}
-      propertyPath: _vectorData._layerProperty.tileJsonData.LayerDisplayNames.Array.size
-      value: 22
-      objectReference: {fileID: 0}
-    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-        type: 2}
-      propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.data[2].filterOptions.filters.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-        type: 2}
-      propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.data[2].materialOptions.materials.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-        type: 2}
-      propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.data[2].materialOptions.materials.Array.data[0].Materials.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-        type: 2}
-      propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.data[2].materialOptions.materials.Array.data[1].Materials.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4187505068457818, guid: 5bb46bae81bf04608ac699be504c5e66, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -1.5367752
-      objectReference: {fileID: 0}
-    - target: {fileID: 4187505068457818, guid: 5bb46bae81bf04608ac699be504c5e66, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -446.4198
-      objectReference: {fileID: 0}
-    - target: {fileID: 4187505068457818, guid: 5bb46bae81bf04608ac699be504c5e66, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -0.7188137
-      objectReference: {fileID: 0}
-    - target: {fileID: 4187505068457818, guid: 5bb46bae81bf04608ac699be504c5e66, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4187505068457818, guid: 5bb46bae81bf04608ac699be504c5e66, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4187505068457818, guid: 5bb46bae81bf04608ac699be504c5e66, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4187505068457818, guid: 5bb46bae81bf04608ac699be504c5e66, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4187505068457818, guid: 5bb46bae81bf04608ac699be504c5e66, type: 2}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-        type: 2}
-      propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.data[0].materialOptions.colorPalette
-      value: 
-      objectReference: {fileID: 11400000, guid: ef118b5e263da4b1fa4327ca1d3e0c7b,
-        type: 2}
-    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-        type: 2}
-      propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.data[1].extrusionOptions._selectedLayerName
-      value: road
-      objectReference: {fileID: 0}
-    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-        type: 2}
-      propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.data[2].coreOptions.isActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-        type: 2}
-      propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.data[2].coreOptions.sublayerName
-      value: Untitled
-      objectReference: {fileID: 0}
-    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-        type: 2}
-      propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.data[2].coreOptions.geometryType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-        type: 2}
-      propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.data[2].coreOptions.layerName
-      value: building
-      objectReference: {fileID: 0}
-    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-        type: 2}
-      propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.data[2].coreOptions.snapToTerrain
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-        type: 2}
-      propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.data[2].coreOptions.lineWidth
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-        type: 2}
-      propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.data[2].extrusionOptions._selectedLayerName
-      value: building
-      objectReference: {fileID: 0}
-    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-        type: 2}
-      propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.data[2].extrusionOptions.propertyName
-      value: height
-      objectReference: {fileID: 0}
-    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-        type: 2}
-      propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.data[2].extrusionOptions.maximumHeight
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-        type: 2}
-      propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.data[2].extrusionOptions.extrusionScaleFactor
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-        type: 2}
-      propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.data[2].materialOptions.style
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-        type: 2}
-      propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.data[2].materialOptions.materials.Array.data[0].Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: a1aa333e18c0640d7b428eecff9c4af7, type: 2}
-    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-        type: 2}
-      propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.data[2].materialOptions.materials.Array.data[1].Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: c0653693b48614a139a124871d499679, type: 2}
-    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-        type: 2}
-      propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.data[2].materialOptions.atlasInfo
-      value: 
-      objectReference: {fileID: 11400000, guid: 414754d7155df47beb52ca117a774f21,
-        type: 2}
-    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-        type: 2}
-      propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.data[2].materialOptions.colorPalette
-      value: 
-      objectReference: {fileID: 11400000, guid: 57bdfa37edf7a4f7f999d19443497554,
-        type: 2}
-    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-        type: 2}
-      propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.data[2].honorBuildingIdSetting
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-        type: 2}
-      propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.data[0].materialOptions.style
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-        type: 2}
-      propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.data[1].materialOptions.style
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-        type: 2}
-      propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.data[0].extrusionOptions.extrusionType
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4187505068457818, guid: 5bb46bae81bf04608ac699be504c5e66, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1.0017751
-      objectReference: {fileID: 0}
-    - target: {fileID: 4187505068457818, guid: 5bb46bae81bf04608ac699be504c5e66, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1.0017751
-      objectReference: {fileID: 0}
-    - target: {fileID: 4187505068457818, guid: 5bb46bae81bf04608ac699be504c5e66, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1.0017751
-      objectReference: {fileID: 0}
-    - target: {fileID: 4187505068457818, guid: 5bb46bae81bf04608ac699be504c5e66, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4187505068457818, guid: 5bb46bae81bf04608ac699be504c5e66, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-        type: 2}
-      propertyPath: _terrain._layerProperty.sourceType
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-        type: 2}
-      propertyPath: _terrain._layerProperty.elevationLayerType
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-        type: 2}
-      propertyPath: _options.extentOptions.rangeAroundCenterOptions.west
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-        type: 2}
-      propertyPath: _options.extentOptions.rangeAroundCenterOptions.east
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-        type: 2}
-      propertyPath: _options.extentOptions.rangeAroundCenterOptions.north
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-        type: 2}
-      propertyPath: _vectorData._layerProperty._sourceType
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-        type: 2}
-      propertyPath: _vectorData._layerProperty.sourceOptions.layerSource.Id
-      value: mapbox.mapbox-streets-v7
-      objectReference: {fileID: 0}
-    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-        type: 2}
-      propertyPath: _vectorData._layerProperty.useOptimizedStyle
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-        type: 2}
-      propertyPath: _vectorData._layerProperty.performanceOptions.entityPerCoroutine
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-        type: 2}
-      propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.data[0].honorBuildingIdSetting
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-        type: 2}
-      propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.data[0].coreOptions.geometryType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-        type: 2}
-      propertyPath: _imagery._layerProperty.rasterOptions.useCompression
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-        type: 2}
-      propertyPath: _imagery._layerProperty.rasterOptions.useMipMap
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-        type: 2}
-      propertyPath: _terrain._layerProperty.modificationOptions.sampleCount
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-        type: 2}
-      propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.data[0].coreOptions.isActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-        type: 2}
-      propertyPath: _options.scalingOptions.unityTileSize
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-        type: 2}
-      propertyPath: _imagery._layerProperty.sourceType
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-        type: 2}
-      propertyPath: _imagery._layerProperty.sourceOptions.layerSource.Id
-      value: mapbox://styles/mapbox/streets-v10
-      objectReference: {fileID: 0}
-    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-        type: 2}
-      propertyPath: _vectorData._layerProperty.sourceOptions.isActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-        type: 2}
-      propertyPath: _terrain._layerProperty.sideWallOptions.isActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-        type: 2}
-      propertyPath: _options.extentOptions.rangeAroundCenterOptions.south
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1290224484336908, guid: 5bb46bae81bf04608ac699be504c5e66, type: 2}
-      propertyPath: m_Name
-      value: CitySimulatorMap (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-        type: 2}
-      propertyPath: _vectorData._layerProperty.optimizedStyle.Id
-      value: mapbox://styles/mapbox/light-v9
-      objectReference: {fileID: 0}
-    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-        type: 2}
-      propertyPath: _vectorData._layerProperty.optimizedStyle.UserName
-      value: mukulbhl
-      objectReference: {fileID: 0}
-    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-        type: 2}
-      propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.data[2].coreOptions.groupFeatures
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-        type: 2}
-      propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.data[2].extrusionOptions.extrusionType
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-        type: 2}
-      propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.data[2].extrusionOptions.propertyDescription
-      value: Number. Height of building or part of building.
-      objectReference: {fileID: 0}
-    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-        type: 2}
-      propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.data[2].filterOptions._selectedLayerName
-      value: building
-      objectReference: {fileID: 0}
-    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-        type: 2}
-      propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.data[2].filterOptions.filters.Array.data[0].KeyDescription
-      value: Number. Height of building or part of building.
-      objectReference: {fileID: 0}
-    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-        type: 2}
-      propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.data[2].filterOptions.filters.Array.data[0].Key
-      value: height
-      objectReference: {fileID: 0}
-    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-        type: 2}
-      propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.data[2].filterOptions.filters.Array.data[0].filterOperator
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-        type: 2}
-      propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.data[2].filterOptions.filters.Array.data[0].Min
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 1290224484336908, guid: 5bb46bae81bf04608ac699be504c5e66, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 5bb46bae81bf04608ac699be504c5e66, type: 2}
-  m_IsPrefabParent: 0
---- !u!4 &456593725 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4187505068457818, guid: 5bb46bae81bf04608ac699be504c5e66,
-    type: 2}
-  m_PrefabInternal: {fileID: 456593724}
---- !u!1 &456593726 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1290224484336908, guid: 5bb46bae81bf04608ac699be504c5e66,
-    type: 2}
-  m_PrefabInternal: {fileID: 456593724}
---- !u!114 &456593727 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-    type: 2}
-  m_PrefabInternal: {fileID: 456593724}
-  m_Script: {fileID: 11500000, guid: cd961b1c9541a4cee99686069ecce852, type: 3}
---- !u!114 &456593728
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 456593726}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15eed3c0528a3498dae4ff8f7b8ae77f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &456593729
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 456593726}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4ce6acc3e8a7d44eb89e3a2edc9f11c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _panSpeed: 6.44
-  _zoomSpeed: 10
-  _rotationSpeed: 60
-  _mapManager: {fileID: 456593727}
-  parentMapGo: {fileID: 1705104807}
-  rightHandPalm: {fileID: 1404294881}
-  leftHandPalm: {fileID: 561006004}
-  planeObscurer: {fileID: 1763784185}
-  fakeSquare: {fileID: 338291022}
-  compass: {fileID: 1128211175}
 --- !u!1 &460678209
 GameObject:
   m_ObjectHideFlags: 0
@@ -6286,7 +5875,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9cbda2e2541992b48a8cd718e5673386, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.115
+      value: -0.0794
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9cbda2e2541992b48a8cd718e5673386, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6294,7 +5883,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9cbda2e2541992b48a8cd718e5673386, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.0977
+      value: -0.0856
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9cbda2e2541992b48a8cd718e5673386, type: 3}
       propertyPath: m_LocalRotation.x
@@ -9226,17 +8815,12 @@ Prefab:
     - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
         type: 2}
       propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
         type: 2}
       propertyPath: _vectorData._layerProperty.tileJsonData.LayerDisplayNames.Array.size
       value: 22
-      objectReference: {fileID: 0}
-    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-        type: 2}
-      propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.data[2].filterOptions.filters.Array.size
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
         type: 2}
@@ -9349,7 +8933,7 @@ Prefab:
     - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
         type: 2}
       propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.data[2].materialOptions.style
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
         type: 2}
@@ -9441,12 +9025,12 @@ Prefab:
     - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
         type: 2}
       propertyPath: _vectorData._layerProperty._sourceType
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
         type: 2}
       propertyPath: _vectorData._layerProperty.sourceOptions.layerSource.Id
-      value: mapbox.3d-buildings,mapbox.mapbox-streets-v7
+      value: mapbox.mapbox-streets-v7
       objectReference: {fileID: 0}
     - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
         type: 2}
@@ -9456,7 +9040,7 @@ Prefab:
     - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
         type: 2}
       propertyPath: _vectorData._layerProperty.performanceOptions.entityPerCoroutine
-      value: 2
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
         type: 2}
@@ -9486,7 +9070,7 @@ Prefab:
     - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
         type: 2}
       propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.data[0].coreOptions.isActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
         type: 2}
@@ -9506,7 +9090,7 @@ Prefab:
     - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
         type: 2}
       propertyPath: _vectorData._layerProperty.sourceOptions.isActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
         type: 2}
@@ -9517,65 +9101,6 @@ Prefab:
         type: 2}
       propertyPath: _options.extentOptions.rangeAroundCenterOptions.south
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1290224484336908, guid: 5bb46bae81bf04608ac699be504c5e66, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-        type: 2}
-      propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.data[2].extrusionOptions.extrusionType
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-        type: 2}
-      propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.data[2].extrusionOptions.propertyDescription
-      value: Number. Height of building or part of building.
-      objectReference: {fileID: 0}
-    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-        type: 2}
-      propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.data[2].filterOptions._selectedLayerName
-      value: building
-      objectReference: {fileID: 0}
-    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-        type: 2}
-      propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.data[2].filterOptions.filters.Array.data[0].KeyDescription
-      value: Number. Height of building or part of building.
-      objectReference: {fileID: 0}
-    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-        type: 2}
-      propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.data[2].filterOptions.filters.Array.data[0].Key
-      value: height
-      objectReference: {fileID: 0}
-    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-        type: 2}
-      propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.data[2].filterOptions.filters.Array.data[0].filterOperator
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-        type: 2}
-      propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.data[2].filterOptions.filters.Array.data[0].Min
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-        type: 2}
-      propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.data[2].extrusionOptions.extrusionGeometryType
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-        type: 2}
-      propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.data[2].coreOptions.groupFeatures
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-        type: 2}
-      propertyPath: _vectorData._layerProperty.vectorSubLayers.Array.data[2].filterOptions.combinerType
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114196496685157712, guid: 5bb46bae81bf04608ac699be504c5e66,
-        type: 2}
-      propertyPath: _options.locationOptions.latitudeLongitude
-      value: 37.7906918837745, -122.397625877129
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5bb46bae81bf04608ac699be504c5e66, type: 2}
@@ -12263,7 +11788,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1603769914748404, guid: e13ee7e0790c7d243b7aa67fe604acac, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114711245158774928, guid: e13ee7e0790c7d243b7aa67fe604acac,
         type: 2}
@@ -16582,7 +16107,6 @@ Transform:
   - {fileID: 327191974}
   - {fileID: 2086990935}
   - {fileID: 1802488353}
-  - {fileID: 456593725}
   m_Father: {fileID: 0}
   m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
